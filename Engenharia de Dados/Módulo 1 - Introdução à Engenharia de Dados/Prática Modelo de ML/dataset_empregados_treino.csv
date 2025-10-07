@@ -1,0 +1,201 @@
+﻿Nome,Data de Nascimento,Sexo,Profissão,Data de Início no Último Emprego,Empregado,Salário atual,Estado Civil,Número de Filhos,Score de Crédito
+Cauã Nogueira,1977-12-01,Feminino,Desenvolvedor de Software,2024-04-17,False,0.0,Solteiro,2,576
+Rafael da Paz,2005-09-14,Masculino,Recepcionista,2020-07-22,True,11982.81,Viúvo,4,429
+Srta. Fernanda Silveira,1971-03-13,Masculino,Arquiteto de Dados,2021-08-14,False,0.0,Viúvo,0,988
+Sarah Mendes,1981-01-08,Feminino,Técnico de Enfermagem,2021-07-18,True,7087.12,Divorciado,1,772
+Francisco Gonçalves,1995-11-23,Feminino,Analista de Sistemas,2024-11-10,True,6400.52,Solteiro,1,324
+Kamilly da Cruz,2001-10-26,Masculino,Vendedor,2022-02-21,False,0.0,Viúvo,0,616
+Luiz Miguel Pereira,1999-06-08,Feminino,Agente de Suporte,2020-11-10,False,0.0,Solteiro,0,202
+Vitor Hugo da Mata,1960-12-15,Masculino,Operador de Máquinas,2024-08-11,True,15517.56,Solteiro,2,980
+Stephany Aragão,1999-09-21,Masculino,Professor Universitário,2017-01-03,True,14068.44,Solteiro,4,378
+João Aragão,1973-07-28,Masculino,Professor,2020-10-17,False,0.0,Viúvo,2,73
+Dr. Marcelo da Paz,1997-05-20,Feminino,Arquiteto,2025-09-09,True,9731.32,Divorciado,1,359
+Calebe Campos,1975-06-26,Masculino,Contador,2020-12-10,False,0.0,Casado,2,438
+Luana da Cruz,1997-02-14,Feminino,Desenvolvedor Front-End,2016-07-15,False,0.0,Casado,4,148
+Luana Freitas,2006-03-21,Feminino,Farmacêutico,2018-05-04,False,0.0,Solteiro,4,842
+Theo Carvalho,2002-02-13,Masculino,Analista de BI,2020-08-29,False,0.0,Solteiro,2,379
+Sophie Lopes,1983-09-22,Masculino,Desenvolvedor Back-End,2025-09-17,False,0.0,Divorciado,2,691
+João Guilherme Azevedo,2004-09-15,Feminino,Analista Financeiro,2019-12-23,False,0.0,Casado,1,564
+Laís da Mata,1996-05-29,Feminino,Analista de Segurança da Informação,2021-06-06,False,0.0,Viúvo,3,159
+Levi da Rosa,1970-04-19,Masculino,Publicitário,2017-08-15,True,5145.46,Casado,3,173
+Luiz Otávio Costa,2007-09-10,Masculino,Fotógrafo,2025-01-27,False,0.0,Divorciado,0,537
+Lucas Gabriel Duarte,1990-01-12,Feminino,Vendedor,2023-09-19,True,9716.7,Divorciado,3,646
+Maria Martins,2005-03-11,Feminino,Farmacêutico,2020-06-25,True,15371.04,Viúvo,1,456
+Emilly Jesus,1994-08-08,Feminino,Engenheiro de Software,2016-11-11,False,0.0,Solteiro,0,925
+Milena Pinto,1973-11-03,Masculino,Gerente de Projetos,2020-06-01,True,8675.51,Casado,0,974
+Cauê Rocha,2005-05-09,Masculino,Técnico de Informática,2016-07-03,False,0.0,Viúvo,3,725
+Calebe Farias,1990-08-20,Masculino,Analista de Sistemas,2025-03-16,True,2322.05,Solteiro,2,227
+Evelyn Gomes,1993-08-12,Feminino,Agente de Suporte,2023-03-21,False,0.0,Viúvo,4,671
+Rafaela Carvalho,1977-05-14,Feminino,Engenheiro de Dados,2016-12-19,False,0.0,Viúvo,0,800
+Nicolas Jesus,2003-07-27,Masculino,Publicitário,2022-07-31,True,2216.84,Solteiro,0,722
+Enzo Gabriel da Paz,1974-10-14,Feminino,Arquiteto de Dados,2025-01-06,False,0.0,Solteiro,4,395
+Cecília Barros,1987-01-05,Masculino,Psicólogo,2025-03-31,False,0.0,Solteiro,2,112
+Diego Dias,1962-03-02,Feminino,Analista Financeiro,2022-12-21,True,4489.39,Viúvo,1,190
+Maria Sophia Mendes,1965-09-22,Feminino,Mecânico,2023-08-04,True,13239.51,Solteiro,0,175
+Alícia Caldeira,1992-09-03,Masculino,Analista Financeiro,2017-01-29,True,6597.43,Divorciado,2,484
+Fernando Caldeira,1978-11-11,Feminino,Operador de Máquinas,2018-11-06,True,10734.64,Casado,2,499
+Isaac Silveira,1961-06-04,Masculino,Arquiteto de Dados,2021-03-21,False,0.0,Viúvo,4,522
+Luiz Miguel Caldeira,1987-01-12,Feminino,Advogado,2018-12-10,True,18144.78,Viúvo,3,442
+Lucas Gabriel Gonçalves,1999-08-30,Masculino,Médico Pediatra,2017-09-23,True,17403.08,Solteiro,3,831
+Laura Mendes,1979-04-27,Feminino,Analista de BI,2022-08-01,False,0.0,Viúvo,1,71
+Lucca Lopes,1971-02-23,Feminino,Contador,2025-06-13,True,7326.16,Casado,2,929
+Luiz Henrique Silveira,1965-11-30,Masculino,Técnico de Enfermagem,2018-05-20,False,0.0,Viúvo,4,474
+Emanuella da Rocha,1982-08-22,Masculino,Desenvolvedor Front-End,2022-09-20,True,7301.25,Viúvo,1,355
+Cecília Rezende,1988-02-29,Masculino,Psicólogo,2023-12-23,False,0.0,Viúvo,0,401
+Samuel Carvalho,1969-07-02,Masculino,Analista de Marketing,2022-04-08,False,0.0,Solteiro,4,931
+Luiz Fernando Costela,1988-06-02,Feminino,Contador,2024-08-24,True,4536.15,Casado,3,238
+Eduarda Azevedo,1981-07-27,Feminino,Arquiteto de Dados,2025-03-21,True,6434.59,Solteiro,3,282
+Gabriel Nascimento,1971-12-11,Masculino,Arquiteto,2022-06-21,True,18472.32,Casado,4,194
+Lorenzo Novaes,1991-01-23,Masculino,Engenheiro Civil,2024-10-02,False,0.0,Casado,3,347
+Brenda Cavalcanti,1997-04-21,Masculino,Motorista,2017-09-24,True,11202.58,Casado,1,747
+João Felipe Castro,1963-04-07,Feminino,Cozinheiro,2020-03-22,True,12312.46,Viúvo,0,869
+André Pereira,1990-02-16,Feminino,Consultor de Vendas,2020-11-30,True,8344.85,Solteiro,4,853
+Srta. Sophia Pereira,1968-09-04,Masculino,Vendedor,2018-12-12,False,0.0,Viúvo,1,739
+Ryan Araújo,1961-12-03,Feminino,Contador,2016-04-15,True,11131.02,Solteiro,4,440
+João Guilherme Alves,1984-07-22,Masculino,Cozinheiro,2016-05-28,True,16643.01,Solteiro,0,368
+Larissa Campos,1969-05-02,Masculino,Arquiteto de Dados,2023-03-15,False,0.0,Divorciado,0,365
+Maria Alice Silveira,1993-11-23,Masculino,Engenheiro de Dados,2019-04-30,False,0.0,Casado,4,698
+Davi Lucas Fogaça,1971-09-22,Feminino,Eletricista,2023-08-04,True,10182.89,Casado,2,639
+Juan Rocha,1986-02-22,Masculino,Assistente Administrativo,2020-03-28,False,0.0,Casado,3,616
+Kevin Sales,1981-10-11,Feminino,Agente de Suporte,2023-09-22,False,0.0,Casado,4,340
+Yuri Jesus,2001-03-16,Masculino,Psicólogo,2025-07-23,False,0.0,Divorciado,1,405
+Sophia da Costa,1973-10-06,Masculino,Analista Financeiro,2021-10-25,False,0.0,Viúvo,4,671
+Antônio Moreira,1984-07-30,Masculino,Arquiteto de Dados,2021-10-20,True,2425.0,Viúvo,0,16
+João Gabriel Gomes,1990-07-06,Feminino,Motorista,2025-06-09,False,0.0,Divorciado,4,752
+Emanuel Araújo,1968-12-06,Feminino,Cozinheiro,2016-12-18,False,0.0,Divorciado,0,302
+Luana da Rosa,2005-05-15,Masculino,Desenvolvedor Back-End,2024-04-23,True,13746.7,Casado,1,802
+Sophia Silveira,2000-04-08,Masculino,Cozinheiro,2019-01-11,True,18952.58,Viúvo,2,42
+Luana Teixeira,2000-04-24,Masculino,Professor Universitário,2021-01-08,True,15684.93,Viúvo,2,287
+Nicolas Monteiro,2007-07-27,Feminino,Engenheiro de Software,2019-11-01,True,11064.18,Solteiro,1,253
+Sra. Kamilly Sales,1994-10-08,Feminino,Psicólogo,2022-11-30,False,0.0,Casado,1,814
+Gabrielly Fernandes,1998-06-01,Feminino,Psicólogo,2022-01-13,True,14943.61,Casado,0,906
+Maria Eduarda Souza,1991-08-03,Masculino,Desenvolvedor Back-End,2023-07-21,True,18928.63,Solteiro,0,340
+Bruna Monteiro,1971-11-10,Masculino,Analista de Marketing,2019-08-18,True,15548.39,Divorciado,3,271
+Nathan Nunes,1964-03-17,Feminino,Professor,2022-01-30,False,0.0,Solteiro,1,156
+Maitê Viana,2006-11-15,Feminino,Desenvolvedor de Software,2025-05-05,True,13198.79,Casado,3,189
+Carlos Eduardo da Paz,2004-07-23,Feminino,Analista de Marketing,2023-10-29,False,0.0,Divorciado,4,633
+Maria Luiza Caldeira,1980-07-18,Masculino,Técnico de Enfermagem,2019-04-09,True,15811.72,Solteiro,2,19
+Luiz Henrique Pereira,1963-07-22,Masculino,Designer Gráfico,2021-11-24,True,9954.83,Solteiro,0,705
+Eloah Carvalho,1961-12-18,Masculino,Analista de Sistemas,2021-10-18,False,0.0,Viúvo,4,951
+Maria Sophia Viana,1976-07-02,Masculino,Analista de Sistemas,2017-03-30,False,0.0,Viúvo,0,42
+Luiz Gustavo Nunes,1973-12-08,Feminino,Desenvolvedor Back-End,2018-02-25,True,15523.29,Solteiro,4,780
+Noah Ferreira,1986-06-24,Feminino,Chefe de Cozinha,2016-06-08,True,15344.17,Divorciado,4,643
+Vicente Mendes,1986-10-09,Feminino,Analista Financeiro,2020-07-20,True,14109.98,Viúvo,0,457
+Emilly da Cruz,1965-11-05,Masculino,Desenvolvedor Back-End,2022-04-06,True,9224.26,Casado,4,31
+Esther Fernandes,1965-01-04,Feminino,Engenheiro Civil,2022-07-17,False,0.0,Viúvo,4,639
+Yuri Pires,1977-07-19,Feminino,Farmacêutico,2019-11-26,True,4314.5,Viúvo,1,730
+Maria Cavalcanti,1970-12-02,Masculino,Analista de BI,2020-04-17,False,0.0,Viúvo,4,807
+Lucca Barros,2002-08-29,Feminino,Farmacêutico,2021-12-02,True,9696.68,Divorciado,2,171
+Alícia Ramos,1991-08-29,Masculino,Desenvolvedor Back-End,2019-09-14,False,0.0,Solteiro,4,29
+Dra. Stella Costa,2007-07-03,Feminino,Eletricista,2024-09-26,False,0.0,Viúvo,0,741
+Enzo Pereira,1997-08-04,Feminino,Arquiteto,2022-01-02,True,10306.03,Viúvo,2,688
+Luiz Henrique Nogueira,2007-06-02,Feminino,Operador de Máquinas,2021-08-14,True,13315.26,Casado,4,886
+Yuri Campos,1983-01-03,Feminino,Arquiteto de Dados,2020-06-26,True,18766.7,Casado,4,911
+Clarice da Conceição,1961-06-08,Feminino,Engenheiro de Dados,2021-08-15,False,0.0,Solteiro,1,671
+Ana Beatriz Barbosa,1989-06-12,Masculino,Assistente de RH,2017-05-09,True,3805.77,Divorciado,1,386
+Isabel Cardoso,1963-12-17,Feminino,Advogado,2019-08-15,True,10132.91,Solteiro,4,11
+Enrico Silveira,1979-02-08,Feminino,Mecânico,2021-09-01,False,0.0,Viúvo,1,670
+Maria Luiza Oliveira,2003-12-09,Masculino,Assistente Administrativo,2025-03-23,False,0.0,Divorciado,2,155
+Vitor Gabriel Mendes,1976-12-26,Feminino,Psicólogo,2024-02-15,False,0.0,Casado,0,910
+Noah Ferreira,2004-06-06,Masculino,Arquiteto,2019-08-19,False,0.0,Viúvo,0,496
+Fernanda Monteiro,1975-01-26,Masculino,Desenvolvedor Back-End,2018-04-05,False,0.0,Casado,1,424
+Natália Lima,1965-05-15,Feminino,Desenvolvedor Front-End,2019-05-23,False,0.0,Viúvo,2,675
+Sophie Ribeiro,1976-01-07,Masculino,Médico Pediatra,2024-02-24,False,0.0,Casado,4,870
+Maria Sophia Moura,1985-04-07,Masculino,Publicitário,2025-07-04,False,0.0,Divorciado,2,195
+Letícia Pires,1968-12-08,Feminino,Analista de Marketing,2017-11-07,False,0.0,Casado,1,948
+Maria Eduarda Melo,1977-12-16,Feminino,Cientista de Dados,2017-02-20,True,12095.44,Viúvo,2,995
+João Vitor Mendes,1992-11-18,Masculino,Arquiteto,2017-07-24,False,0.0,Solteiro,1,693
+Maria Fernanda Vieira,1960-01-15,Masculino,Arquiteto de Dados,2020-10-14,False,0.0,Divorciado,0,993
+Emilly Costela,1985-07-20,Feminino,Operador de Máquinas,2016-09-06,False,0.0,Solteiro,0,418
+Esther Fogaça,2005-07-04,Feminino,Operador de Máquinas,2022-09-07,True,16860.94,Solteiro,4,183
+Bárbara Nascimento,1966-03-13,Masculino,Analista de Segurança da Informação,2015-10-14,True,14631.31,Viúvo,4,948
+Dra. Alícia da Cunha,1998-09-03,Masculino,Advogado,2025-06-14,False,0.0,Viúvo,3,477
+Eduarda Pires,1997-09-29,Feminino,Mecânico,2020-02-13,False,0.0,Viúvo,0,192
+Igor da Cruz,1979-03-27,Feminino,Professor Universitário,2016-07-15,False,0.0,Divorciado,0,793
+Guilherme Souza,1994-05-02,Feminino,Cozinheiro,2024-05-13,False,0.0,Divorciado,1,898
+João Almeida,1975-11-08,Masculino,Assistente Administrativo,2022-03-08,True,12229.36,Viúvo,3,699
+Davi Lucca Ribeiro,1966-09-04,Masculino,Gerente de Projetos,2021-07-21,False,0.0,Solteiro,2,171
+Melissa Costa,1975-08-18,Feminino,Eletricista,2018-05-18,True,8365.42,Viúvo,4,953
+Dra. Sophia Caldeira,1988-11-15,Masculino,Advogado,2023-12-16,True,10725.73,Viúvo,1,818
+Ian Viana,1985-08-15,Masculino,Farmacêutico,2017-12-06,False,0.0,Solteiro,0,147
+Miguel Fernandes,2004-05-01,Feminino,Técnico de Enfermagem,2017-01-27,False,0.0,Casado,1,337
+Juliana Ribeiro,1975-01-23,Feminino,Arquiteto de Dados,2025-01-27,True,13278.05,Solteiro,0,405
+Lucas Gabriel Castro,1971-10-05,Masculino,Agente de Suporte,2020-08-17,False,0.0,Viúvo,1,745
+Antônio Carvalho,1968-12-31,Feminino,Psicólogo,2016-02-03,True,15201.68,Divorciado,2,870
+Sabrina Ramos,1987-09-09,Masculino,Professor Universitário,2017-09-11,True,11682.79,Solteiro,1,584
+Daniela da Costa,1962-01-04,Masculino,Analista Financeiro,2016-11-15,False,0.0,Casado,4,127
+Kevin Alves,1991-02-25,Feminino,Eletricista,2023-01-20,False,0.0,Solteiro,3,303
+Lorenzo Pires,1966-05-31,Masculino,Enfermeiro,2019-08-05,True,2856.71,Viúvo,4,983
+Gabrielly Souza,1965-11-21,Masculino,Professor Universitário,2021-10-31,True,13578.72,Divorciado,2,510
+Lucas Campos,1997-01-05,Masculino,Analista Financeiro,2017-12-18,True,18365.81,Divorciado,0,78
+Caroline Campos,1980-11-07,Feminino,Publicitário,2024-12-07,False,0.0,Solteiro,4,326
+Lavínia Rocha,1998-01-23,Masculino,Desenvolvedor Back-End,2024-02-05,True,11716.83,Solteiro,3,477
+Dr. Luiz Otávio Teixeira,1995-08-08,Masculino,Chefe de Cozinha,2024-03-05,False,0.0,Casado,2,113
+Isabelly Silva,2000-01-18,Feminino,Fotógrafo,2023-05-08,True,10305.01,Divorciado,3,436
+Stella Fogaça,1998-04-18,Masculino,Assistente de RH,2018-08-28,True,11771.18,Divorciado,0,727
+Clara da Conceição,1986-06-02,Masculino,Consultor de Vendas,2019-02-05,True,11275.06,Viúvo,0,736
+Bryan da Luz,2007-02-06,Masculino,Publicitário,2018-07-09,False,0.0,Casado,3,0
+Caroline Pires,1977-01-09,Feminino,Cozinheiro,2019-03-15,False,0.0,Divorciado,4,273
+Helena Ribeiro,2001-01-19,Masculino,Agente de Suporte,2024-06-30,True,17102.88,Solteiro,4,529
+Lorenzo Carvalho,1998-04-25,Masculino,Eletricista,2021-03-03,False,0.0,Viúvo,1,499
+Srta. Ana Carolina da Rosa,1992-07-04,Masculino,Engenheiro de Dados,2016-11-17,False,0.0,Divorciado,4,135
+Vitória Rodrigues,1974-07-02,Masculino,Analista de BI,2016-09-10,False,0.0,Casado,0,938
+Luiza Nogueira,1994-12-05,Feminino,Técnico de Informática,2022-07-17,False,0.0,Solteiro,1,403
+Nicolas Souza,2005-12-08,Masculino,Psicólogo,2016-07-19,True,9767.06,Casado,4,396
+Isabella Rezende,1991-03-08,Feminino,Analista de Marketing,2020-12-19,False,0.0,Divorciado,2,156
+Luigi Nascimento,1968-08-24,Feminino,Desenvolvedor de Software,2018-02-17,False,0.0,Casado,2,491
+Pedro Lucas Ferreira,1964-05-19,Masculino,Professor,2022-07-07,True,9138.95,Viúvo,4,80
+Daniela Moraes,1996-12-14,Feminino,Assistente de RH,2019-04-27,True,12009.73,Viúvo,3,827
+Sra. Mirella Teixeira,1986-03-18,Feminino,Cientista de Dados,2019-06-13,False,0.0,Solteiro,0,801
+Lucas Gabriel da Rocha,1959-12-20,Feminino,Consultor de Vendas,2019-03-13,True,13080.72,Casado,2,711
+Guilherme Fogaça,1988-12-21,Masculino,Engenheiro de Dados,2023-07-17,True,19947.49,Casado,2,1
+Nicolas Porto,2004-01-13,Feminino,Enfermeiro,2015-10-27,True,3309.95,Divorciado,0,843
+Benjamin Viana,1966-07-11,Masculino,Enfermeiro,2017-07-14,True,5734.85,Solteiro,2,384
+Dr. João Felipe Martins,1969-08-14,Feminino,Analista de Segurança da Informação,2025-07-18,True,17347.82,Solteiro,3,831
+Luiz Henrique Aragão,1964-11-07,Feminino,Analista de Segurança da Informação,2016-07-03,True,6621.59,Casado,2,946
+Benício Silveira,1991-12-15,Feminino,Engenheiro de Dados,2018-02-06,False,0.0,Divorciado,4,27
+André da Cunha,1999-10-02,Feminino,Analista de Segurança da Informação,2024-02-24,True,8036.84,Viúvo,1,562
+Paulo Cardoso,1977-11-28,Masculino,Mecânico,2023-08-15,False,0.0,Viúvo,3,361
+Melissa Alves,1976-06-10,Masculino,Desenvolvedor Front-End,2018-12-28,False,0.0,Divorciado,3,35
+Enzo da Costa,1961-04-19,Masculino,Publicitário,2024-03-15,False,0.0,Casado,2,441
+Emilly Barbosa,1965-08-14,Masculino,Engenheiro de Dados,2023-02-25,False,0.0,Casado,4,912
+Natália Ribeiro,1963-05-05,Masculino,Arquiteto de Dados,2023-09-07,True,10334.61,Casado,1,620
+Maria Sophia Moura,1993-04-02,Masculino,Arquiteto de Dados,2025-07-04,False,0.0,Casado,0,907
+Sarah Araújo,2006-11-27,Masculino,Consultor de Vendas,2022-07-01,True,1885.93,Solteiro,1,384
+Emanuel Gonçalves,1977-02-10,Masculino,Arquiteto de Dados,2022-05-30,True,17502.66,Solteiro,0,970
+Laura das Neves,1980-09-21,Masculino,Desenvolvedor de Software,2020-07-17,False,0.0,Viúvo,2,670
+Vinicius Mendes,1993-01-23,Feminino,Enfermeiro,2021-02-03,True,19256.69,Casado,4,916
+Sr. Antônio Ferreira,1989-03-08,Masculino,Desenvolvedor Back-End,2022-10-25,True,2371.14,Casado,3,556
+Sra. Eduarda Cavalcanti,1989-02-07,Feminino,Assistente Administrativo,2019-02-14,False,0.0,Divorciado,3,309
+Leandro Pires,1976-09-22,Masculino,Professor Universitário,2023-06-11,False,0.0,Divorciado,0,993
+Davi Lucca Pinto,1998-07-10,Feminino,Chefe de Cozinha,2025-07-02,True,18964.91,Solteiro,3,398
+Maria Julia Teixeira,1993-01-28,Masculino,Engenheiro Civil,2016-04-20,True,10120.59,Divorciado,2,787
+Brenda Cavalcanti,1960-01-21,Feminino,Cozinheiro,2022-09-07,True,8145.7,Viúvo,4,492
+Diogo Aragão,1967-11-11,Feminino,Farmacêutico,2023-07-09,False,0.0,Solteiro,4,180
+Isadora da Conceição,1964-10-26,Masculino,Eletricista,2025-05-03,True,10768.3,Casado,4,209
+Bernardo Castro,1980-02-26,Feminino,Analista de Marketing,2020-08-15,True,14418.38,Viúvo,2,632
+Levi Rocha,1972-04-18,Feminino,Gerente de Projetos,2021-08-01,False,0.0,Viúvo,0,180
+Natália Vieira,2000-03-07,Masculino,Engenheiro de Software,2020-12-23,True,5893.75,Casado,2,379
+Sr. Enrico Duarte,1980-07-28,Masculino,Técnico de Enfermagem,2018-07-01,False,0.0,Solteiro,2,214
+Danilo Peixoto,1978-02-24,Feminino,Técnico de Enfermagem,2020-08-13,True,17073.62,Divorciado,3,114
+Stephany da Rosa,1962-11-18,Feminino,Enfermeiro,2023-07-29,False,0.0,Viúvo,4,3
+Sr. Bruno Freitas,1964-10-13,Feminino,Analista Financeiro,2021-04-07,True,9173.11,Divorciado,4,782
+Giovanna da Rosa,1994-04-04,Feminino,Recepcionista,2021-05-21,False,0.0,Solteiro,1,511
+Sr. Noah Sales,1997-12-07,Masculino,Analista de Segurança da Informação,2022-03-28,False,0.0,Viúvo,0,32
+João Guilherme Correia,1975-02-18,Masculino,Motorista,2025-04-23,True,14094.6,Viúvo,3,863
+Gabriel Fogaça,1997-05-02,Masculino,Analista de Marketing,2017-05-03,True,13621.72,Viúvo,1,527
+Dra. Rafaela Barbosa,1998-05-12,Feminino,Vendedor,2024-03-27,False,0.0,Solteiro,3,537
+Dr. Diego Gonçalves,1978-10-26,Feminino,Arquiteto de Dados,2024-03-17,False,0.0,Solteiro,4,604
+Juliana Pires,1974-03-30,Masculino,Professor Universitário,2025-08-26,False,0.0,Divorciado,4,552
+Srta. Ana Laura da Paz,1997-01-18,Feminino,Enfermeiro,2017-10-13,True,10178.29,Casado,1,747
+Luiz Fernando Costa,1964-04-08,Feminino,Cientista de Dados,2021-11-17,True,10212.26,Casado,3,918
+Benjamin Ferreira,1982-03-12,Masculino,Desenvolvedor Back-End,2017-03-21,False,0.0,Viúvo,3,694
+Theo Rocha,1963-07-30,Feminino,Arquiteto de Dados,2021-04-01,False,0.0,Solteiro,1,198
+Heitor da Costa,1969-09-11,Feminino,Professor Universitário,2020-08-15,False,0.0,Divorciado,1,989
+Isabella Viana,1964-07-08,Masculino,Mecânico,2020-08-20,True,10859.48,Casado,2,382
+Nina Mendes,1986-05-27,Masculino,Cozinheiro,2019-01-20,True,8858.76,Viúvo,0,74
+Ana Carolina Pereira,1982-01-27,Feminino,Técnico de Informática,2021-11-15,False,0.0,Casado,4,579
+Maitê Vieira,1996-03-21,Masculino,Designer Gráfico,2018-02-21,True,9611.79,Solteiro,2,429
+Rafael Oliveira,1966-06-07,Masculino,Agente de Suporte,2021-11-24,False,0.0,Casado,4,450
+Henrique Azevedo,1992-07-05,Feminino,Engenheiro de Software,2016-11-07,True,5527.49,Viúvo,1,379
+Marcos Vinicius Ribeiro,2002-01-16,Feminino,Analista de Marketing,2016-05-21,True,16093.75,Solteiro,4,301
