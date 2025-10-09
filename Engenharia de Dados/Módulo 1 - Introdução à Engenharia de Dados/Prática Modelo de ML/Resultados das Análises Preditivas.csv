@@ -1,0 +1,1001 @@
+,Nome,Sexo,Profissão,Salário atual,Estado Civil,Predição KNN,Predição Árvore
+0,Davi Luiz Azevedo,Feminino,Analista de BI,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+1,Alice Vieira,Masculino,Desenvolvedor de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+2,Enzo Gabriel Rezende,Masculino,Arquiteto,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+3,Mariane da Cunha,Masculino,Advogado,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+4,Srta. Sofia Pires,Feminino,Desenvolvedor Back-End,13060.43,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+5,Gustavo da Luz,Masculino,Engenheiro de Dados,3042.5,Casado,Provável Pagador Regular,Provável Pagador Regular
+6,Dr. João Freitas,Masculino,Enfermeiro,1813.24,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+7,Pietra das Neves,Feminino,Professor,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+8,Bruna Pereira,Masculino,Publicitário,12773.9,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+9,Maria Cecília Costa,Masculino,Mecânico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+10,Emanuel Monteiro,Feminino,Publicitário,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+11,Daniela Cardoso,Masculino,Arquiteto,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+12,Luiz Fernando Vieira,Feminino,Professor,3325.11,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+13,Bernardo Ferreira,Masculino,Eletricista,5981.77,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+14,Dr. Guilherme Carvalho,Feminino,Enfermeiro,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+15,Stephany Ferreira,Feminino,Gerente de Projetos,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+16,Beatriz Almeida,Feminino,Psicólogo,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+17,Cauã Ferreira,Feminino,Desenvolvedor Back-End,13573.04,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+18,Manuela Rodrigues,Feminino,Consultor de Vendas,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+19,João Guilherme Gomes,Masculino,Operador de Máquinas,6292.37,Casado,Provável Mal Pagador,Provável Pagador Regular
+20,Isaac Araújo,Masculino,Analista de Segurança da Informação,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+21,Emanuel Dias,Masculino,Engenheiro Civil,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+22,Ian Cardoso,Masculino,Analista de Sistemas,13049.72,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+23,Luiz Miguel Nunes,Feminino,Eletricista,13549.92,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+24,Ana Vitória da Mota,Feminino,Gerente de Projetos,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+25,Milena Peixoto,Masculino,Chefe de Cozinha,2863.04,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+26,Nicole das Neves,Feminino,Engenheiro de Software,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+27,Levi Freitas,Masculino,Eletricista,12676.76,Casado,Provável Mal Pagador,Provável Pagador Regular
+28,Yasmin Peixoto,Masculino,Analista de Sistemas,7859.86,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+29,Sr. Davi Luiz Freitas,Feminino,Gerente de Projetos,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+30,Maria Cecília da Cunha,Feminino,Engenheiro Civil,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+31,Helena Cavalcanti,Masculino,Mecânico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+32,Calebe Nogueira,Feminino,Engenheiro de Software,13457.27,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+33,Maria Julia da Cunha,Masculino,Técnico de Informática,7690.25,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+34,Eduarda Cardoso,Feminino,Assistente Administrativo,12602.48,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+35,Gustavo Henrique da Mota,Feminino,Analista de Marketing,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+36,Sofia Souza,Masculino,Engenheiro de Dados,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+37,Benício Costa,Masculino,Psicólogo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+38,Emilly Ferreira,Masculino,Professor,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+39,Vinicius Pinto,Masculino,Contador,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+40,Antônio Peixoto,Masculino,Enfermeiro,8830.31,Casado,Provável Mal Pagador,Provável Pagador Regular
+41,Augusto Cardoso,Feminino,Engenheiro de Software,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+42,Leonardo da Mata,Masculino,Professor,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+43,Benjamin Cardoso,Masculino,Cozinheiro,11932.64,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+44,Cauê da Rocha,Masculino,Analista de Segurança da Informação,9894.63,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+45,Erick Castro,Feminino,Cozinheiro,15005.84,Casado,Provável Mal Pagador,Provável Pagador Regular
+46,André Nunes,Masculino,Designer Gráfico,4540.75,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+47,Pedro Henrique Gomes,Feminino,Mecânico,1853.7,Casado,Provável Mal Pagador,Provável Pagador Regular
+48,Dr. João Gabriel Gomes,Feminino,Analista de Sistemas,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+49,Heitor Fogaça,Feminino,Contador,15593.02,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+50,Breno Teixeira,Feminino,Operador de Máquinas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+51,Yasmin das Neves,Feminino,Assistente Administrativo,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+52,Bryan Cardoso,Feminino,Analista de Sistemas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+53,Bruno Ramos,Masculino,Advogado,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+54,Luna da Mota,Masculino,Analista Financeiro,6018.61,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+55,Miguel Gomes,Masculino,Desenvolvedor Front-End,7016.42,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+56,Diogo Melo,Feminino,Arquiteto de Dados,6733.66,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+57,Luigi Dias,Masculino,Vendedor,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+58,Ana Beatriz Pereira,Masculino,Consultor de Vendas,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+59,João Felipe Aragão,Masculino,Engenheiro de Dados,18090.04,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+60,Kamilly das Neves,Feminino,Analista Financeiro,10324.13,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+61,João Gabriel Peixoto,Feminino,Operador de Máquinas,2413.16,Casado,Provável Pagador Regular,Provável Pagador Regular
+62,Carlos Eduardo Azevedo,Feminino,Analista Financeiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+63,Isabelly Costa,Masculino,Engenheiro Civil,2234.97,Casado,Provável Pagador Regular,Provável Pagador Regular
+64,Stella da Cruz,Feminino,Engenheiro de Software,11704.52,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+65,Alexia Campos,Feminino,Designer Gráfico,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+66,Sr. Thales Novaes,Masculino,Arquiteto de Dados,12621.57,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+67,Dr. Pedro Miguel da Paz,Feminino,Chefe de Cozinha,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+68,Dra. Juliana Pereira,Masculino,Contador,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+69,João Pedro Silveira,Feminino,Técnico de Enfermagem,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+70,Alexandre Souza,Feminino,Gerente de Projetos,15251.46,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+71,Sr. Bryan Jesus,Masculino,Professor,10413.38,Casado,Provável Pagador Regular,Provável Pagador Regular
+72,Sra. Alexia Vieira,Masculino,Analista de Marketing,3136.72,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+73,Mirella Martins,Feminino,Cozinheiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+74,Raul Moreira,Feminino,Gerente de Projetos,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+75,Sarah Oliveira,Masculino,Operador de Máquinas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+76,Sra. Júlia Aragão,Masculino,Gerente de Projetos,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+77,Maria Luiza Viana,Feminino,Cientista de Dados,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+78,Vitor Gabriel Aragão,Masculino,Chefe de Cozinha,17603.46,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+79,Felipe Ferreira,Masculino,Desenvolvedor de Software,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+80,Lívia da Cruz,Masculino,Engenheiro de Software,5603.06,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+81,Luiza Azevedo,Feminino,Gerente de Projetos,17138.82,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+82,Dra. Natália Costa,Masculino,Desenvolvedor Front-End,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+83,Ana Júlia Dias,Feminino,Analista de Sistemas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+84,Alícia Duarte,Masculino,Chefe de Cozinha,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+85,Benício Nogueira,Feminino,Agente de Suporte,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+86,Pedro Miguel da Rocha,Masculino,Desenvolvedor de Software,19598.86,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+87,Gabriel Moura,Masculino,Arquiteto,4272.01,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+88,Raquel da Paz,Masculino,Motorista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+89,Laís Mendes,Masculino,Analista de Sistemas,4415.82,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+90,Enzo Gabriel Cavalcanti,Feminino,Contador,5058.61,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+91,Vitor Hugo Oliveira,Feminino,Mecânico,9469.35,Casado,Provável Mal Pagador,Provável Pagador Regular
+92,Lorena Vieira,Masculino,Professor Universitário,13762.32,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+93,Dr. Thales Melo,Masculino,Cientista de Dados,13614.29,Casado,Provável Mal Pagador,Provável Pagador Regular
+94,Henrique Correia,Feminino,Chefe de Cozinha,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+95,Sra. Letícia Araújo,Feminino,Vendedor,7428.65,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+96,Srta. Emanuelly Pinto,Masculino,Analista de Segurança da Informação,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+97,Maria Luiza da Cunha,Masculino,Psicólogo,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+98,Isaac Cavalcanti,Feminino,Fotógrafo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+99,Bernardo Sales,Masculino,Recepcionista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+100,Murilo Monteiro,Feminino,Arquiteto de Dados,16614.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+101,Heloísa da Conceição,Masculino,Assistente Administrativo,1524.91,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+102,Kevin Moreira,Feminino,Assistente Administrativo,11149.16,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+103,Emanuel da Cunha,Masculino,Gerente de Projetos,11470.26,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+104,Dr. João Vitor Fogaça,Masculino,Publicitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+105,Pedro Miguel Souza,Masculino,Contador,8441.47,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+106,Marcela Rocha,Feminino,Desenvolvedor de Software,5777.33,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+107,Ana Beatriz Vieira,Masculino,Técnico de Enfermagem,1850.63,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+108,Gustavo Henrique Ferreira,Feminino,Médico Pediatra,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+109,Calebe Pires,Feminino,Técnico de Enfermagem,8121.62,Casado,Provável Pagador Regular,Provável Pagador Regular
+110,Alana Silveira,Masculino,Motorista,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+111,Laura Fogaça,Feminino,Analista de Marketing,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+112,Ana Vitória da Paz,Masculino,Chefe de Cozinha,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+113,Natália Cavalcanti,Masculino,Agente de Suporte,4934.09,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+114,Theo da Mata,Masculino,Engenheiro de Software,13507.43,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+115,Dr. Marcelo Dias,Feminino,Enfermeiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+116,Esther Gomes,Masculino,Engenheiro de Dados,2583.61,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+117,Rafaela Correia,Feminino,Consultor de Vendas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+118,Davi Luiz Azevedo,Feminino,Chefe de Cozinha,7664.45,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+119,Erick Pereira,Feminino,Vendedor,3976.08,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+120,Eloah Fogaça,Feminino,Advogado,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+121,Pedro Lucas Melo,Feminino,Motorista,4767.97,Casado,Provável Mal Pagador,Provável Pagador Regular
+122,Alícia Oliveira,Masculino,Analista de BI,6305.43,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+123,Sra. Valentina Campos,Masculino,Técnico de Informática,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+124,João Gabriel Novaes,Masculino,Arquiteto de Dados,18478.9,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+125,Gabriel Novaes,Masculino,Analista Financeiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+126,Davi Lucca Fogaça,Masculino,Assistente de RH,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+127,Sophia Pinto,Feminino,Professor,4106.42,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+128,Diego Pires,Masculino,Analista de Segurança da Informação,6034.48,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+129,Diogo Porto,Masculino,Cozinheiro,8584.34,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+130,João Gabriel Pires,Feminino,Assistente Administrativo,9647.53,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+131,Bruno Ribeiro,Feminino,Assistente de RH,19497.34,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+132,João Vitor Pinto,Feminino,Fotógrafo,19154.2,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+133,João Lucas Alves,Feminino,Publicitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+134,Sophie Nascimento,Masculino,Arquiteto,17806.04,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+135,Emanuelly Fernandes,Masculino,Farmacêutico,12014.01,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+136,Bruno Jesus,Feminino,Cientista de Dados,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+137,João Miguel Moura,Feminino,Engenheiro de Dados,5898.17,Casado,Provável Mal Pagador,Provável Pagador Regular
+138,Heloísa Barros,Masculino,Professor,9667.54,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+139,Eloah Ribeiro,Feminino,Analista Financeiro,8765.39,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+140,Luiz Gustavo Nascimento,Feminino,Engenheiro de Dados,19641.04,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+141,Srta. Ana Julia Fernandes,Feminino,Recepcionista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+142,Natália Novaes,Masculino,Desenvolvedor Front-End,13390.21,Casado,Provável Mal Pagador,Provável Pagador Regular
+143,Leandro Martins,Feminino,Analista de Segurança da Informação,8628.56,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+144,Rodrigo Carvalho,Masculino,Analista de BI,7775.81,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+145,Dra. Eloah Moreira,Masculino,Professor,5595.57,Casado,Provável Mal Pagador,Provável Pagador Regular
+146,Davi Lima,Feminino,Psicólogo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+147,Rafaela Correia,Feminino,Fotógrafo,8687.92,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+148,Ana Júlia Farias,Masculino,Motorista,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+149,Caroline Cardoso,Feminino,Contador,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+150,Joaquim Lima,Feminino,Publicitário,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+151,Sarah Santos,Feminino,Consultor de Vendas,16516.52,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+152,Matheus Pires,Masculino,Analista de Marketing,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+153,Bárbara da Mata,Masculino,Farmacêutico,19656.56,Casado,Provável Mal Pagador,Provável Pagador Regular
+154,Agatha Lima,Masculino,Engenheiro de Software,3756.53,Casado,Provável Mal Pagador,Provável Pagador Regular
+155,Srta. Stephany Moreira,Masculino,Cozinheiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+156,Mirella Freitas,Feminino,Médico Pediatra,6855.03,Casado,Provável Mal Pagador,Provável Pagador Regular
+157,Lucca da Costa,Masculino,Engenheiro de Software,15653.85,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+158,João Gabriel Rezende,Masculino,Arquiteto,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+159,Alice Campos,Feminino,Desenvolvedor de Software,11931.2,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+160,Stella Rocha,Masculino,Publicitário,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+161,Alexandre da Conceição,Feminino,Farmacêutico,15334.93,Casado,Provável Pagador Regular,Provável Pagador Regular
+162,Sr. Fernando da Rocha,Feminino,Advogado,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+163,Sr. Marcelo Correia,Feminino,Recepcionista,8105.27,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+164,Sr. André Pereira,Feminino,Analista de Sistemas,10863.22,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+165,Catarina da Rocha,Feminino,Desenvolvedor Back-End,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+166,Erick Vieira,Feminino,Gerente de Projetos,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+167,Emanuella Farias,Feminino,Chefe de Cozinha,4323.62,Casado,Provável Mal Pagador,Provável Pagador Regular
+168,Sra. Maitê Costa,Masculino,Desenvolvedor de Software,6078.83,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+169,Felipe Ramos,Feminino,Recepcionista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+170,Gustavo Henrique Santos,Masculino,Analista de Marketing,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+171,Luiz Otávio Azevedo,Masculino,Arquiteto de Dados,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+172,Dr. Miguel da Mota,Masculino,Analista de Segurança da Informação,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+173,João Gabriel Novaes,Masculino,Gerente de Projetos,9047.02,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+174,Dr. João Vitor Nunes,Feminino,Analista de Segurança da Informação,1708.6,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+175,Sr. Enzo Martins,Feminino,Arquiteto,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+176,Sr. Levi Fernandes,Feminino,Publicitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+177,Dr. Luigi Martins,Masculino,Gerente de Projetos,7490.44,Casado,Provável Mal Pagador,Provável Pagador Regular
+178,Antônio Aragão,Masculino,Desenvolvedor Back-End,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+179,Benjamin da Paz,Masculino,Engenheiro de Dados,8116.57,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+180,Dr. Vitor da Costa,Feminino,Farmacêutico,19701.21,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+181,Vitor Hugo Viana,Feminino,Professor,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+182,Kamilly das Neves,Masculino,Publicitário,16910.37,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+183,Milena Barbosa,Masculino,Analista Financeiro,4439.25,Casado,Provável Mal Pagador,Provável Pagador Regular
+184,Luigi Moreira,Feminino,Técnico de Enfermagem,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+185,Nicolas Silveira,Masculino,Desenvolvedor Front-End,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+186,Levi Moura,Masculino,Advogado,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+187,Lara Monteiro,Masculino,Engenheiro de Dados,1888.79,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+188,Luiza Ferreira,Masculino,Médico Pediatra,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+189,Luiz Miguel Cunha,Feminino,Técnico de Informática,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+190,Dr. Benjamin Correia,Masculino,Desenvolvedor de Software,16280.86,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+191,Letícia Oliveira,Feminino,Mecânico,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+192,Dra. Bárbara Teixeira,Masculino,Motorista,17856.47,Casado,Provável Pagador Regular,Provável Pagador Regular
+193,Nicolas da Rocha,Feminino,Técnico de Enfermagem,17631.28,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+194,Gabrielly Araújo,Feminino,Professor Universitário,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+195,Júlia Caldeira,Feminino,Advogado,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+196,Luiz Gustavo Porto,Masculino,Desenvolvedor Back-End,2176.21,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+197,João Pedro Cunha,Masculino,Enfermeiro,2691.08,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+198,Eloah Moraes,Masculino,Agente de Suporte,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+199,Luiza Moreira,Masculino,Arquiteto de Dados,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+200,Diego Santos,Feminino,Farmacêutico,19842.53,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+201,Luiz Felipe Azevedo,Feminino,Motorista,2944.88,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+202,Maria Julia Teixeira,Masculino,Desenvolvedor Back-End,1560.11,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+203,Larissa Monteiro,Masculino,Motorista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+204,Isadora Jesus,Masculino,Professor,18511.28,Casado,Provável Mal Pagador,Provável Pagador Regular
+205,Emilly Fernandes,Masculino,Operador de Máquinas,9971.34,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+206,Joaquim Freitas,Masculino,Desenvolvedor Back-End,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+207,Gabriel Silveira,Masculino,Arquiteto,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+208,Enrico Cardoso,Feminino,Analista de Segurança da Informação,4563.36,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+209,Heitor Ribeiro,Masculino,Advogado,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+210,Nicolas da Luz,Feminino,Cientista de Dados,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+211,Ana Viana,Masculino,Analista de Sistemas,10864.17,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+212,Rodrigo da Rosa,Masculino,Analista Financeiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+213,Otávio da Costa,Masculino,Farmacêutico,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+214,Sr. Nicolas Oliveira,Masculino,Vendedor,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+215,Vitor Hugo das Neves,Masculino,Publicitário,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+216,Srta. Nicole Ribeiro,Feminino,Analista de Segurança da Informação,14793.36,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+217,Maria Julia Santos,Feminino,Enfermeiro,5627.3,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+218,Sabrina da Rocha,Feminino,Professor,13766.7,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+219,Dr. Bruno Silveira,Feminino,Contador,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+220,Dra. Larissa Aragão,Masculino,Advogado,3282.67,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+221,Davi Lucca Cunha,Masculino,Designer Gráfico,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+222,Ana Carolina Jesus,Feminino,Arquiteto,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+223,Kamilly Azevedo,Masculino,Cozinheiro,17241.76,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+224,Nicole Jesus,Feminino,Gerente de Projetos,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+225,Thiago Dias,Masculino,Cientista de Dados,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+226,Srta. Sophia Lima,Feminino,Recepcionista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+227,Daniel Almeida,Masculino,Analista de Sistemas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+228,Sr. Levi Cunha,Masculino,Mecânico,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+229,Bruno Ribeiro,Feminino,Técnico de Enfermagem,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+230,Breno Cardoso,Masculino,Eletricista,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+231,Theo Peixoto,Feminino,Mecânico,4241.23,Casado,Provável Mal Pagador,Provável Pagador Regular
+232,Sra. Laura Cunha,Feminino,Assistente de RH,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+233,Luiz Gustavo Fernandes,Feminino,Farmacêutico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+234,Juliana Alves,Feminino,Consultor de Vendas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+235,Nicolas da Luz,Feminino,Desenvolvedor Back-End,7792.52,Casado,Provável Mal Pagador,Provável Pagador Regular
+236,Enzo Melo,Feminino,Enfermeiro,16309.17,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+237,Bárbara Nascimento,Feminino,Desenvolvedor de Software,7817.71,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+238,Ana Sophia Aragão,Feminino,Motorista,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+239,Emilly Moreira,Masculino,Desenvolvedor Back-End,3382.07,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+240,Rafael Cunha,Masculino,Desenvolvedor Back-End,4161.39,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+241,Daniela Alves,Feminino,Desenvolvedor Front-End,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+242,Lucca Pinto,Masculino,Eletricista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+243,Srta. Maria Vieira,Feminino,Desenvolvedor de Software,14561.54,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+244,Stella da Conceição,Feminino,Médico Pediatra,19806.62,Casado,Provável Mal Pagador,Provável Pagador Regular
+245,Diogo Novaes,Masculino,Psicólogo,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+246,Lucca Moura,Masculino,Técnico de Enfermagem,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+247,Ana Júlia Costa,Masculino,Agente de Suporte,2260.99,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+248,Dr. Luiz Otávio da Paz,Masculino,Advogado,11043.2,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+249,Gustavo da Conceição,Masculino,Engenheiro Civil,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+250,Emilly Santos,Feminino,Designer Gráfico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+251,Sra. Camila Sales,Masculino,Analista de BI,6259.04,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+252,Eduarda Martins,Feminino,Operador de Máquinas,7651.3,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+253,Carlos Eduardo Pinto,Feminino,Analista de Segurança da Informação,13881.32,Casado,Provável Pagador Regular,Provável Pagador Regular
+254,Gabriela Duarte,Feminino,Analista Financeiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+255,Eduarda Nascimento,Feminino,Analista de Segurança da Informação,18371.53,Casado,Provável Pagador Regular,Provável Pagador Regular
+256,Danilo Melo,Feminino,Professor Universitário,10053.78,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+257,Davi Lucca Ribeiro,Masculino,Gerente de Projetos,10607.13,Casado,Provável Pagador Regular,Provável Pagador Regular
+258,Marcela Moreira,Masculino,Fotógrafo,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+259,Lucca Martins,Feminino,Arquiteto,5950.94,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+260,Rafael Lima,Feminino,Arquiteto,10378.03,Casado,Provável Mal Pagador,Provável Pagador Regular
+261,Maria Julia da Rosa,Masculino,Enfermeiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+262,Manuela Barbosa,Feminino,Arquiteto de Dados,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+263,Alícia da Luz,Feminino,Consultor de Vendas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+264,Evelyn Lopes,Masculino,Publicitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+265,João Miguel Ramos,Feminino,Analista Financeiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+266,Ana Carolina Alves,Feminino,Assistente Administrativo,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+267,Dra. Rebeca Lima,Feminino,Analista de Sistemas,19799.23,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+268,Sr. Enrico Gomes,Feminino,Advogado,19725.33,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+269,Cecília da Luz,Feminino,Assistente Administrativo,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+270,Dra. Bruna Melo,Feminino,Recepcionista,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+271,Pedro Miguel Duarte,Masculino,Advogado,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+272,Sr. Lucca da Mata,Feminino,Cientista de Dados,13780.11,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+273,Juliana Farias,Masculino,Vendedor,9844.69,Casado,Provável Pagador Regular,Provável Pagador Regular
+274,Erick da Costa,Masculino,Chefe de Cozinha,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+275,Erick Silva,Feminino,Operador de Máquinas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+276,Maria Sophia da Paz,Feminino,Desenvolvedor de Software,14797.32,Casado,Provável Mal Pagador,Provável Pagador Regular
+277,Augusto Azevedo,Masculino,Desenvolvedor de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+278,Amanda Lopes,Feminino,Analista de Sistemas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+279,João Miguel Fogaça,Feminino,Analista Financeiro,14122.16,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+280,Yago Rezende,Masculino,Desenvolvedor Front-End,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+281,Danilo Nogueira,Feminino,Desenvolvedor Back-End,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+282,Emanuelly Azevedo,Masculino,Motorista,15551.23,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+283,Gabrielly Araújo,Feminino,Analista Financeiro,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+284,Rafael Viana,Masculino,Analista de Sistemas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+285,Júlia Novaes,Masculino,Assistente de RH,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+286,Dra. Mariane Oliveira,Feminino,Analista de Sistemas,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+287,Benjamin Dias,Masculino,Gerente de Projetos,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+288,Caio Santos,Feminino,Gerente de Projetos,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+289,Joaquim Barros,Masculino,Arquiteto,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+290,Maria Vitória Fernandes,Masculino,Analista de Segurança da Informação,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+291,Sr. Rafael Gomes,Feminino,Eletricista,9206.26,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+292,Sr. Bruno Aragão,Feminino,Analista de Marketing,11218.17,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+293,Sra. Caroline da Rocha,Feminino,Analista Financeiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+294,Bárbara Jesus,Feminino,Enfermeiro,5656.73,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+295,Isabelly Lima,Feminino,Publicitário,7589.39,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+296,Sra. Sofia Campos,Feminino,Técnico de Informática,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+297,Dr. Lucca da Luz,Feminino,Agente de Suporte,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+298,Srta. Mariana Martins,Masculino,Enfermeiro,10115.68,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+299,Dr. João Felipe Pinto,Feminino,Desenvolvedor Front-End,5215.86,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+300,Dra. Agatha Lima,Feminino,Analista de BI,13936.85,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+301,Davi Caldeira,Masculino,Professor,14344.3,Casado,Provável Mal Pagador,Provável Pagador Regular
+302,Sr. Theo Jesus,Feminino,Contador,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+303,Felipe Farias,Masculino,Arquiteto de Dados,5556.33,Casado,Provável Mal Pagador,Provável Pagador Regular
+304,Luiza Silva,Masculino,Analista de Segurança da Informação,10612.9,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+305,Sabrina Lopes,Feminino,Cientista de Dados,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+306,Isaac Almeida,Feminino,Assistente de RH,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+307,Daniel Cunha,Masculino,Desenvolvedor Back-End,19205.37,Casado,Provável Pagador Regular,Provável Pagador Regular
+308,Isabella Freitas,Feminino,Técnico de Enfermagem,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+309,Maria Clara Campos,Feminino,Operador de Máquinas,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+310,Henrique Araújo,Masculino,Engenheiro de Dados,11487.06,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+311,Leonardo Rodrigues,Masculino,Cientista de Dados,9918.33,Casado,Provável Mal Pagador,Provável Pagador Regular
+312,Alice da Conceição,Feminino,Médico Pediatra,8058.92,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+313,Laura Teixeira,Masculino,Gerente de Projetos,3078.13,Casado,Provável Mal Pagador,Provável Pagador Regular
+314,Antônio Ramos,Feminino,Agente de Suporte,6800.28,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+315,Pedro Pires,Feminino,Arquiteto,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+316,Noah das Neves,Feminino,Recepcionista,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+317,Nathan da Luz,Feminino,Advogado,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+318,Cecília Almeida,Feminino,Assistente de RH,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+319,Sra. Ana Beatriz da Costa,Feminino,Técnico de Enfermagem,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+320,Ana Beatriz Silveira,Masculino,Médico Pediatra,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+321,Alexia Moreira,Feminino,Designer Gráfico,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+322,Alice Santos,Feminino,Técnico de Enfermagem,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+323,Nathan Fernandes,Masculino,Assistente Administrativo,14929.94,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+324,Thales Azevedo,Feminino,Analista de BI,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+325,Emanuel Araújo,Feminino,Motorista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+326,Benjamin Jesus,Masculino,Desenvolvedor Front-End,18126.52,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+327,Júlia Silveira,Feminino,Engenheiro de Dados,6986.88,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+328,Guilherme Gomes,Feminino,Fotógrafo,4619.11,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+329,Alícia Nunes,Masculino,Engenheiro de Software,4559.75,Casado,Provável Mal Pagador,Provável Pagador Regular
+330,Ana Sophia Castro,Masculino,Contador,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+331,João Miguel Souza,Masculino,Motorista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+332,Davi Lucca da Cruz,Feminino,Eletricista,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+333,Matheus Oliveira,Feminino,Engenheiro de Software,13988.84,Casado,Provável Mal Pagador,Provável Pagador Regular
+334,Sarah Pinto,Masculino,Agente de Suporte,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+335,Emanuella Cavalcanti,Masculino,Professor Universitário,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+336,Isaac da Paz,Feminino,Arquiteto de Dados,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+337,Luiza Farias,Masculino,Técnico de Informática,10135.64,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+338,Srta. Maria Porto,Masculino,Contador,13744.83,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+339,Srta. Manuela da Rosa,Feminino,Analista de Sistemas,13837.96,Casado,Provável Mal Pagador,Provável Pagador Regular
+340,Valentina Cardoso,Masculino,Analista de Marketing,6814.39,Casado,Provável Mal Pagador,Provável Pagador Regular
+341,Rebeca Santos,Masculino,Gerente de Projetos,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+342,Samuel Viana,Feminino,Engenheiro Civil,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+343,Leandro Fernandes,Feminino,Contador,19620.85,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+344,Igor Ferreira,Feminino,Publicitário,9602.99,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+345,Sr. Carlos Eduardo Carvalho,Feminino,Consultor de Vendas,9001.3,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+346,Sr. Enzo Ferreira,Feminino,Publicitário,2924.24,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+347,Nicole Almeida,Masculino,Analista Financeiro,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+348,João Pedro Fogaça,Masculino,Desenvolvedor Front-End,5582.58,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+349,Henrique da Cruz,Feminino,Engenheiro de Software,14264.79,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+350,Alice Lima,Masculino,Eletricista,7109.93,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+351,João Gabriel Martins,Feminino,Psicólogo,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+352,Srta. Emanuelly Duarte,Masculino,Analista de BI,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+353,Vitor Sales,Feminino,Contador,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+354,Diego Peixoto,Feminino,Consultor de Vendas,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+355,Mariane da Luz,Feminino,Técnico de Informática,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+356,Caroline Cardoso,Masculino,Recepcionista,11655.06,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+357,Heloísa Cunha,Feminino,Técnico de Informática,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+358,Dr. Gabriel Correia,Masculino,Analista de Sistemas,11656.51,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+359,Nicolas Cardoso,Feminino,Farmacêutico,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+360,Ryan Ferreira,Masculino,Consultor de Vendas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+361,Ana Carolina Costela,Masculino,Desenvolvedor Front-End,6884.93,Casado,Provável Mal Pagador,Provável Pagador Regular
+362,Mariane da Conceição,Masculino,Engenheiro de Software,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+363,Srta. Ana Clara Cardoso,Feminino,Analista de Marketing,7535.28,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+364,Dr. Miguel Campos,Masculino,Engenheiro Civil,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+365,Yago Cunha,Masculino,Analista de Sistemas,11451.18,Casado,Provável Mal Pagador,Provável Pagador Regular
+366,Heloísa da Conceição,Feminino,Gerente de Projetos,3491.51,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+367,Maria Fernanda Pires,Feminino,Publicitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+368,Pedro Henrique da Rosa,Masculino,Agente de Suporte,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+369,Cauê da Costa,Feminino,Desenvolvedor Front-End,3277.47,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+370,Ana Luiza Aragão,Masculino,Analista de Sistemas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+371,Diego Martins,Masculino,Professor Universitário,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+372,Eduarda Silva,Masculino,Analista de Marketing,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+373,Manuela Costela,Masculino,Publicitário,16615.22,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+374,Dr. Enrico Freitas,Masculino,Médico Pediatra,16679.14,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+375,Breno Barros,Masculino,Psicólogo,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+376,Sr. Benjamin Azevedo,Masculino,Cientista de Dados,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+377,Emanuella Cardoso,Feminino,Assistente de RH,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+378,Davi Lucas Nunes,Feminino,Agente de Suporte,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+379,Anthony Teixeira,Feminino,Professor,5149.81,Casado,Provável Pagador Regular,Provável Pagador Regular
+380,Sr. Arthur Moreira,Masculino,Eletricista,17530.84,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+381,João Vitor Correia,Feminino,Analista Financeiro,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+382,Emanuella Barbosa,Feminino,Engenheiro de Software,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+383,João Vitor Nascimento,Masculino,Assistente Administrativo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+384,Elisa Costela,Masculino,Analista de Segurança da Informação,19449.94,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+385,André Aragão,Masculino,Enfermeiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+386,Leandro Alves,Feminino,Designer Gráfico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+387,Paulo Oliveira,Feminino,Eletricista,13720.36,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+388,Sra. Juliana da Cunha,Masculino,Operador de Máquinas,19403.47,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+389,Maria Clara da Rocha,Feminino,Cozinheiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+390,Marina Duarte,Masculino,Analista Financeiro,17748.28,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+391,Giovanna das Neves,Feminino,Técnico de Enfermagem,16489.31,Casado,Provável Pagador Regular,Provável Pagador Regular
+392,Lívia Duarte,Masculino,Engenheiro de Dados,8137.68,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+393,Joaquim da Cunha,Feminino,Desenvolvedor de Software,15217.15,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+394,Lara Ferreira,Feminino,Mecânico,5692.77,Casado,Provável Pagador Regular,Provável Pagador Regular
+395,Maria Julia Jesus,Masculino,Engenheiro de Dados,6890.43,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+396,Esther Aragão,Feminino,Médico Pediatra,15447.54,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+397,Sophie Cunha,Feminino,Operador de Máquinas,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+398,Ana Clara Duarte,Feminino,Engenheiro de Software,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+399,Nina Souza,Masculino,Cientista de Dados,9795.06,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+400,Maria Luiza Silva,Masculino,Técnico de Informática,17426.03,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+401,Eduardo da Cruz,Feminino,Técnico de Enfermagem,17791.11,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+402,Pedro Moura,Masculino,Vendedor,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+403,Thomas das Neves,Feminino,Arquiteto,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+404,Samuel Barbosa,Feminino,Cozinheiro,17644.26,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+405,Rafaela Castro,Masculino,Professor Universitário,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+406,Maria Vitória Silveira,Masculino,Engenheiro Civil,10912.2,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+407,Sophie Peixoto,Feminino,Designer Gráfico,10948.88,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+408,Sophie Viana,Masculino,Técnico de Informática,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+409,Enzo Rodrigues,Masculino,Arquiteto,18795.76,Casado,Provável Pagador Regular,Provável Pagador Regular
+410,Fernanda Peixoto,Feminino,Advogado,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+411,João Pedro da Rocha,Feminino,Analista Financeiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+412,Yuri Melo,Feminino,Desenvolvedor Back-End,4176.63,Casado,Provável Pagador Regular,Provável Pagador Regular
+413,Breno Dias,Feminino,Professor Universitário,19281.6,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+414,Maria Clara da Rocha,Masculino,Eletricista,10813.8,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+415,Pedro Azevedo,Masculino,Professor,2847.06,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+416,Pedro Castro,Masculino,Desenvolvedor Back-End,13283.8,Casado,Provável Pagador Regular,Provável Pagador Regular
+417,Manuela da Costa,Masculino,Advogado,15860.91,Casado,Provável Pagador Regular,Provável Pagador Regular
+418,João Pedro da Cunha,Feminino,Vendedor,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+419,Alana Melo,Masculino,Engenheiro Civil,6704.88,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+420,Otávio Ribeiro,Feminino,Arquiteto,10634.63,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+421,Ian Cavalcanti,Feminino,Analista de Segurança da Informação,17570.74,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+422,Dr. Renan da Costa,Feminino,Vendedor,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+423,Ana Luiza Oliveira,Masculino,Desenvolvedor Back-End,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+424,Calebe Cunha,Feminino,Assistente Administrativo,18455.31,Casado,Provável Mal Pagador,Provável Pagador Regular
+425,Luiz Gustavo Gomes,Feminino,Farmacêutico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+426,Noah Pires,Feminino,Desenvolvedor Front-End,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+427,Natália Lopes,Masculino,Consultor de Vendas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+428,Pedro Henrique Pereira,Feminino,Professor,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+429,Luiz Henrique Ramos,Masculino,Desenvolvedor Back-End,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+430,Pedro Miguel Santos,Masculino,Engenheiro de Software,4808.23,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+431,Maria Clara Araújo,Feminino,Psicólogo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+432,Igor Ribeiro,Masculino,Assistente Administrativo,14482.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+433,Sr. João Vitor Gonçalves,Masculino,Eletricista,6698.89,Casado,Provável Mal Pagador,Provável Pagador Regular
+434,Carlos Eduardo Gonçalves,Masculino,Psicólogo,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+435,Sra. Alícia Teixeira,Feminino,Médico Pediatra,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+436,Sabrina da Costa,Masculino,Cozinheiro,10755.38,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+437,Dr. João Gonçalves,Masculino,Publicitário,4010.55,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+438,Dr. Leonardo Caldeira,Masculino,Advogado,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+439,Milena Jesus,Masculino,Analista de Marketing,19420.25,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+440,Sra. Kamilly Pereira,Masculino,Mecânico,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+441,Sr. Benício Gonçalves,Feminino,Chefe de Cozinha,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+442,Samuel Barbosa,Feminino,Designer Gráfico,11487.91,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+443,Danilo Cavalcanti,Feminino,Psicólogo,16872.78,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+444,Bianca Vieira,Masculino,Assistente Administrativo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+445,Igor Nogueira,Feminino,Analista de BI,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+446,Marcos Vinicius Cardoso,Masculino,Desenvolvedor Front-End,5030.26,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+447,Sra. Marcela Aragão,Masculino,Mecânico,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+448,Sr. Marcos Vinicius da Luz,Feminino,Chefe de Cozinha,5253.56,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+449,Isaac Carvalho,Masculino,Designer Gráfico,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+450,Sra. Helena Ferreira,Feminino,Recepcionista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+451,Daniela Araújo,Masculino,Analista de Segurança da Informação,5366.41,Casado,Provável Mal Pagador,Provável Pagador Regular
+452,Ana Sophia Pires,Masculino,Designer Gráfico,11601.77,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+453,Lorenzo Oliveira,Feminino,Analista de Marketing,10053.28,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+454,Thomas Farias,Feminino,Engenheiro de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+455,Danilo Jesus,Feminino,Analista de Sistemas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+456,Rebeca da Rocha,Masculino,Cientista de Dados,9482.63,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+457,Srta. Maria Fernanda da Rosa,Masculino,Técnico de Informática,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+458,Diogo Alves,Feminino,Agente de Suporte,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+459,Davi Lucas Cardoso,Feminino,Mecânico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+460,Dr. Benício Oliveira,Feminino,Professor Universitário,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+461,Emanuella Nascimento,Feminino,Cientista de Dados,18607.21,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+462,Alexia Campos,Masculino,Publicitário,12465.94,Casado,Provável Mal Pagador,Provável Pagador Regular
+463,Luana Oliveira,Masculino,Enfermeiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+464,Alícia Pires,Masculino,Arquiteto,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+465,Carolina Farias,Feminino,Desenvolvedor Back-End,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+466,Fernanda Gonçalves,Feminino,Chefe de Cozinha,5655.28,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+467,Luna Rocha,Feminino,Analista de Segurança da Informação,3221.64,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+468,Luna Mendes,Masculino,Arquiteto de Dados,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+469,Luiza Jesus,Masculino,Médico Pediatra,12259.91,Casado,Provável Pagador Regular,Provável Pagador Regular
+470,Larissa Nunes,Feminino,Eletricista,4518.96,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+471,Bernardo Campos,Masculino,Médico Pediatra,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+472,Ana Júlia Cardoso,Feminino,Médico Pediatra,7152.65,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+473,Luana Rodrigues,Masculino,Arquiteto de Dados,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+474,Ana Vitória Nascimento,Feminino,Técnico de Enfermagem,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+475,Sophia Melo,Masculino,Cozinheiro,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+476,Benício da Paz,Masculino,Agente de Suporte,12791.26,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+477,Dr. Yago Rocha,Masculino,Contador,5330.05,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+478,Amanda Oliveira,Masculino,Médico Pediatra,9613.99,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+479,Davi Lucca Santos,Masculino,Farmacêutico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+480,Joana Rocha,Feminino,Recepcionista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+481,Rafael Cardoso,Feminino,Arquiteto de Dados,10719.25,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+482,Gustavo Rodrigues,Masculino,Operador de Máquinas,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+483,Juliana Araújo,Masculino,Professor,13286.67,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+484,Isabelly Moraes,Feminino,Vendedor,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+485,Dra. Marina Martins,Masculino,Agente de Suporte,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+486,Breno da Mata,Masculino,Enfermeiro,10839.57,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+487,Alexia Sales,Masculino,Gerente de Projetos,10561.52,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+488,Maria Julia Peixoto,Masculino,Analista de BI,7484.78,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+489,Ana Lívia Ribeiro,Masculino,Engenheiro Civil,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+490,Dra. Maria Fernanda Fogaça,Feminino,Mecânico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+491,Mariane da Mota,Masculino,Desenvolvedor Back-End,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+492,Sra. Isabel Cunha,Feminino,Arquiteto de Dados,6803.22,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+493,Camila Souza,Feminino,Técnico de Enfermagem,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+494,Kaique da Luz,Masculino,Arquiteto,7055.89,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+495,Sra. Mariane Carvalho,Masculino,Motorista,16287.93,Casado,Provável Pagador Regular,Provável Pagador Regular
+496,Isabella Fernandes,Feminino,Engenheiro de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+497,Srta. Júlia Gomes,Feminino,Engenheiro Civil,18573.19,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+498,André Ribeiro,Masculino,Cozinheiro,4739.91,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+499,Luiz Fernando Cardoso,Masculino,Consultor de Vendas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+500,João Felipe da Conceição,Masculino,Analista de Marketing,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+501,Dra. Lara Vieira,Feminino,Professor Universitário,6438.07,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+502,Catarina da Mota,Masculino,Fotógrafo,4016.08,Casado,Provável Mal Pagador,Provável Pagador Regular
+503,Dr. Emanuel Campos,Masculino,Analista Financeiro,15400.26,Casado,Provável Pagador Regular,Provável Pagador Regular
+504,Maria Cecília Pires,Masculino,Analista de Sistemas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+505,Davi Luiz Lima,Masculino,Engenheiro de Dados,6325.29,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+506,Brenda Moraes,Feminino,Enfermeiro,19673.29,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+507,Maria Eduarda Viana,Masculino,Cozinheiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+508,Maria Cecília Cardoso,Masculino,Professor,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+509,Lara Castro,Feminino,Cientista de Dados,12954.33,Casado,Provável Pagador Regular,Provável Pagador Regular
+510,Stella Fernandes,Feminino,Assistente Administrativo,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+511,Yuri Carvalho,Masculino,Operador de Máquinas,8476.63,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+512,Samuel Mendes,Masculino,Cientista de Dados,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+513,Isaac Aragão,Feminino,Técnico de Enfermagem,15804.82,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+514,Sra. Natália Martins,Masculino,Farmacêutico,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+515,Cauê Gonçalves,Feminino,Consultor de Vendas,1965.93,Casado,Provável Mal Pagador,Provável Pagador Regular
+516,Dr. Theo Rezende,Feminino,Assistente Administrativo,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+517,Alice Ferreira,Feminino,Eletricista,8681.78,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+518,Maria Clara Nascimento,Feminino,Farmacêutico,16356.78,Casado,Provável Mal Pagador,Provável Pagador Regular
+519,Mariane Rezende,Masculino,Desenvolvedor de Software,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+520,Theo Rezende,Feminino,Analista Financeiro,2139.42,Casado,Provável Pagador Regular,Provável Pagador Regular
+521,Lívia da Conceição,Masculino,Designer Gráfico,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+522,Enzo Gabriel da Cunha,Feminino,Desenvolvedor Front-End,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+523,Carolina Correia,Masculino,Publicitário,17717.4,Casado,Provável Pagador Regular,Provável Pagador Regular
+524,Maria Cecília da Costa,Feminino,Farmacêutico,18640.94,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+525,Ana Vitória Melo,Masculino,Médico Pediatra,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+526,Ana Júlia Gonçalves,Feminino,Desenvolvedor Back-End,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+527,Rafaela da Mota,Feminino,Assistente de RH,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+528,Henrique Rocha,Masculino,Designer Gráfico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+529,Sra. Isadora Viana,Feminino,Técnico de Informática,12940.59,Casado,Provável Mal Pagador,Provável Pagador Regular
+530,Juan Costela,Masculino,Designer Gráfico,7819.36,Casado,Provável Pagador Regular,Provável Pagador Regular
+531,Enzo Costa,Masculino,Médico Pediatra,17189.66,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+532,Dr. Renan Silva,Feminino,Chefe de Cozinha,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+533,João Gabriel Dias,Feminino,Médico Pediatra,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+534,Luiz Henrique da Cruz,Feminino,Analista de Sistemas,6807.01,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+535,Dr. Kaique Moraes,Feminino,Farmacêutico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+536,Noah Cunha,Feminino,Cozinheiro,19328.7,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+537,Renan Gonçalves,Masculino,Engenheiro de Dados,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+538,Kaique Martins,Masculino,Professor,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+539,Srta. Clarice Fogaça,Masculino,Analista de Segurança da Informação,8584.42,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+540,Dra. Camila Souza,Masculino,Enfermeiro,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+541,Sr. Theo Mendes,Masculino,Analista de Marketing,2313.05,Casado,Provável Mal Pagador,Provável Pagador Regular
+542,Marcos Vinicius Ramos,Feminino,Analista de BI,7154.36,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+543,Sr. Guilherme da Mata,Feminino,Chefe de Cozinha,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+544,Vitor Vieira,Masculino,Chefe de Cozinha,3017.48,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+545,Rafaela Almeida,Masculino,Arquiteto,2392.91,Casado,Provável Mal Pagador,Provável Pagador Regular
+546,Lívia da Paz,Feminino,Mecânico,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+547,Camila Cardoso,Feminino,Técnico de Enfermagem,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+548,Natália Ferreira,Feminino,Desenvolvedor de Software,5868.96,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+549,Heloísa Cunha,Masculino,Contador,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+550,Maysa Sales,Feminino,Vendedor,16415.7,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+551,Manuela Alves,Feminino,Contador,6542.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+552,Emanuel Freitas,Masculino,Advogado,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+553,Thales Duarte,Feminino,Analista de BI,19710.28,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+554,Marcos Vinicius Rezende,Feminino,Advogado,17230.53,Casado,Provável Mal Pagador,Provável Pagador Regular
+555,Sr. Thiago Jesus,Masculino,Motorista,9464.41,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+556,Dra. Yasmin Araújo,Masculino,Arquiteto de Dados,8840.32,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+557,Noah Gomes,Masculino,Engenheiro Civil,8206.54,Casado,Provável Pagador Regular,Provável Pagador Regular
+558,Letícia Nogueira,Masculino,Engenheiro de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+559,Dr. Marcelo Sales,Feminino,Mecânico,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+560,Eduarda Correia,Masculino,Contador,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+561,Maysa Duarte,Masculino,Desenvolvedor Back-End,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+562,Mirella Ferreira,Feminino,Analista de Marketing,5277.84,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+563,Miguel Ribeiro,Masculino,Arquiteto de Dados,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+564,Sophia Correia,Feminino,Motorista,5618.8,Casado,Provável Mal Pagador,Provável Pagador Regular
+565,Daniela Carvalho,Masculino,Eletricista,17036.11,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+566,Juliana das Neves,Feminino,Engenheiro de Software,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+567,Raul Viana,Masculino,Eletricista,15790.78,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+568,Leonardo Santos,Feminino,Arquiteto,8337.64,Casado,Provável Pagador Regular,Provável Pagador Regular
+569,Vitor Gabriel Correia,Masculino,Analista de Marketing,14649.28,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+570,Theo Ribeiro,Feminino,Motorista,13294.01,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+571,Leandro Rocha,Feminino,Desenvolvedor de Software,13282.35,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+572,Lorenzo da Conceição,Feminino,Professor Universitário,17717.57,Casado,Provável Mal Pagador,Provável Pagador Regular
+573,Lucas Gabriel das Neves,Feminino,Engenheiro de Dados,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+574,Amanda Dias,Masculino,Agente de Suporte,9049.27,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+575,Milena Martins,Feminino,Advogado,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+576,Ana Lívia Moreira,Feminino,Cientista de Dados,18750.33,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+577,Srta. Fernanda Moura,Masculino,Engenheiro de Software,10297.9,Casado,Provável Mal Pagador,Provável Pagador Regular
+578,Alícia da Mata,Masculino,Gerente de Projetos,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+579,Pedro Ribeiro,Feminino,Recepcionista,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+580,Srta. Ana Laura Freitas,Masculino,Eletricista,3553.73,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+581,Enrico Ferreira,Masculino,Designer Gráfico,13469.43,Casado,Provável Pagador Regular,Provável Pagador Regular
+582,Eduarda Lima,Feminino,Gerente de Projetos,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+583,Isadora Ramos,Feminino,Recepcionista,12600.33,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+584,Dr. Renan Moraes,Feminino,Fotógrafo,14134.9,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+585,Isabella Costela,Feminino,Engenheiro de Dados,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+586,Lívia Cardoso,Feminino,Fotógrafo,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+587,João Miguel da Costa,Feminino,Consultor de Vendas,2115.59,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+588,Yuri Nascimento,Masculino,Consultor de Vendas,8951.97,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+589,Carolina Fernandes,Masculino,Assistente Administrativo,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+590,Srta. Isabella Campos,Feminino,Enfermeiro,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+591,Sra. Lívia da Luz,Feminino,Desenvolvedor Back-End,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+592,Pietro Cardoso,Masculino,Desenvolvedor Front-End,3848.9,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+593,Sophie Souza,Feminino,Agente de Suporte,7033.82,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+594,Mirella Gomes,Masculino,Vendedor,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+595,Sra. Fernanda Campos,Masculino,Psicólogo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+596,Dr. Vitor Fernandes,Masculino,Professor Universitário,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+597,Alana Dias,Masculino,Analista de Sistemas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+598,Sr. Nicolas Rocha,Masculino,Engenheiro de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+599,Sofia Nascimento,Masculino,Analista de Marketing,14109.42,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+600,Heitor Cardoso,Masculino,Motorista,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+601,Sofia Fernandes,Masculino,Arquiteto de Dados,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+602,Lorena da Paz,Feminino,Eletricista,5255.12,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+603,Fernando Teixeira,Masculino,Analista de Segurança da Informação,3393.51,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+604,Cecília Castro,Feminino,Arquiteto de Dados,9598.31,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+605,João Guilherme Cavalcanti,Feminino,Analista de Marketing,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+606,Dr. Gustavo da Paz,Masculino,Motorista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+607,Thales Costa,Masculino,Cozinheiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+608,Gustavo Silva,Feminino,Designer Gráfico,15160.24,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+609,Alexandre Castro,Feminino,Arquiteto de Dados,9939.9,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+610,Sr. Davi Luiz Cardoso,Feminino,Técnico de Enfermagem,14237.39,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+611,Lucas Ramos,Masculino,Gerente de Projetos,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+612,Sr. Yago Gomes,Masculino,Chefe de Cozinha,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+613,Heloísa da Paz,Feminino,Operador de Máquinas,19381.58,Casado,Provável Mal Pagador,Provável Pagador Regular
+614,Cauã Jesus,Masculino,Vendedor,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+615,Sr. Noah Azevedo,Masculino,Engenheiro de Dados,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+616,Vitor Castro,Feminino,Analista de Sistemas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+617,Ian Pires,Masculino,Designer Gráfico,5167.44,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+618,Diego Nunes,Feminino,Mecânico,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+619,Luiz Otávio da Cruz,Masculino,Engenheiro de Dados,8992.48,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+620,Leandro Viana,Feminino,Vendedor,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+621,Davi Lucas Vieira,Feminino,Advogado,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+622,Alana Moraes,Masculino,Professor Universitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+623,Maria Luiza Cardoso,Masculino,Recepcionista,19806.99,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+624,Nicolas Monteiro,Feminino,Chefe de Cozinha,2472.9,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+625,Dr. Lucas Gabriel Nogueira,Masculino,Eletricista,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+626,Dr. Thales Cardoso,Feminino,Vendedor,12087.36,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+627,João Guilherme Novaes,Masculino,Professor,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+628,Srta. Gabriela Pinto,Masculino,Analista de BI,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+629,Arthur Dias,Masculino,Analista de Sistemas,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+630,Lívia Silveira,Masculino,Mecânico,16469.6,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+631,Vinicius da Luz,Masculino,Assistente Administrativo,18173.1,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+632,Maria Clara Peixoto,Feminino,Professor,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+633,Gabrielly Jesus,Masculino,Analista de Sistemas,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+634,Augusto Pereira,Feminino,Professor,12395.59,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+635,Brenda Cavalcanti,Feminino,Analista de Marketing,13471.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+636,Gustavo Henrique Aragão,Feminino,Professor,2610.88,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+637,Paulo Castro,Feminino,Consultor de Vendas,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+638,Maria Vitória Barbosa,Feminino,Designer Gráfico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+639,Dr. Levi da Luz,Feminino,Analista de Sistemas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+640,Luiz Henrique da Rosa,Feminino,Técnico de Informática,5186.66,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+641,Srta. Maria Luiza Gomes,Feminino,Arquiteto,7180.29,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+642,Dr. João Miguel Cardoso,Feminino,Psicólogo,3139.28,Casado,Provável Mal Pagador,Provável Pagador Regular
+643,Bernardo da Rosa,Feminino,Psicólogo,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+644,Ana Nogueira,Masculino,Assistente Administrativo,19314.87,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+645,Luiz Miguel da Rocha,Masculino,Assistente Administrativo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+646,João Felipe Vieira,Masculino,Consultor de Vendas,3341.03,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+647,Calebe Correia,Feminino,Psicólogo,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+648,Luna Fernandes,Masculino,Professor,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+649,Cecília Souza,Masculino,Professor Universitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+650,Milena Caldeira,Feminino,Agente de Suporte,19165.04,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+651,João Lucas Campos,Masculino,Designer Gráfico,4602.74,Casado,Provável Mal Pagador,Provável Pagador Regular
+652,Alice Duarte,Feminino,Motorista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+653,Fernanda Moreira,Masculino,Desenvolvedor de Software,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+654,Sr. Pedro Lucas Moraes,Masculino,Psicólogo,11399.1,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+655,Esther da Luz,Masculino,Médico Pediatra,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+656,Pedro Lucas Lima,Masculino,Desenvolvedor de Software,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+657,Marcela Cardoso,Masculino,Contador,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+658,André Freitas,Masculino,Analista de Marketing,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+659,Maria Fernanda Barros,Feminino,Farmacêutico,3304.46,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+660,Gabriel Moraes,Masculino,Técnico de Informática,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+661,Sr. Noah Aragão,Feminino,Assistente de RH,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+662,Raul Souza,Feminino,Designer Gráfico,14705.27,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+663,Luiz Gustavo Peixoto,Masculino,Operador de Máquinas,3127.78,Casado,Provável Pagador Regular,Provável Pagador Regular
+664,Mirella Farias,Masculino,Enfermeiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+665,Ana Luiza Fogaça,Feminino,Recepcionista,1809.81,Casado,Provável Mal Pagador,Provável Pagador Regular
+666,Raquel Araújo,Masculino,Fotógrafo,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+667,Lucas Gabriel Araújo,Feminino,Analista Financeiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+668,Calebe Barbosa,Masculino,Analista de Sistemas,17631.52,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+669,Helena Rocha,Masculino,Técnico de Enfermagem,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+670,Srta. Olivia Azevedo,Feminino,Gerente de Projetos,13309.39,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+671,Augusto Gomes,Feminino,Desenvolvedor Back-End,10269.42,Casado,Provável Mal Pagador,Provável Pagador Regular
+672,Carolina Ferreira,Masculino,Professor Universitário,6403.07,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+673,Srta. Alana Peixoto,Feminino,Analista de Sistemas,14138.43,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+674,Bruna Lima,Feminino,Desenvolvedor Front-End,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+675,Nathan Sales,Masculino,Vendedor,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+676,Luiza Peixoto,Feminino,Engenheiro Civil,3496.81,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+677,Lucas Carvalho,Masculino,Engenheiro de Software,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+678,Enrico da Costa,Masculino,Técnico de Enfermagem,18148.49,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+679,Rebeca Teixeira,Feminino,Desenvolvedor Back-End,6540.64,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+680,Gustavo Henrique Cunha,Masculino,Gerente de Projetos,9187.33,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+681,Daniel Barbosa,Masculino,Professor,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+682,Elisa da Rosa,Feminino,Desenvolvedor Back-End,16189.96,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+683,Lívia Castro,Feminino,Psicólogo,19221.89,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+684,Milena da Conceição,Masculino,Contador,18873.72,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+685,Ana Carolina Nascimento,Masculino,Técnico de Informática,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+686,Maria Clara Peixoto,Feminino,Assistente de RH,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+687,Luiz Otávio Silveira,Masculino,Psicólogo,8372.85,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+688,Dr. Lorenzo Santos,Masculino,Farmacêutico,17136.53,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+689,João Gabriel Nogueira,Feminino,Consultor de Vendas,3640.1,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+690,Thomas Dias,Masculino,Analista de Sistemas,12901.74,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+691,Nathan Gonçalves,Masculino,Consultor de Vendas,8051.49,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+692,Melissa Campos,Feminino,Psicólogo,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+693,Pedro Henrique Oliveira,Masculino,Médico Pediatra,9477.32,Casado,Provável Mal Pagador,Provável Pagador Regular
+694,Dr. João Felipe Silveira,Feminino,Mecânico,5227.04,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+695,Lara Vieira,Feminino,Assistente Administrativo,12531.47,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+696,Ana Laura Cardoso,Masculino,Enfermeiro,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+697,Samuel Almeida,Masculino,Arquiteto de Dados,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+698,Danilo Ferreira,Masculino,Técnico de Enfermagem,13776.51,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+699,Natália Correia,Feminino,Analista de Sistemas,10453.92,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+700,Gabrielly Santos,Masculino,Arquiteto,6112.79,Casado,Provável Mal Pagador,Provável Pagador Regular
+701,Lucas Nogueira,Masculino,Consultor de Vendas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+702,Raquel Ribeiro,Feminino,Gerente de Projetos,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+703,Giovanna Novaes,Masculino,Arquiteto,1936.68,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+704,Rodrigo Gonçalves,Feminino,Publicitário,15886.77,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+705,Isadora Viana,Feminino,Designer Gráfico,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+706,Luiz Otávio Melo,Masculino,Mecânico,18969.48,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+707,Rebeca Campos,Feminino,Mecânico,12829.4,Casado,Provável Mal Pagador,Provável Pagador Regular
+708,Fernando Sales,Masculino,Chefe de Cozinha,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+709,Thiago Moreira,Masculino,Analista Financeiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+710,Cauã Moreira,Feminino,Farmacêutico,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+711,Dr. Henrique Monteiro,Feminino,Professor Universitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+712,Nina Viana,Masculino,Desenvolvedor Front-End,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+713,Vitor Caldeira,Masculino,Técnico de Enfermagem,19079.9,Casado,Provável Mal Pagador,Provável Pagador Regular
+714,Luiz Miguel Farias,Masculino,Cozinheiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+715,Carlos Eduardo Barros,Masculino,Enfermeiro,2315.55,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+716,Rafael Teixeira,Feminino,Chefe de Cozinha,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+717,Davi Araújo,Masculino,Técnico de Enfermagem,10148.51,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+718,Elisa Santos,Feminino,Publicitário,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+719,Laís Barros,Feminino,Motorista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+720,Sra. Ana Carolina Campos,Feminino,Assistente Administrativo,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+721,Sr. Leonardo Oliveira,Feminino,Enfermeiro,11773.84,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+722,Isabel da Luz,Feminino,Fotógrafo,4217.06,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+723,Joaquim Rodrigues,Feminino,Cozinheiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+724,Srta. Sarah Mendes,Feminino,Cozinheiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+725,Pietro Nascimento,Feminino,Publicitário,4681.8,Casado,Provável Mal Pagador,Provável Pagador Regular
+726,Alana Nunes,Masculino,Publicitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+727,Sr. João Correia,Masculino,Agente de Suporte,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+728,Vinicius Teixeira,Feminino,Publicitário,2525.54,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+729,Murilo das Neves,Masculino,Eletricista,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+730,Sr. Diego Fernandes,Masculino,Desenvolvedor de Software,14211.43,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+731,Dr. Cauê Silveira,Masculino,Assistente Administrativo,11031.41,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+732,Luana da Costa,Masculino,Técnico de Enfermagem,16683.67,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+733,Letícia Rezende,Feminino,Advogado,6888.59,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+734,Dra. Ana Sophia Lima,Masculino,Contador,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+735,Emilly Almeida,Feminino,Agente de Suporte,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+736,Francisco Correia,Feminino,Psicólogo,8471.37,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+737,Maria Cecília Cardoso,Feminino,Eletricista,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+738,Maria Luiza Costa,Masculino,Desenvolvedor Front-End,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+739,Dr. Benício Azevedo,Feminino,Analista Financeiro,10053.65,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+740,Maria Eduarda Viana,Masculino,Enfermeiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+741,Felipe Dias,Feminino,Gerente de Projetos,12974.32,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+742,Dr. João Lucas da Luz,Feminino,Analista Financeiro,17093.45,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+743,Isis da Paz,Feminino,Técnico de Enfermagem,16430.67,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+744,Sr. Eduardo Farias,Feminino,Arquiteto de Dados,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+745,Diego Rodrigues,Feminino,Assistente de RH,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+746,Letícia Cardoso,Feminino,Consultor de Vendas,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+747,Natália Ramos,Masculino,Vendedor,5018.07,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+748,Ana Luiza Moraes,Masculino,Cozinheiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+749,Dra. Luiza Porto,Feminino,Contador,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+750,Ana Laura Monteiro,Feminino,Consultor de Vendas,17844.7,Casado,Provável Mal Pagador,Provável Pagador Regular
+751,Ana Vitória da Cunha,Feminino,Desenvolvedor de Software,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+752,Felipe Farias,Masculino,Gerente de Projetos,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+753,Paulo Caldeira,Feminino,Analista de Segurança da Informação,8343.92,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+754,Pedro Miguel Barros,Feminino,Técnico de Enfermagem,1613.46,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+755,Bruna Barros,Masculino,Professor Universitário,6690.99,Casado,Provável Mal Pagador,Provável Pagador Regular
+756,Kamilly Ramos,Feminino,Contador,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+757,Vicente Mendes,Feminino,Médico Pediatra,16100.99,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+758,Maysa Cunha,Masculino,Engenheiro de Dados,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+759,Sr. Luiz Henrique Porto,Masculino,Consultor de Vendas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+760,Dra. Luna Fernandes,Masculino,Enfermeiro,18001.48,Casado,Provável Mal Pagador,Provável Pagador Regular
+761,Isabel Santos,Feminino,Desenvolvedor Front-End,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+762,Henrique Melo,Masculino,Recepcionista,19749.16,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+763,Dra. Luiza da Rosa,Masculino,Analista de Segurança da Informação,15572.34,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+764,Nicolas Monteiro,Masculino,Agente de Suporte,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+765,Maria Cecília Rezende,Feminino,Técnico de Enfermagem,8795.82,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+766,Gabriel da Mata,Feminino,Assistente Administrativo,4355.49,Casado,Provável Mal Pagador,Provável Pagador Regular
+767,Francisco da Luz,Feminino,Assistente Administrativo,11604.38,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+768,Dr. Vitor Gonçalves,Masculino,Professor Universitário,8855.27,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+769,Noah da Costa,Masculino,Arquiteto,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+770,Raul Almeida,Masculino,Vendedor,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+771,Ana Laura Alves,Masculino,Mecânico,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+772,Nicolas Pires,Masculino,Vendedor,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+773,Fernando das Neves,Feminino,Contador,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+774,Sarah Martins,Masculino,Operador de Máquinas,1672.96,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+775,Isabelly Moreira,Feminino,Farmacêutico,17175.75,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+776,Srta. Maria Eduarda Campos,Masculino,Desenvolvedor Front-End,3789.11,Casado,Provável Mal Pagador,Provável Pagador Regular
+777,Breno Barros,Feminino,Consultor de Vendas,10803.3,Casado,Provável Pagador Regular,Provável Pagador Regular
+778,Dr. Paulo Aragão,Masculino,Analista de Marketing,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+779,Thomas Farias,Feminino,Motorista,19504.73,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+780,Lucas Martins,Feminino,Técnico de Enfermagem,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+781,Yasmin Nunes,Feminino,Arquiteto de Dados,3399.61,Casado,Provável Mal Pagador,Provável Pagador Regular
+782,Heitor Costa,Masculino,Engenheiro de Dados,9893.21,Casado,Provável Pagador Regular,Provável Pagador Regular
+783,Kamilly Azevedo,Feminino,Assistente de RH,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+784,Ian Peixoto,Feminino,Fotógrafo,8684.67,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+785,Otávio da Cunha,Masculino,Chefe de Cozinha,19601.04,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+786,Lorenzo Jesus,Feminino,Mecânico,2591.76,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+787,Kaique Castro,Feminino,Técnico de Enfermagem,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+788,João Lucas da Paz,Feminino,Gerente de Projetos,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+789,Sra. Sophie Correia,Masculino,Assistente de RH,11114.05,Casado,Provável Mal Pagador,Provável Pagador Regular
+790,Diogo Novaes,Feminino,Analista de Marketing,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+791,Cauê Araújo,Masculino,Chefe de Cozinha,16645.88,Casado,Provável Mal Pagador,Provável Pagador Regular
+792,Srta. Gabrielly Martins,Masculino,Analista de Segurança da Informação,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+793,Sr. João Lucas Ferreira,Masculino,Professor,14209.86,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+794,Sra. Maria Moura,Masculino,Chefe de Cozinha,12535.92,Casado,Provável Mal Pagador,Provável Pagador Regular
+795,Dra. Ana Luiza Fernandes,Masculino,Chefe de Cozinha,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+796,Vitória Mendes,Feminino,Médico Pediatra,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+797,Ana Vitória Caldeira,Feminino,Engenheiro Civil,8114.36,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+798,Maria Luiza da Mota,Masculino,Engenheiro de Software,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+799,Stella Araújo,Masculino,Técnico de Informática,5062.13,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+800,Sra. Maria Luiza Moreira,Feminino,Arquiteto,8406.2,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+801,Alana Porto,Masculino,Designer Gráfico,7834.32,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+802,Diogo da Luz,Feminino,Chefe de Cozinha,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+803,Maria Cecília Peixoto,Feminino,Psicólogo,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+804,Yuri Campos,Feminino,Mecânico,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+805,Cauê Alves,Feminino,Designer Gráfico,19100.36,Casado,Provável Mal Pagador,Provável Pagador Regular
+806,Ana Sophia Rocha,Masculino,Analista Financeiro,3788.42,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+807,Carlos Eduardo Barros,Feminino,Motorista,4028.43,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+808,Ana Clara Nunes,Masculino,Chefe de Cozinha,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+809,Alexia Peixoto,Masculino,Engenheiro Civil,17482.15,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+810,Mariane Lima,Feminino,Médico Pediatra,16944.04,Casado,Provável Mal Pagador,Provável Pagador Regular
+811,Manuela Mendes,Masculino,Professor Universitário,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+812,Maitê Lima,Feminino,Cozinheiro,5953.42,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+813,Maria Sophia Ferreira,Feminino,Eletricista,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+814,Luiz Gustavo Caldeira,Feminino,Enfermeiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+815,Augusto Cardoso,Masculino,Professor Universitário,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+816,Murilo Pereira,Masculino,Psicólogo,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+817,Emanuelly Barros,Feminino,Recepcionista,8521.56,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+818,Caio Teixeira,Masculino,Operador de Máquinas,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+819,Marcela Araújo,Feminino,Cozinheiro,2114.84,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+820,Ana Vitória Fogaça,Feminino,Chefe de Cozinha,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+821,Ana Laura Costa,Feminino,Chefe de Cozinha,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+822,Giovanna Silveira,Masculino,Contador,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+823,Srta. Marina Pinto,Feminino,Desenvolvedor Back-End,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+824,Fernando Jesus,Masculino,Publicitário,3829.98,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+825,Ana Carolina Campos,Feminino,Operador de Máquinas,13182.86,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+826,Júlia Santos,Masculino,Desenvolvedor Front-End,19732.74,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+827,Danilo Rezende,Feminino,Motorista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+828,Lucas Gabriel Freitas,Masculino,Desenvolvedor de Software,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+829,Eduarda Peixoto,Masculino,Analista de Marketing,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+830,Stephany Rodrigues,Masculino,Designer Gráfico,7750.88,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+831,Luiz Fernando Silva,Feminino,Designer Gráfico,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+832,Guilherme da Mota,Feminino,Fotógrafo,13577.48,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+833,Nina Silveira,Masculino,Publicitário,3112.04,Casado,Provável Mal Pagador,Provável Pagador Regular
+834,Sophia Novaes,Feminino,Arquiteto de Dados,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+835,Lorenzo Cardoso,Feminino,Assistente de RH,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+836,João Felipe Rocha,Feminino,Professor,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+837,Lavínia Freitas,Feminino,Contador,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+838,João Pedro Jesus,Masculino,Operador de Máquinas,10258.82,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+839,Larissa Lima,Masculino,Gerente de Projetos,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+840,Enzo Novaes,Feminino,Analista Financeiro,14554.06,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+841,Sra. Maysa Cavalcanti,Masculino,Analista de Segurança da Informação,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+842,Maria Fernanda Farias,Masculino,Gerente de Projetos,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+843,Sr. Kevin Pinto,Masculino,Arquiteto,6514.25,Casado,Provável Pagador Regular,Provável Pagador Regular
+844,Erick Nunes,Feminino,Desenvolvedor Front-End,11541.9,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+845,Gabrielly Freitas,Feminino,Gerente de Projetos,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+846,Isabel Ramos,Feminino,Professor,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+847,Sr. Calebe Pires,Masculino,Analista de BI,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+848,Danilo Farias,Feminino,Fotógrafo,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+849,Isabella da Costa,Masculino,Agente de Suporte,8394.85,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+850,Alice Oliveira,Masculino,Contador,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+851,Dra. Ana Júlia Pinto,Feminino,Analista de Sistemas,19581.74,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+852,Olivia Pinto,Feminino,Engenheiro de Dados,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+853,Cauã Ramos,Masculino,Técnico de Enfermagem,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+854,João Almeida,Feminino,Farmacêutico,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+855,Laura Caldeira,Masculino,Engenheiro de Dados,2165.61,Casado,Provável Pagador Regular,Provável Pagador Regular
+856,Vitória Viana,Masculino,Recepcionista,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+857,Vitor Gabriel Sales,Masculino,Analista de BI,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+858,Isadora da Rosa,Masculino,Cozinheiro,3008.32,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+859,Mariane Moraes,Masculino,Analista de Sistemas,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+860,Cecília Lopes,Masculino,Engenheiro de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+861,Gustavo Henrique Silva,Feminino,Cozinheiro,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+862,Rodrigo Peixoto,Feminino,Arquiteto de Dados,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+863,Erick Vieira,Feminino,Advogado,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+864,Dra. Maria Vitória Farias,Feminino,Analista de Marketing,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+865,Ana Clara Caldeira,Feminino,Publicitário,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+866,Ana Beatriz da Costa,Masculino,Eletricista,18226.43,Casado,Provável Pagador Regular,Provável Pagador Regular
+867,Dr. Benjamin Pereira,Masculino,Operador de Máquinas,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+868,Yago da Conceição,Masculino,Analista de Segurança da Informação,15250.5,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+869,Antônio Fogaça,Masculino,Cozinheiro,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+870,Dr. Rodrigo Vieira,Masculino,Arquiteto de Dados,7600.57,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+871,João Vitor Mendes,Masculino,Engenheiro de Dados,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+872,Mirella Monteiro,Masculino,Vendedor,18980.6,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+873,Sr. João Miguel da Cruz,Feminino,Engenheiro Civil,16129.07,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+874,João Guilherme Nogueira,Feminino,Arquiteto,19798.64,Casado,Provável Mal Pagador,Provável Pagador Regular
+875,Ryan da Cruz,Masculino,Enfermeiro,19351.9,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+876,Sra. Maria Sophia das Neves,Masculino,Assistente de RH,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+877,Davi Lucas Rodrigues,Masculino,Contador,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+878,Emilly da Cruz,Feminino,Chefe de Cozinha,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+879,João Gabriel Rezende,Feminino,Técnico de Enfermagem,17728.89,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+880,Maria Julia Nunes,Masculino,Eletricista,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+881,Joana Silva,Feminino,Farmacêutico,10998.89,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+882,Dr. Augusto Gomes,Feminino,Eletricista,19497.65,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+883,Dra. Lavínia Vieira,Feminino,Analista de BI,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+884,João Guilherme Rocha,Feminino,Psicólogo,16465.75,Casado,Provável Mal Pagador,Provável Pagador Regular
+885,Emilly Moura,Feminino,Gerente de Projetos,2508.39,Casado,Provável Pagador Regular,Provável Pagador Regular
+886,Elisa Freitas,Feminino,Técnico de Enfermagem,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+887,Dra. Caroline Pereira,Feminino,Médico Pediatra,9516.02,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+888,Marcela da Conceição,Feminino,Professor Universitário,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+889,Davi Peixoto,Feminino,Analista Financeiro,13320.64,Casado,Provável Mal Pagador,Provável Pagador Regular
+890,Dra. Emilly Pereira,Masculino,Analista de BI,13918.52,Casado,Provável Mal Pagador,Provável Pagador Regular
+891,Laura Aragão,Feminino,Contador,5850.93,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+892,Camila Duarte,Masculino,Cozinheiro,19194.01,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+893,Gabriela Freitas,Masculino,Engenheiro de Software,7250.37,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+894,Lucca Martins,Feminino,Mecânico,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+895,Luiz Felipe Mendes,Masculino,Mecânico,8516.25,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+896,Srta. Maria Alice da Costa,Feminino,Recepcionista,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+897,Natália da Conceição,Feminino,Assistente de RH,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+898,Laura Nunes,Feminino,Analista Financeiro,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+899,Maysa Campos,Feminino,Analista de Sistemas,9592.8,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+900,Alícia Farias,Feminino,Analista Financeiro,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+901,Nathan Ribeiro,Masculino,Desenvolvedor de Software,6809.64,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+902,Melissa Ribeiro,Feminino,Engenheiro de Software,13991.72,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+903,Marina Peixoto,Feminino,Arquiteto,6057.75,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+904,Dr. Luiz Felipe da Paz,Masculino,Técnico de Enfermagem,1919.74,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+905,Lavínia Mendes,Masculino,Analista de Sistemas,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+906,Marina Cavalcanti,Feminino,Publicitário,6070.7,Casado,Provável Mal Pagador,Provável Pagador Regular
+907,Diogo Mendes,Masculino,Consultor de Vendas,9717.25,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+908,Enrico Nunes,Masculino,Analista de BI,8184.2,Casado,Provável Mal Pagador,Provável Pagador Regular
+909,Maria Julia Correia,Feminino,Analista de BI,8007.56,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+910,Letícia Viana,Feminino,Desenvolvedor de Software,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+911,Emanuelly Castro,Masculino,Analista Financeiro,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+912,Maria Luiza Carvalho,Masculino,Analista Financeiro,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+913,Sofia Viana,Masculino,Recepcionista,11524.13,Casado,Provável Pagador Regular,Provável Pagador Regular
+914,Daniela da Cunha,Feminino,Assistente Administrativo,16566.47,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+915,Juan da Cunha,Feminino,Engenheiro de Software,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+916,Sra. Ana Lívia Porto,Masculino,Professor,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+917,Isaac da Mota,Feminino,Assistente de RH,3487.01,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+918,Thomas Monteiro,Feminino,Motorista,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+919,Giovanna Pires,Feminino,Desenvolvedor de Software,11351.64,Casado,Provável Mal Pagador,Provável Pagador Regular
+920,Esther da Paz,Masculino,Recepcionista,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+921,Pedro Rocha,Masculino,Gerente de Projetos,13373.42,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+922,Pietra Santos,Feminino,Eletricista,2220.84,Casado,Provável Mal Pagador,Provável Pagador Regular
+923,Clara Araújo,Feminino,Contador,19382.93,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+924,Maria Sophia Pinto,Feminino,Operador de Máquinas,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+925,Daniel Nascimento,Feminino,Gerente de Projetos,5357.28,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+926,Isis Araújo,Feminino,Chefe de Cozinha,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+927,Erick Freitas,Masculino,Psicólogo,14206.62,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+928,Sr. Kaique Mendes,Masculino,Publicitário,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+929,Isabella da Luz,Masculino,Professor Universitário,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+930,Dr. Levi Viana,Masculino,Agente de Suporte,11791.21,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+931,Felipe Cardoso,Masculino,Mecânico,4686.78,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+932,Sra. Ana Sophia Cunha,Masculino,Mecânico,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+933,Bruna Carvalho,Feminino,Eletricista,0.0,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+934,Dr. Kevin Barros,Masculino,Assistente de RH,1709.21,Casado,Provável Mal Pagador,Provável Pagador Regular
+935,Francisco Aragão,Masculino,Arquiteto de Dados,19623.75,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+936,Vitória da Mata,Feminino,Engenheiro Civil,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+937,Enzo Aragão,Feminino,Assistente Administrativo,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+938,Maria Clara Almeida,Feminino,Analista de Sistemas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+939,Maria Clara Pires,Masculino,Cientista de Dados,14055.55,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+940,Maria Alice Sales,Masculino,Gerente de Projetos,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+941,Isabel da Cruz,Masculino,Desenvolvedor Front-End,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+942,Raul Pereira,Feminino,Técnico de Enfermagem,18946.48,Casado,Provável Mal Pagador,Provável Pagador Regular
+943,Maria Vitória Ramos,Masculino,Contador,6418.88,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+944,Caroline Duarte,Feminino,Agente de Suporte,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+945,Ana Beatriz Fernandes,Feminino,Médico Pediatra,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+946,Luiz Fernando Pinto,Masculino,Enfermeiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+947,Nicole da Conceição,Feminino,Técnico de Informática,18894.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+948,Kamilly Silveira,Masculino,Publicitário,16236.23,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+949,Luiz Henrique Moura,Feminino,Engenheiro de Dados,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+950,Pietra Fogaça,Masculino,Agente de Suporte,11963.92,Casado,Provável Pagador Regular,Provável Pagador Regular
+951,Thiago Gonçalves,Feminino,Cozinheiro,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+952,Lívia da Cunha,Feminino,Técnico de Informática,5809.93,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+953,Vitor Hugo Rezende,Feminino,Operador de Máquinas,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+954,Sra. Júlia Dias,Feminino,Engenheiro Civil,0.0,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+955,Noah Oliveira,Masculino,Analista de Marketing,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+956,Camila Lopes,Masculino,Publicitário,3237.83,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+957,Eduarda Rezende,Feminino,Consultor de Vendas,11776.13,Casado,Provável Mal Pagador,Provável Pagador Regular
+958,André Cavalcanti,Feminino,Farmacêutico,10291.43,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+959,Kevin da Mata,Feminino,Farmacêutico,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+960,Eduardo Viana,Masculino,Operador de Máquinas,5216.68,Casado,Provável Mal Pagador,Provável Pagador Regular
+961,Sr. Juan Moura,Masculino,Chefe de Cozinha,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+962,Sra. Stephany da Mata,Feminino,Técnico de Enfermagem,0.0,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+963,Luana das Neves,Masculino,Professor,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+964,Ana Julia da Rosa,Feminino,Assistente de RH,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+965,Ryan da Cruz,Masculino,Engenheiro de Software,5368.16,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+966,Isabelly Dias,Masculino,Técnico de Enfermagem,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+967,Dra. Beatriz da Paz,Feminino,Cientista de Dados,13573.06,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+968,Clarice Moura,Masculino,Recepcionista,12468.87,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+969,Luiza Almeida,Feminino,Médico Pediatra,17699.15,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+970,Davi Rodrigues,Feminino,Assistente Administrativo,5417.27,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+971,Luna Ribeiro,Masculino,Analista de Sistemas,8352.67,Casado,Provável Mal Pagador,Provável Pagador Regular
+972,Valentina Silveira,Feminino,Cozinheiro,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
+973,Lara Peixoto,Masculino,Contador,7220.04,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+974,Caroline Correia,Feminino,Analista de Marketing,13903.55,Casado,Provável Mal Pagador,Provável Pagador Regular
+975,Srta. Isabelly da Cruz,Masculino,Enfermeiro,15918.48,Divorciado,Provável Pagador Regular,Provável Pagador Regular
+976,Luna Lima,Feminino,Engenheiro Civil,17090.4,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+977,Melissa Moreira,Feminino,Publicitário,14658.03,Casado,Provável Mal Pagador,Provável Pagador Regular
+978,Srta. Elisa da Cunha,Feminino,Mecânico,10380.24,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+979,Gustavo Ferreira,Feminino,Consultor de Vendas,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+980,Heloísa Oliveira,Masculino,Contador,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+981,Rodrigo Aragão,Masculino,Consultor de Vendas,5716.84,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+982,Alexia Correia,Masculino,Professor Universitário,3273.8,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+983,Alice Lopes,Masculino,Mecânico,8121.85,Casado,Provável Mal Pagador,Provável Pagador Regular
+984,Isabelly da Rosa,Feminino,Analista de BI,18671.47,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+985,Otávio Martins,Masculino,Motorista,14884.46,Viúvo,Provável Mal Pagador,Provável Pagador Regular
+986,Mariane Rocha,Feminino,Arquiteto,4150.3,Casado,Provável Mal Pagador,Provável Pagador Regular
+987,Isabella Porto,Masculino,Mecânico,0.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+988,Sra. Valentina Nogueira,Masculino,Médico Pediatra,4824.11,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+989,Ian da Conceição,Masculino,Assistente de RH,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+990,Dr. Eduardo Aragão,Feminino,Técnico de Enfermagem,6346.0,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+991,João Pedro das Neves,Masculino,Cozinheiro,0.0,Casado,Provável Pagador Regular,Provável Pagador Regular
+992,Renan Martins,Masculino,Professor Universitário,10236.92,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+993,Carlos Eduardo Nogueira,Feminino,Analista de Sistemas,7786.84,Solteiro,Provável Mal Pagador,Provável Pagador Regular
+994,Noah Nascimento,Masculino,Engenheiro Civil,0.0,Solteiro,Provável Pagador Regular,Provável Pagador Regular
+995,Davi Lucas Azevedo,Feminino,Cientista de Dados,0.0,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+996,Vicente Ramos,Feminino,Enfermeiro,13668.24,Casado,Provável Pagador Regular,Provável Pagador Regular
+997,Leandro da Luz,Masculino,Analista de Marketing,1844.3,Divorciado,Provável Mal Pagador,Provável Pagador Regular
+998,Lorena Azevedo,Masculino,Analista de Sistemas,14644.93,Viúvo,Provável Pagador Regular,Provável Pagador Regular
+999,Gabriel Sales,Masculino,Eletricista,0.0,Casado,Provável Mal Pagador,Provável Pagador Regular
