@@ -1,7 +1,5 @@
 # Contando Números com Spark
-'''
-Contando quantas vezes os números aparecerão no arquivo numbers.txt
-'''
+# Contando quantas vezes os números aparecerão no arquivo numbers.txt
 
 '''
 # %%
