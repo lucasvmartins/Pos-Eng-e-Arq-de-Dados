@@ -1,15 +1,6 @@
 # Contando Números com Spark
 # Contando quantas vezes os números aparecerão no arquivo numbers.txt
 
-'''
-# %%
-# Colocando esse trecho de código por causa de alguns erros que estavam acontecendo
-import os, sys
-
-os.environ['PYSPARK_PYTHON'] = sys.executable
-os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
-'''
-
 # %%
 # Importando Biblioteca Spark
 from pyspark.sql import SparkSession

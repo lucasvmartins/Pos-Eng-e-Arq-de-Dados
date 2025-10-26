@@ -1,13 +1,5 @@
 # Prática de Transformações com Spark
 
-#%%
-
-import os, sys
-
-os.environ['PYSPARK_PYTHON'] = sys.executable
-os.environ['PYSPARK_DRIVER_PYTHON'] = sys.executable
-
-
 # %%
 # Importando Spark e criando sessão
 from pyspark.sql import SparkSession
