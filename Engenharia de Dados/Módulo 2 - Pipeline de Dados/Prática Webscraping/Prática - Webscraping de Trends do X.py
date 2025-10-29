@@ -15,6 +15,11 @@ import matplotlib.pyplot as plt
 # Capturando os trending topics do Brasil via Trends24
 url = "https://trends24.in/brazil/"
 response = requests.get(url)
+
+# Define a codificação para ISO-8859-1 (Latin-1)
+response.encoding = 'UTF-8'
+
+# Cria o objeto BeautifulSoup usando o texto já decodificado
 soup = BeautifulSoup(response.text, 'html.parser')
 
 # %%
