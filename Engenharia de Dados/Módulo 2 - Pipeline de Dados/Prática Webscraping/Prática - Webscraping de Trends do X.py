@@ -1,8 +1,8 @@
 # Prática de "webscraping" de trends do X/Twitter
 
 # %%
-# Instalando as bibliotecas Tweepy
-# ! pip install requests beautifulsoup4 wordcloud matplotlib
+# Instalando as bibliotecas requests beautifulsoup4 wordcloud (caso ainda não tenha)
+# ! pip install requests beautifulsoup4 wordcloud
 
 # %%
 # Importando bibliotecas
@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 url = "https://trends24.in/brazil/"
 response = requests.get(url)
 
-# Define a codificação para ISO-8859-1 (Latin-1)
+# Define a codificação para UTF-8
 response.encoding = 'UTF-8'
 
 # Cria o objeto BeautifulSoup usando o texto já decodificado
