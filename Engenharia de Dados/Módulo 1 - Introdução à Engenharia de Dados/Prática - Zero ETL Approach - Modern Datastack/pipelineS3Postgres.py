@@ -10,7 +10,7 @@ from astro.files import File
 from astro.sql.table import Table
 
 # Input
-S3_FOLDER_PATH = 's3://teste-astro'
+S3_FOLDER_PATH = 's3://caminho-da-pasta-no-s3'
 S3_FILE_PATH = '/clientes.csv'
 S3_CONNECTION_ID = 'aws_astro'
 
