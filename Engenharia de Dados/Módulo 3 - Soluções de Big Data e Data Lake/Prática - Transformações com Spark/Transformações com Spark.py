@@ -1,4 +1,5 @@
 # Prática de Transformações com Spark
+# Para esta prática, foi usado o README.md do repositório do Spark no GitHub
 
 # %%
 # Importando Spark e criando sessão
