@@ -1,6 +1,9 @@
-version: '2.1'
+# Prática com os Fundamentos do Apache Kafka
+# Broker, Cluster, Zookeeper, Producer, Consumer
+
+
 services:
-  
+
   # ---------------------- #
   #      ZOOKEEPERS        #
   # ---------------------- #
@@ -51,21 +54,21 @@ services:
 
   kafka-1:
     image: confluentinc/cp-kafka:7.0.0
-    network-mode: host
+    network_mode: host
     depends_on:
       - zookeeper-1
       - zookeeper-2
       - zookeeper-3
     environment:
       KAFKA_BROKER_ID: 1
-      KAFK_ZOOKEEPER_CONNECT: localhost:22181,localhost:32181,localhost:42181
+      KAFKA_ZOOKEEPER_CONNECT: localhost:22181,localhost:32181,localhost:42181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:19092
     extra_hosts:
       - "moby:127.0.0.1"
 
   kafka-2:
     image: confluentinc/cp-kafka:7.0.0
-    network-mode: host
+    network_mode: host
     depends_on:
       - zookeeper-1
       - zookeeper-2
@@ -79,7 +82,7 @@ services:
 
   kafka-3:
     image: confluentinc/cp-kafka:7.0.0
-    network-mode: host
+    network_mode: host
     depends_on:
       - zookeeper-1
       - zookeeper-2
