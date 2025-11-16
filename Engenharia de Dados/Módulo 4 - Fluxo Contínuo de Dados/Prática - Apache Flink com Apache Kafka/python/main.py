@@ -1,6 +1,7 @@
 # Prática do Apache Flink com Apache Kafka
 # É necessário para o código a instalação das bibliotecas
-# faker e confluent_kafka
+# faker, confluent_kafka e simplejson
+# pip install faker confluent_kafka simplejson
 
 
 import random
@@ -27,7 +28,7 @@ def generate_sales_transaction():
         'productQuantity': random.randint(1, 10),
         'currency': random.choice(['BRL', 'USD', 'EUR', 'LIB']),
         'customerId': user['username'],
-        'transactionDate': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f%z '),
+        'transactionDate': datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f%z'),
         'paymentMethod': random.choice(['Credit Card', 'Debit Card', 'Paypal', 'Cash'])
     }
 
@@ -42,8 +43,9 @@ def main():
     while True:
 
         try:
+
             transaction = generate_sales_transaction()
-            transaction['TotalAmounth'] = transaction['productPrice'] * transaction['productQuantity']
+            transaction['totalAmount'] = transaction['productPrice'] * transaction['productQuantity']
 
             producer.produce(
                 topic,
@@ -67,11 +69,12 @@ def delivery_report(err, msg):
     if err is not None:
         print(f'Nao foi possivel entregar o payload para a gravacao {msg.key()}: {err}')
     else:
-        print(f'Mensagem entregue com sucesso no topico {msg.topic()} [{msg.partition()}]')
+        print(f'Mensagem entregue com sucesso no topico {msg.topic} [{msg.partition()}]')
+
 
 if __name__ == '__main__':
     main()
 
-# kafka-console-consumer --bootstrap-server localhost:9092 \
+# kafka-console-consumer --bootstrap-server 172.17.0.1:9092 \
 # --topic sales-transactions \
-# --from-beginningcd
+# --from-beginning
