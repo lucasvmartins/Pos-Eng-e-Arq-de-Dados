@@ -1,0 +1,98 @@
+Comandos do Desafio Final
+
+docker buildx build . -t connect-custom:1.0.0
+
+docker compose up -d
+
+docker exec -it broker bash
+
+
+kafka-topics --create \
+--bootstrap-server localhost:9092 \
+--partitions 1 \
+--replication-factor 1 \
+--topic postgres-dadostesouroipca
+
+kafka-topics --create \
+--bootstrap-server localhost:9092 \
+--partitions 1 \
+--replication-factor 1 \
+--topic postgres-dadostesouropre
+
+
+kafka-topics --bootstrap-server localhost:9092 --list
+
+
+curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_ipca.config http://localhost:8083/connectors
+
+curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_pre.config localhost:8083/connectors
+
+kafka-console-consumer --bootstrap-server localhost:9092 \
+--topic postgres-dadostesouroipca \
+--from-beginning
+
+kafka-console-consumer --bootstrap-server localhost:9092 \
+--topic postgres-dadostesouropre \
+--from-beginning
+
+kafka-topics --bootstrap-server localhost:9092 \
+--describe \
+--topic postgres-dadostesouroipca
+
+kafka-topics --bootstrap-server localhost:9092 \
+--describe \
+--topic postgres-dadostesouropre
+
+docker logs -f connect
+
+curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_ipca.config http://localhost:8083/connectors
+
+curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_pre.config http://localhost:8083/connectors
+
+arn:aws:iam::363166322011:user/lucasv.martins
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowWriteAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::363166322011:user/lucasv.martins"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::bucket-df-ipca",
+                "arn:aws:s3:::bucket-df-ipca/*"
+            ]
+        }
+    ]
+}
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowWriteAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::363166322011:user/lucasv.martins"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::bucket-df-pre",
+                "arn:aws:s3:::bucket-df-pre/*"
+            ]
+        }
+    ]
+}
