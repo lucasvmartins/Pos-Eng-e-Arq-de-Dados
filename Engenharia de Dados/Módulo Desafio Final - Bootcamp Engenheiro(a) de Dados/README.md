@@ -123,51 +123,73 @@ Após clonar o repositório, entre na pasta `./custom-kafka-connectors-image` pe
 docker buildx build . -t connect-custom:1.0.0
 ```
 
-Uma nova imagem com o nome `connect-custom` e tag `1.0.0` será criada. Essa é a imagem que nosso serviço connect dentro do `docker-compose.yml` irá utilizar, com os conectores que precisaremos instalados.
+Uma nova imagem com o nome `connect-custom` e tag `1.0.0` será criada. Essa é a imagem que nosso serviço connect dentro do `docker-compose.yaml` irá utilizar, com os conectores que precisaremos instalados.
 
 **Explicação:** O comando `docker buildx build` cria uma nova imagem Docker a partir do `Dockerfile` dentro da pasta `./custom-kafka-connectors-image`. Essa pasta contém os arquivos necessários para personalizar a imagem, como congurações especícas e conectores adicionais.
 
-Essa imagem será usada pelo serviço Kafka Connect definido no arquivo `docker-compose.yml`. Os conectores personalizados incluídos na imagem são necessários para realizar a integração com as fontes de dados **(PostgreSQL)** e destinos **(Amazon S3)**.
+Essa imagem será usada pelo serviço Kafka Connect definido no arquivo `docker-compose.yaml`. Os conectores personalizados incluídos na imagem são necessários para realizar a integração com as fontes de dados **(PostgreSQL)** e destinos **(Amazon S3)**.
 
 
 ---
 
 ## 4. Subir o PostgreSQL
 
-Dentro da pasta `./postgres`, execute o arquivo `docker-compose.yml` rode:
+Dentro da pasta `./postgres`, execute o arquivo `docker-compose.yaml` rode:
 
 ```
 docker compose up -d
 ```
+
+_Obs.: Possa ser que algum serviço postgres já esteja rodando na sua máquina, isso impede que o Docker inicie o contêiner postgres. Caso isso aconteça, verifique os serviços que estão rodando e veja se o postgres já está em execução, se já estiver, pare a execução e execute o docker compose novamente._
 
 ---
 
 ## 5. Processar o ETL
 
-Abra e execute o arquivo **importar.ipynb** (não funciona em Colab por causa da conexão local com PostgreSQL).
+Abra e execute o arquivo `importar.ipynb` _(não funciona em Colab por causa da conexão local com PostgreSQL)_. Você pode rodar este notebook no **Jupyter** ou **VS Code** com extensão **Jupyter**. Pelo fato do seu Postgres estar em um container local, o código vai dar erro na conexão caso você use o **Google Colab**.
+
+Depois de rodar, confira as tabelas no Postgres. Por exemplo, pode usar o **DBeaver** ou o **pgAdmin 4** como ferramenta gerenciadora do banco de dados.
+Os parâmetros de conexão estão dentro do arquivo `docker-compose.yaml` na pasta `./postgres`.
+
+```
+postgres:
+    image: postgres:13.2
+    ports:
+      - 5432:5432
+    hostname: postgres
+    container_name: postgres
+    environment: 
+      POSTGRES_PASSWORD: postgres
+```
 
 ---
 
 ## 6. Subir a plataforma Confluent com Docker Compose
 
-Na raiz do projeto:
+No arquivo `docker-compose.yaml` localizado na raiz do projeto estamos subindo toda a estrutura da plataforma Confluent. Para isso, vamos entrar na pasta e subir a estrutura.
+
+Na raiz do projeto, rode:
 
 ```
 docker compose up -d
 ```
 
-A arquitetura inclui:
+Este Docker Compose cria uma arquitetura Kafka com suporte para:
 
-* Kafka Broker
-* Zookeeper
-* Schema Registry
-* Kafka Connect
-* ksqldb-server e ksqldb-cli
-* REST Proxy
+* Streaming de dados com Kafka Broker
+* Coordenação através do Zookeeper
+* Gerenciamento de esquemas com Schema Registry
+* Integração com sistemas externos via Kafka Connect
+* Consultas SQL em tempo real com ksqldb-server e ksqldb-cli
+* Interface REST para Kafka via REST Proxy
+
+Se o container do proxy não subir na porta 8082, você pode identificar qual processo está usando a porta 8082 a partir do terminal rodando o comando no Windows `netstat -ano | ndstr :8082`. Você verá o PID (Process ID) do processo que está usando a porta. Obs: para finalizar a tarefa, entre no terminal com acesso de admistrador e execute `taskkill /PID <PID> /F`. Após ter finalizado o processo, tente iniciar o contêiner novamente.
 
 ---
 
 ## 7. Criar dois tópicos no Kafka
+
+Antes de criar os tópicos, você precisa acessar o contêiner onde o Kafka está rodando. Certique-se de que o Docker está ativo e os serviços do Kafka estão em execução.
 
 Acesse o container do broker:
 
@@ -175,9 +197,19 @@ Acesse o container do broker:
 docker exec -it broker bash
 ```
 
-Crie os tópicos:
+Após executar esse comando, você estará no terminal do contêiner Kafka Broker.
 
-### IPCA
+**Explicação:**
+* **docker exec**: Executa um comando em um contêiner ativo.
+* **-it**: Abre uma sessão interativa com o contêiner.
+* **broker**: Nome do contêiner que roda o Kafka Broker (esse nome pode variar de acordo com a conguração do seu docker-compose.yaml)
+* **bash**: Usando a linha de comando
+
+Crie os tópicos no Kafka:
+
+Agora que você está dentro do contêiner do Kafka, use o comando kafka-topics para criar os tópicos. Cada tópico armazenará os dados movidos do PostgreSQL.
+
+### IPCA (Comando para criar o tópico postgres-dadostesouroipca)
 
 ```
 kafka-topics --create \
@@ -187,7 +219,7 @@ kafka-topics --create \
 --topic postgres-dadostesouroipca
 ```
 
-### PRE
+### PRE (Comando para criar o tópico postgres-dadostesouropre)
 
 ```
 kafka-topics --create \
@@ -197,11 +229,20 @@ kafka-topics --create \
 --topic postgres-dadostesouropre
 ```
 
-Verifique:
+* **--bootstrap-server localhost:9092:** Especifica o endereço do servidor Kafka. O localhost:9092 é o endereço padrão usado em contêineres Kafka.
+* **--partitions 1:** Define o número de partições do tópico. Para este exemplo, usamos 1 partição.
+* **--replication-factor 1:** Define o número de réplicas para o tópico. Usamos 1, pois estamos rodando o Kafka em um único broker.
+* **--topic postgres-dadostesouro...:** Nome do tópico sendo criado.
+
+### Verificar se os tópicos foram criados:
+
+Após executar os comandos acima, é importante confirmar que os tópicos foram criados com sucesso. Use o comando abaixo para listar os tópicos disponíveis no Kafka:
 
 ```
 kafka-topics --bootstrap-server localhost:9092 --list
 ```
+
+Isso exibirá todos os tópicos criados no Kafka. Você deve ver os nomes `postgres-dadostesouroipca` e `postgres-dadostesouropre` na lista.
 
 ---
 
