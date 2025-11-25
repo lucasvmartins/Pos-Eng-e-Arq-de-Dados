@@ -65,14 +65,6 @@ Portanto, vamos desenvolver uma solução prática de Engenharia de Dados que im
 
 ---
 
-## Entregáveis
-
-1. **Screenshots** que comprovem as tabelas carregadas no Postgres.
-2. **Screenshots ou logs** que comprovem os códigos Spark dos pipelines (incluindo consultas Spark SQL).
-3. **Screenshots ou logs** que comprovem os dados processados no Amazon S3, organizados e particionados.
-
----
-
 # PARTE 01 – CAMADAS BRONZE
 
 ## Passo a Passo para Execução
@@ -89,13 +81,15 @@ Portanto, vamos desenvolver uma solução prática de Engenharia de Dados que im
 
 ## 2. Configurar o arquivo `.env_kafka_connect`
 
-Crie um arquivo `.env_kafka_connect` contendo suas chaves AWS como variáveis de ambiente.
+Edite o arquivo `.env_kafka_connect` com suas chaves AWS como variáveis de ambiente.
 Exemplo:
 
 ```
 AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxx
 AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
+
+Lembre-se que o mesmo usuário que possui essa chave precisa ter em suas permissões a permissão `AmazonS3FullAccess` para poder gerenciar os Buckets do S3.
 
 ---
 
@@ -131,14 +125,14 @@ docker buildx build . -t connect-custom:1.0.0
 Dentro da pasta `postgres`, rode:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 ---
 
 ## 5. Processar o ETL
 
-Abra e execute o arquivo **importar.ipynb** no Jupyter Notebook (não funciona em Colab por causa da conexão local com PostgreSQL).
+Abra e execute o arquivo **importar.ipynb** (não funciona em Colab por causa da conexão local com PostgreSQL).
 
 ---
 
@@ -147,7 +141,7 @@ Abra e execute o arquivo **importar.ipynb** no Jupyter Notebook (não funciona e
 Na raiz do projeto:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 A arquitetura inclui:
