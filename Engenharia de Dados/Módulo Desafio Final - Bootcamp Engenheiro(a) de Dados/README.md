@@ -117,24 +117,24 @@ Ajuste os arquivos de configuração `connect_s3_sink_ipca.config` e `connect_s3
 
 ## 3. Build da imagem do Kafka Connect
 
-Após clonar o repositório, entre na pasta `custom-kafka-connectors-image` e execute:
+Após clonar o repositório, entre na pasta `./custom-kafka-connectors-image` pelo console e execute:
 
 ```
 docker buildx build . -t connect-custom:1.0.0
 ```
 
-Uma nova imagem com o nome `connect-custom` e tag `1.0.0` será criada. Essa é a imagem que nosso serviço connect dentro do docker-compose.yml irá utilizar, com os conectores que precisaremos instalados.
+Uma nova imagem com o nome `connect-custom` e tag `1.0.0` será criada. Essa é a imagem que nosso serviço connect dentro do `docker-compose.yml` irá utilizar, com os conectores que precisaremos instalados.
 
-**Explicação:** O comando `docker buildx build` cria uma nova imagem Docker a partir do `Dockerfile` dentro da pasta `custom-kafka-connectors-image`. Essa pasta contém os arquivos necessários para personalizar a imagem, como congurações especícas e conectores adicionais.
+**Explicação:** O comando `docker buildx build` cria uma nova imagem Docker a partir do `Dockerfile` dentro da pasta `./custom-kafka-connectors-image`. Essa pasta contém os arquivos necessários para personalizar a imagem, como congurações especícas e conectores adicionais.
 
-Essa imagem será usada pelo serviço Kafka Connect definido no arquivo `docker-compose.yml`. Os conectores personalizados incluídos na imagem são necessários para realizar a integração com as fontes de dados (PostgreSQL) e destinos (Amazon S3).
+Essa imagem será usada pelo serviço Kafka Connect definido no arquivo `docker-compose.yml`. Os conectores personalizados incluídos na imagem são necessários para realizar a integração com as fontes de dados **(PostgreSQL)** e destinos **(Amazon S3)**.
 
 
 ---
 
 ## 4. Subir o PostgreSQL
 
-Dentro da pasta `postgres`, rode:
+Dentro da pasta `./postgres`, execute o arquivo `docker-compose.yml` rode:
 
 ```
 docker compose up -d
