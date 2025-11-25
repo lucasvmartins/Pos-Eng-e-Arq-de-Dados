@@ -96,6 +96,7 @@ Lembre-se que o mesmo usuário que possui essa chave precisa ter em suas permiss
 ## Configurar o Bucket no Amazon S3
 
 O Kafka Connect precisa das credenciais para se autenticar no Amazon S3. Essas credenciais foram fornecidas dentro de arquivo de conguração.
+
 Vá ao console da AWS e crie os buckets com os nomes que preferir, por exemplo:
 
 * `my-bucket-xx-01`
@@ -108,7 +109,7 @@ Escolha a região compatível:
 Ajuste os arquivos de configuração `connect_s3_sink_ipca.config` e `connect_s3_sink_pre.config` em `.../connectors/sink`, substituindo os nomes dos buckets nas linhas:
 
 ```
-"s3.bucket.name": "my-bucket-xx-01",
+"s3.bucket.name": "my-bucket-xx-0x",
 "s3.region": "us-east-1",
 ```
 
