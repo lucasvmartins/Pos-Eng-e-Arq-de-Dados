@@ -99,8 +99,8 @@ O Kafka Connect precisa das credenciais para se autenticar no Amazon S3. Essas c
 
 Vá ao console da AWS e crie os buckets com os nomes que preferir, por exemplo:
 
-* `my-bucket-xx-01`
-* `my-bucket-xx-02`
+* `NOME-DO-BUCKET-01`
+* `NOME-DO-BUCKET-02`
 
 Escolha a região compatível:
 
@@ -109,7 +109,7 @@ Escolha a região compatível:
 Ajuste os arquivos de configuração `connect_s3_sink_ipca.config` e `connect_s3_sink_pre.config` em `.../connectors/sink`, substituindo os nomes dos buckets nas linhas:
 
 ```
-"s3.bucket.name": "my-bucket-xx-0x",
+"s3.bucket.name": "NOME-DO-BUCKET-0X",
 "s3.region": "us-east-1",
 ```
 
@@ -398,7 +398,7 @@ Este arquivo configura o conector para enviar dados do tópico `postgres-dadoste
         "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
         "flush.size": 2,
         "schema.compatibility": "FULL",
-        "s3.bucket.name": "NOME-DO-BUCKET",
+        "s3.bucket.name": "NOME-DO-BUCKET-01",
         "s3.region": "us-east-1",
         "s3.object.tagging": true,
         "s3.ssea.name": "AES256",
@@ -424,7 +424,7 @@ Este arquivo configura o conector para enviar dados do tópico `postgres-dadoste
         "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
         "flush.size": 2,
         "schema.compatibility": "FULL",
-        "s3.bucket.name": "NOME-DO-BUCKET",
+        "s3.bucket.name": "NOME-DO-BUCKET-02",
         "s3.region": "us-east-1",
         "s3.object.tagging": true,
         "s3.ssea.name": "AES256",
@@ -436,58 +436,107 @@ Este arquivo configura o conector para enviar dados do tópico `postgres-dadoste
 }
 ```
 
-_Obs.: Lembre-se de alterar o nome do bucket para o mesmo que você criou no S3 **("s3.bucket.name": "NOME-DO-BUCKET")**_
+_Obs.: Lembre-se de alterar o nome dos buckets para o mesmo que você criou no S3 **("s3.bucket.name": "NOME-DO-BUCKET-0X")**_
+
+Registre os Sink Connectors no Kafka Connect. Fora do contêiner, vá no diretório _...connectors/sink_ e execute os comandos abaixo:
+
+### IPCA
+
+```
+curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_ipca.config http://localhost:8083/connectors
+```
+
+### PRE
+
+```
+curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_pre.config http://localhost:8083/connectors
+```
 
 ---
 
 ## 10. Verificar entrega no S3
 
+Certifique-se de que os dados dos tópicos `postgres-dadostesouroipca` e `postgres-dadostesouropre` estão sendo escritos no bucket S3 configurado.
+
 Os arquivos devem aparecer no bucket em formato JSON, por exemplo:
 
 ```json
 {
-  "CompraManha": 12.73,
-  "VendaManha": 12.79,
-  "PUCompraManha": 631.4,
-  "PUVendaManha": 630.11,
-  "PUBaseManha": 629.81,
-  "Data_Vencimento": 1420070400000,
-  "Data_Base": 1298851200000,
-  "Tipo": "PRE-FIXADOS",
-  "dt_update": 1734381830665
+    "CompraManha": 12.73,
+    "VendaManha": 12.79,
+    "PUCompraManha": 631.4,
+    "PUVendaManha": 630.11,
+    "PUBaseManha": 629.81,
+    "Data_Vencimento": 1420070400000,
+    "Data_Base": 1298851200000,
+    "Tipo": "PRE-FIXADOS",
+    "dt_update": 1734381830665
 }
 ```
 
 ---
 
-# PARTE 02 – CAMADAS SILVER E GOLD
+# PARTE 02 – CAMADAS SILVER E GOLD COM APACHE SPARK
 
 ## 1. Configuração de Permissões nos Buckets
 
-Inclua permissões similares a:
+Vamos precisar dar acesso aos buckets. Vá em cada bucket, nas permissões e crie a seguinte diretiva. Repare que você precisa buscar antes no IAM seu código e usuário.
+
+`"AWS": "arn:aws:iam::012345678901:user/seuusuario"`
+
+Permissões a serem inseridas em cada bucket. **Não se esqueça de alterar seu user e o nome do bucket.**
+
+### IPCA
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "AllowWriteAccess",
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::123456789012:user/ricardobalves"
-      },
-      "Action": [
-        "s3:GetObject",
-        "s3:PutObject",
-        "s3:DeleteObject",
-        "s3:ListBucket"
-      ],
-      "Resource": [
-        "arn:aws:s3:::my-bucket-ric-01",
-        "arn:aws:s3:::my-bucket-ric-01/*"
-      ]
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowWriteAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::012345678901:user/seuusuario
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::NOME-DO-BUCKET-01",
+                "arn:aws:s3:::NOME-DO-BUCKET-01/*"
+            ]
+        }
+    ]
+}
+```
+
+### PRE
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowWriteAccess",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::012345678901:user/seuusuario
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::NOME-DO-BUCKET-02",
+                "arn:aws:s3:::NOME-DO-BUCKET-02/*"
+            ]
+        }
+    ]
 }
 ```
 
@@ -495,64 +544,135 @@ Inclua permissões similares a:
 
 # 2. Instalação do Apache Spark
 
-Pode ser:
+Vamos começar usando a pasta **spark**, que está na estrutura de diretórios. Você pode ter o Spark das duas formas que vou explicar abaixo: instalação local na sua máquina ou instalação utilizando contêineres do Docker.
 
 ### a) Instalação local (Spark + Hadoop)
 
+Você pode estar instalando o Spark de forma local seguindo o passo a passo dos links a seguir:
+
+* **No Linux:** https://phoenixnap.com/kb/install-spark-on-ubuntu
+* **No Windows:** https://phoenixnap.com/kb/install-spark-on-windows-10
+
+Você precisa do **Jupyter Notebook** operando na sua máquina, para abrir o arquivo do notebook `(etl-spark.ipynb)`.
+
 ou
 
-### b) Uso via contêineres Docker
+### b) Uso do Spark via contêineres Docker
 
-(Conteúdo mantido como no original, apenas corrigido.)
+Vá no diretório _spark_ e rode o Docker compose. Ele vai subir o conjunto de contêineres necessários para rodarmos o **Spark**, incluindo o **Jupyter Notebook**.
+
+Vá no notebook criado para o Jupyter e clique no endereço http://localhost:8888. Vai abrir o **Jupyter Notebook** no browser, a partir do contêiner.
+
+Para abrir o arquivo do notebook `(etl-spark.ipynb)`, basta fazer o upload do arquivo.
+
+Para ambos os ambientes do **Spark**, precisaremos dos arquivos **.jar**:
+* **hadoop-aws:** O conector Hadoop para AWS
+* **aws-java-sdk-bundle:** O SDK da Amazon para AWS
+
+**Versões recomendadas:**
+* hadoop-aws-3.3.4.jar
+* aws-java-sdk-bundle-1.12.262.jar
 
 ---
 
-# 3. Notebook `etl-spark.ipynb`
+# 3. Entendendo o Notebook `etl-spark.ipynb` Para Transformações
 
-Trechos corrigidos, incluindo:
+Você pode rodar o notebook, entretanto é interessante que leia as explicações abaixo antes de rodar o código.
 
-### Bronze → Silver
+* **Camada Bronze:** Os dados foram ingeridos como estão, no formato bruto
+* **Camada Silver:** Vamos converter **timestamps** em datas legíveis e trataremos duplicações e inconsistências
+* **Camada Gold:** Vamos agregar dados, como médias de preços unitários (PU) e métricas por tipo de título _(IPCA e "PRE-FIXADOS")_
+
+### (Leitura dos dados brutos no S3)
+
+Carregue os dados brutos do S3 que estão em formato **JSON**:
 
 ```python
+from pyspark.sql import SparkSession
+
+# Inicializando Spark Session
+spark = SparkSession.builder \
+                    .appName("ETL Pipeline - Bronze to Silver") \
+                    .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
+                    .getOrCreate()
+
+# Caminho dos dados brutos no S3 (Camada Bronze)
+bronze_path = "s3a://NOME-DO-BUCKET-01/raw-data/ipca/kafka/"
+
+# Lendo os dados brutos do S3
+df_bronze = spark.read.json(bronze_path)
+
+# Visualizando os dados brutos
+df_bronze.show()
+```
+
+### Bronze → Silver (Limpeza e Transformação)
+
+Aqui você realiza:
+* Remoção de duplicações
+* Conversão de timestamps em formato de data
+* Tratamento de dados ausentes ou inválidos
+* Normalização de colunas
+
+```python
+from pyspark.sql.functions import col, from_unixtime
+
+# Removendo duplicações
 df_silver = df_bronze.dropDuplicates()
 
-df_silver = df_silver.withColumn("Data_Vencimento",
-    from_unixtime(col("Data_Vencimento") / 1000, "yyyy-MM-dd")) \
-    .withColumn("Data_Base",
-    from_unixtime(col("Data_Base") / 1000, "yyyy-MM-dd")) \
-    .withColumn("dt_update",
-    from_unixtime(col("dt_update") / 1000, "yyyy-MM-dd HH:mm:ss"))
+# Tratando timestamps e convertendo para o formato de data legível
+df_silver = df_silver.withColumn("Data_Vencimento", from_unixtime(col("Data_Vencimento") / 1000, "yyyy-MM-dd")) \
+                     .withColumn("Data_Base", from_unixtime(col("Data_Base") / 1000, "yyyy-MM-dd")) \
+                     .withColumn("dt_update", from_unixtime(col("dt_update") / 1000, "yyyy-MM-dd HH:mm:ss"))
 
+# Tratando valores nulos (preenchendo com 0)
 df_silver = df_silver.fillna({
     "PUCompraManha": 0,
     "PUVendaManha": 0,
     "PUBaseManha": 0
 })
+
+# Exibindo os dados da camada Silver
+df_silver.show()
+
+# Salvando a camada Silver de volta no S3
+silver_path = "s3a://NOME-DO-BUCKET-01/processed-data/ipca/silver/"
+df_silver.write.mode("overwrite").parquet(silver_path)
 ```
 
-### Silver → Gold
+### Silver → Gold (Agregação e Enriquecimento)
+
+Aqui você agrega os dados para criar métricas analíticas, como:
+* Média de PUCompraManha e PUVendaManha
+* Contagem por tipo de título
 
 ```python
-df_gold = df_silver.groupBy("Tipo").agg(
-    avg("PUCompraManha").alias("Media_PUCompraManha"),
-    avg("PUVendaManha").alias("Media_PUVendaManha"),
-    count("*").alias("Total_Registros")
-)
+from pyspark.sql.functions import avg, count
+
+# Calculando métricas agregadas
+df_gold = df_silver.groupBy("Tipo").agg(avg("PUCompraManha").alias("Media_PUCompraManha"), \
+                                        avg("PUVendaManha").alias("Media_PUVendaManha"), \
+                                        count("*").alias("Total_Registros")
+                                   )
+
+# Exibindo os dados agregados (Gold)
+df_gold.show()
+
+# Salvando a camada Gold no S3
+gold_path = "s3a://NOME-DO-BUCKET-01/analytics/ipca/gold/"
+df_gold.write.mode("overwrite").parquet(gold_path)
 ```
 
 ---
 
 ## 4. Validar Resultados no S3
 
-* `processed-data/ipca/silver/`: dados limpos
-* `analytics/ipca/gold/`: dados agregados
+Após o processamento, verifique o bucket no S3:
+* `processed-data/ipca/silver/:` Dados limpos e transformados
+* `analytics/ipca/gold/:` Dados agregados e prontos para análise
 
 ---
 
-Se quiser, posso também:
+# Desafio
 
-✅ Criar um **PDF formatado**
-✅ Criar uma **versão resumida para entrega**
-✅ Criar um **guia passo a passo simplificado**
-
-É só pedir!
+Faça os mesmos processamentos para ambos os dados **(IPCA e PRE-FIXADO)**.
