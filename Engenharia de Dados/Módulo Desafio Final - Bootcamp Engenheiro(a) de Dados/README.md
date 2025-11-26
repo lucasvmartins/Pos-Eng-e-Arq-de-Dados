@@ -248,26 +248,30 @@ Isso exibirá todos os tópicos criados no Kafka. Você deve ver os nomes `postg
 
 ## 8. Registrar os Connectors Kafka Source
 
-Crie os arquivos:
+Os conectores Kafka Source serão configurados para extrair dados do PostgreSQL e enviá-los para os tópicos no Kafka. Para isso, vamos precisar de um arquivo no formato json contendo as configurações do conector que vamos registrar. O arquivo `connect_jdbc_postgres_ipca.config` possui a implementação do **IPCA**. O arquivo `connect_jdbc_postgres_pre.config` possui a implementação do **PRE**.
+
+Os conectores são configurados através de arquivos JSON contendo os parâmetros necessários. Aqui está como configurar:
+
+Crie os arquivos com o seguinte conteúdo e salve cada arquivo no diretório onde você irá executar os comandos de registro (./connectors/source):
 
 ### `connect_jdbc_postgres_ipca.config`
 
 ```json
 {
-  "name": "postgres-connector-ipca",
-  "config": {
-    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-    "tasks.max": 1,
-    "connection.url": "jdbc:postgresql://postgres:5432/postgres",
-    "connection.user": "postgres",
-    "connection.password": "postgres",
-    "mode": "timestamp",
-    "timestamp.column.name": "dt_update",
-    "table.whitelist": "public.dadostesouroipca",
-    "topic.prefix": "postgres-",
-    "validate.non.null": "false",
-    "poll.interval.ms": 500
-  }
+    "name": "postg-connector-ipca",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "tasks.max": 1,
+        "connection.url": "jdbc:postgresql://postgres:5432/postgres",
+        "connection.user": "postgres",
+        "connection.password": "postgres",
+        "mode": "timestamp",
+        "timestamp.column.name": "dt_update",
+        "table.whitelist": "public.dadostesouroipca",
+        "topic.prefix": "postgres-",
+        "validate.non.null": "false",
+        "poll.interval.ms": 500
+    }
 }
 ```
 
@@ -275,44 +279,79 @@ Crie os arquivos:
 
 ```json
 {
-  "name": "postgres-connector-pre",
-  "config": {
-    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-    "tasks.max": 1,
-    "connection.url": "jdbc:postgresql://postgres:5432/postgres",
-    "connection.user": "postgres",
-    "connection.password": "postgres",
-    "mode": "timestamp",
-    "timestamp.column.name": "dt_update",
-    "table.whitelist": "public.dadostesouropre",
-    "topic.prefix": "postgres-",
-    "validate.non.null": "false",
-    "poll.interval.ms": 500
-  }
+    "name": "postg-connector",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+        "tasks.max": 1,
+        "connection.url": "jdbc:postgresql://postgres:5432/postgres",
+        "connection.user": "postgres",
+        "connection.password": "postgres",
+        "mode": "timestamp",
+        "timestamp.column.name": "dt_update",
+        "table.whitelist": "public.dadostesouropre",
+        "topic.prefix": "postgres-",
+        "validate.non.null": "false",
+        "poll.interval.ms": 500
+    }
 }
 ```
+
+### Execute os comandos curl para registrar os conectores:
+
+Esta etapa envolve o registro de conectores no Kafka Connect utilizando o comando curl no terminal. O Kafka Connect é uma ferramenta usada para integrar sistemas externos com o Apache Kafka, e, neste caso, estamos registrando conectores JDBC para conectar bancos de dados **PostgreSQL** ao Kafka. O objetivo é registrar dois conectores JDBC no Kafka Connect para que ele possa ler dados de duas tabelas do **PostgreSQL** (provavelmente relacionadas ao IPCA e Pre-fixados, conforme os arquivos de configuração).
+
+No terminal do host **(não dentro do contêiner)**, execute os comandos para registrar os conectores. Certifique-se de estar no diretório onde os arquivos estão salvos ou forneça o caminho completo _(por exemplo, .../connectors/source/)_, antes de executar o comando.
 
 ### Registrar:
 
 ```
 curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_ipca.config http://localhost:8083/connectors
+```
+```
 curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_pre.config http://localhost:8083/connectors
 ```
 
 ---
 
-## Verificar consumo no Kafka
+## Vericar os conectores e tópicos
+
+Verifique o consumo de dados nos tópicos. O comando kafka-console-consumer é usado para consumir mensagens de um tópico Kafka. Vamos verificar os dados nos tópicos `postgres-dadostesouroipca` e `postgres-dadostesouropre`.
+
+### Explicação do comando:
+
+* **kafka-console-consumer:**
+  * Ferramenta CLI do Kafka para consumir mensagens de um tópico
+* **--bootstrap-server localhost:9092:**
+  * Especifica o servidor Kafka que será usado para consumir mensagens
+  * No exemplo, usamos localhost:9092, que é a porta padrão do Kafka Broker
+* **--topic <nome_do_tópico>:**
+  * Define o tópico Kafka de onde você quer consumir as mensagens
+  * No seu caso, os tópicos são `postgres-dadostesouroipca` e `postgres-dadostesouropre`.
+* **--from-beginning:**
+  * Indica que o consumo de mensagens deve começar desde o início do tópico _(todas as mensagens enviadas desde a criação do tópico)_.
+
+Vamos entrar no Kafka Broker que está rodando:
+
+```
+docker exec -it broker bash
+```
+
+### Verifique o consumo de dados nos tópicos:
 
 ### IPCA
 
 ```
-kafka-console-consumer --bootstrap-server localhost:9092 --topic postgres-dadostesouroipca --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 \
+--topic postgres-dadostesouroipca \
+--from-beginning
 ```
 
 ### PRE
 
 ```
-kafka-console-consumer --bootstrap-server localhost:9092 --topic postgres-dadostesouropre --from-beginning
+kafka-console-consumer --bootstrap-server localhost:9092 \
+--topic postgres-dadostesouropre \
+--from-beginning
 ```
 
 ---
