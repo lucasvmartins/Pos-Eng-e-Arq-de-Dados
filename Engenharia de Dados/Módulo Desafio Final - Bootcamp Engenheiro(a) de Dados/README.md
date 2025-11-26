@@ -354,35 +354,89 @@ kafka-console-consumer --bootstrap-server localhost:9092 \
 --from-beginning
 ```
 
+### Verifique os detalhes dos tópicos:
+
+### IPCA
+
+```
+kafka-topics --bootstrap-server localhost:9092 \
+--describe \
+--topic postgres-dadostesouroipca
+```
+
+### PRE
+
+```
+kafka-topics --bootstrap-server localhost:9092 \
+--describe \
+--topic postgres-dadostesouropre
+```
+
+Fora do contêiner, exiba os logs do Kafka Connect para garantir que os conectores não apresentam erros:
+
+```
+docker logs -f connect
+```
+
 ---
 
 ## 9. Configurar os Sink Connectors
 
-Exemplos:
+Os **Sink Connectors** enviam os dados dos tópicos para o **S3**. Edite os arquivos de configuração `connect_s3_sink_ipca.config` e `connect_s3_sink_pre.config` para os Sink Connectors no diretório _(./connectors/sink)_.
 
 ### `connect_s3_sink_ipca.config`
 
+Este arquivo configura o conector para enviar dados do tópico `postgres-dadostesouroipca` para um **bucket S3**.
+
 ```json
 {
-  "name": "s3-sink-ipca",
-  "config": {
-    "connector.class": "io.confluent.connect.s3.S3SinkConnector",
-    "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
-    "keys.format.class": "io.confluent.connect.s3.format.json.JsonFormat",
-    "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
-    "flush.size": 2,
-    "schema.compatibility": "FULL",
-    "s3.bucket.name": "NOME-DO-BUCKET",
-    "s3.region": "us-east-1",
-    "s3.object.tagging": true,
-    "s3.ssea.name": "AES256",
-    "topics.dir": "raw-data/kafka",
-    "storage.class": "io.confluent.connect.s3.storage.S3Storage",
-    "tasks.max": 1,
-    "topics": "postgres-dadostesouroipca"
-  }
+    "name": "s3-sink-ipca",
+    "config": {
+        "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+        "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+        "keys.format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+        "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
+        "flush.size": 2,
+        "schema.compatibility": "FULL",
+        "s3.bucket.name": "NOME-DO-BUCKET",
+        "s3.region": "us-east-1",
+        "s3.object.tagging": true,
+        "s3.ssea.name": "AES256",
+        "topics.dir": "raw-data/ipca/kafka",
+        "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+        "tasks.max": 1,
+        "topics": "postgres-dadostesouroipca"
+    }
 }
 ```
+
+### `connect_s3_sink_pre.config`
+
+Este arquivo configura o conector para enviar dados do tópico `postgres-dadostesouropre` para um **bucket S3**
+
+```json
+{
+    "name": "s3-sink-pre",
+    "config": {
+        "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+        "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+        "keys.format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+        "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
+        "flush.size": 2,
+        "schema.compatibility": "FULL",
+        "s3.bucket.name": "NOME-DO-BUCKET",
+        "s3.region": "us-east-1",
+        "s3.object.tagging": true,
+        "s3.ssea.name": "AES256",
+        "topics.dir": "raw-data/pre/kafka",
+        "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+        "tasks.max": 1,
+        "topics": "postgres-dadostesouropre"
+    }
+}
+```
+
+_Obs.: Lembre-se de alterar o nome do bucket para o mesmo que você criou no S3 **("s3.bucket.name": "NOME-DO-BUCKET")**_
 
 ---
 
