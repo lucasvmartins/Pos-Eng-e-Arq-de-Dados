@@ -480,11 +480,18 @@ Os arquivos devem aparecer no bucket em formato JSON, por exemplo:
 
 ## 1. Configuração de Permissões nos Buckets
 
-Vamos precisar dar acesso aos buckets. Vá em cada bucket, nas permissões e crie a seguinte diretiva. Repare que você precisa buscar antes no IAM seu código e usuário.
+Vamos precisar dar acesso aos buckets. Repare que você precisa buscar antes na área de IAM da AWS seu código de usuário.
 
 `"AWS": "arn:aws:iam::012345678901:user/seuusuario"`
 
 Permissões a serem inseridas em cada bucket. **Não se esqueça de alterar seu user e o nome do bucket.**
+
+```
+"arn:aws:s3:::NOME-DO-BUCKET-0X",
+"arn:aws:s3:::NOME-DO-BUCKET-0X/*"
+```
+
+Obs.: Para acessar as permissões, vá em cada bucket, na aba `Permissões`, na área de `Política do Bucket`, clique em **Editar** e crie as seguintes diretivas:
 
 ### IPCA
 
@@ -496,7 +503,7 @@ Permissões a serem inseridas em cada bucket. **Não se esqueça de alterar seu 
             "Sid": "AllowWriteAccess",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::012345678901:user/seuusuario
+                "AWS": "arn:aws:iam::012345678901:user/seuusuario"
             },
             "Action": [
                 "s3:GetObject",
@@ -523,7 +530,7 @@ Permissões a serem inseridas em cada bucket. **Não se esqueça de alterar seu 
             "Sid": "AllowWriteAccess",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::012345678901:user/seuusuario
+                "AWS": "arn:aws:iam::012345678901:user/seuusuario"
             },
             "Action": [
                 "s3:GetObject",
