@@ -58,7 +58,7 @@ arn:aws:iam::363166322011:user/lucasv.martins
             "Sid": "AllowWriteAccess",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::363166322011:user/lucasv.martins"
+                "AWS": "arn:aws:iam::012345678910:user/meuusuario"
             },
             "Action": [
                 "s3:GetObject",
@@ -67,8 +67,8 @@ arn:aws:iam::363166322011:user/lucasv.martins
                 "s3:ListBucket"
             ],
             "Resource": [
-                "arn:aws:s3:::bucket-df-ipca",
-                "arn:aws:s3:::bucket-df-ipca/*"
+                "arn:aws:s3:::MY-BUCKET-0X",
+                "arn:aws:s3:::MY-BUCKET-0X/*"
             ]
         }
     ]
@@ -81,7 +81,7 @@ arn:aws:iam::363166322011:user/lucasv.martins
             "Sid": "AllowWriteAccess",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "arn:aws:iam::363166322011:user/lucasv.martins"
+                "AWS": "arn:aws:iam::012345678910:user/meuusuario"
             },
             "Action": [
                 "s3:GetObject",
@@ -90,8 +90,8 @@ arn:aws:iam::363166322011:user/lucasv.martins
                 "s3:ListBucket"
             ],
             "Resource": [
-                "arn:aws:s3:::bucket-df-pre",
-                "arn:aws:s3:::bucket-df-pre/*"
+                "arn:aws:s3:::MY-BUCKET-0X",
+                "arn:aws:s3:::MY-BUCKET-0X/*"
             ]
         }
     ]
