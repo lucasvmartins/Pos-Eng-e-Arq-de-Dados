@@ -1,0 +1,14 @@
+CREATE TABLE financial_snapshot (
+    data_hora TIMESTAMP PRIMARY KEY,
+    IBOVESPA   NUMERIC(18,6),
+    SP500      NUMERIC(18,6),
+    DOWJONES   NUMERIC(18,6),
+    USD_BRL    NUMERIC(18,6),
+    EUR_BRL    NUMERIC(18,6),
+    GBP_BRL    NUMERIC(18,6),
+    JPY_BRL    NUMERIC(18,6),
+    BITCOIN    NUMERIC(18,6),
+    ETHEREUM   NUMERIC(18,6),
+    VIX        NUMERIC(18,6),
+    VIX_BR     NUMERIC(18,6)
+);
