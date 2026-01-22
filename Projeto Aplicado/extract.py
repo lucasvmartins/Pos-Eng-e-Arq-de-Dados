@@ -40,7 +40,7 @@ cursor = conn.cursor()
 # =========================
 # Função de coleta
 # =========================
-def fetch_snapshot():
+def get_data():
     snapshot = {}
     now = datetime.now()
     snapshot["data_hora"] = now
@@ -61,11 +61,11 @@ def fetch_snapshot():
 # =========================
 while True:
     try:
-        data = fetch_snapshot()
+        data = get_data()
 
         cursor.execute(
             """
-            INSERT INTO financial_snapshot (
+            INSERT INTO financial (
                 data_hora, IBOVESPA, SP500, DOWJONES,
                 USD_BRL, EUR_BRL, GBP_BRL, JPY_BRL,
                 BITCOIN, ETHEREUM, VIX, VIX_BR

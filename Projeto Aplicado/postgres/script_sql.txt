@@ -1,4 +1,4 @@
-CREATE TABLE financial_snapshot (
+CREATE TABLE financial (
     data_hora TIMESTAMP PRIMARY KEY,
     IBOVESPA   NUMERIC(18,6),
     SP500      NUMERIC(18,6),
