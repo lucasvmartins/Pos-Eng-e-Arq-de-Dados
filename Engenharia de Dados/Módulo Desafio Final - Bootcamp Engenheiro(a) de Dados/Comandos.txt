@@ -49,7 +49,7 @@ curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_ipca.co
 
 curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_pre.config http://localhost:8083/connectors
 
-arn:aws:iam::363166322011:user/lucasv.martins
+arn:aws:iam::012345678910:user/meuusuario
 
 {
     "Version": "2012-10-17",
