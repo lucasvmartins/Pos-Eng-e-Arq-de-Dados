@@ -1,0 +1,25 @@
+docker buildx build . -t connect-custom:1.0.0
+
+docker compose up -d
+
+docker exec -it broker bash
+
+kafka-topics --create \
+--bootstrap-server localhost:9092 \
+--partitions 1 \
+--replication-factor 1 \
+--topic postgres-financial
+
+kafka-topics --bootstrap-server localhost:9092 --list
+
+curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_financial.config http://localhost:8083/connectors
+
+kafka-console-consumer --bootstrap-server localhost:9092 \
+--topic postgres-financial \
+--from-beginning
+
+kafka-topics --bootstrap-server localhost:9092 \
+--describe \
+--topic postgres-financial
+
+curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_financial.config http://localhost:8083/connectors
