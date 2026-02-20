@@ -12,14 +12,155 @@ kafka-topics --create \
 
 kafka-topics --bootstrap-server localhost:9092 --list
 
+kafka-topics --bootstrap-server localhost:9092 \
+--describe \
+--topic postgres-financial
+
 curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_financial.config http://localhost:8083/connectors
 
 kafka-console-consumer --bootstrap-server localhost:9092 \
 --topic postgres-financial \
 --from-beginning
 
-kafka-topics --bootstrap-server localhost:9092 \
---describe \
---topic postgres-financial
-
 curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_financial.config http://localhost:8083/connectors
+
+# No Athena, para criar o banco de dados, basta rodar
+
+CREATE DATABASE IF NOT EXISTS financial_db;
+
+# Para criar a tabela
+
+CREATE EXTERNAL TABLE financial_data (
+  data_hora BIGINT,
+  ibovespa DOUBLE,
+  sp500 DOUBLE,
+  dowjones DOUBLE,
+  usd_brl DOUBLE,
+  eur_brl DOUBLE,
+  gbp_brl DOUBLE,
+  jpy_brl DOUBLE,
+  bitcoin DOUBLE,
+  ethereum DOUBLE,
+  vix DOUBLE,
+  vix_br DOUBLE
+)
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+LOCATION 's3://pa-financial/raw-data/kafka/financial/postgres-financial/partition=0/';
+
+# Convertendo timestamp corretamente
+
+SELECT
+  from_unixtime(data_hora/1000) AS time,
+  ibovespa,
+  sp500,
+  bitcoin
+FROM financial_data
+ORDER BY time DESC
+LIMIT 50;
+
+# SQL para criação do dashboard das bolsas de valores
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'IBOVESPA' as asset,
+  ibovespa as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+UNION ALL
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'SP500' as asset,
+  sp500 as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+UNION ALL
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'DOWJONES' as asset,
+  dowjones as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+ORDER BY time
+
+# SQL para criação do dashboard das moedas
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'USD/BRL' as asset,
+  usd_brl as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+UNION ALL
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'EUR/BRL' as asset,
+  eur_brl as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+UNION ALL
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'GBP/BRL' as asset,
+  gbp_brl as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+UNION ALL
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'JPY/BRL' as asset,
+  jpy_brl as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+ORDER BY time
+
+# SQL para criação do dashboard das criptomoedas
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'BITCOIN' as asset,
+  bitcoin as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+UNION ALL
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'ETHEREUM' as asset,
+  ethereum as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+ORDER BY time
+
+# SQL para criação do dashboard dos índices de volatilidade
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'VIX' as asset,
+  vix as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+UNION ALL
+
+SELECT
+  from_unixtime(data_hora / 1000) as time,
+  'VIX_BR' as asset,
+  vix_br as value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+
+ORDER BY time
