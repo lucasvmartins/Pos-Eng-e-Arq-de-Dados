@@ -26,10 +26,10 @@ Pos-Eng-e-Arq-de-Dados/
 │   ├── Transformações/
 │   └── Scripts/
 │
-├── Projeto-Aplicado/
-├── Códigos/
-├── Pipeline/
-└── Documentação/
+└── Projeto-Aplicado/
+    ├── Códigos/
+    ├── Pipeline/
+    └── Documentação/
 
 ```
 
