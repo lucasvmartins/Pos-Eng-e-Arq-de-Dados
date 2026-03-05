@@ -1,5 +1,6 @@
 # 🚀 Pós-Graduação em Engenharia e Arquitetura de Dados
 
+<!-- ![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-success)-->
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
