@@ -46,13 +46,20 @@ def get_data():
     snapshot["data_hora"] = now
 
     for ativo, ticker in TICKERS.items():
-        hist = yf.Ticker(ticker).history(period="1d", interval="1m")
+        try:
+            ticker_obj = yf.Ticker(ticker)
 
-        snapshot[ativo] = (
-            float(hist.iloc[-1]["Close"])
-            if not hist.empty
-            else None
-        )
+            # pega o último preço disponível
+            price = ticker_obj.fast_info.get("lastPrice")
+
+            if price is not None:
+                snapshot[ativo] = float(price)
+            else:
+                snapshot[ativo] = None
+
+        except Exception as e:
+            print(f"Erro ao coletar {ativo}: {e}")
+            snapshot[ativo] = None
 
     return snapshot
 
