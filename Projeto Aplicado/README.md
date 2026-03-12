@@ -1,13 +1,17 @@
-# Desafio Final - Bootcamp: Engenheiro(a) de Dados
+# Projeto Aplicado - Pós-graduação em Engenharia e Arquitetura de Dados
 
-## Desafio Final
+## Arquitetura de Pipeline de Dados Financeiros em Nuvem com Mensageria e Dashboard Analítico em Tempo Quase Real
 
 ### Objetivos
 
-O tema do desafio final é a construção de Pipelines ETL com integração do Kafka com uma database (PostgreSQL) usando Kafka Connect e entrega em datalake com Kafka Connect.
-Todos os serviços que compõem o Kafka e o database PostgreSQL que servirá de fonte serão implantados com Docker Compose.
-
-Portanto, vamos desenvolver uma solução prática de Engenharia de Dados que implemente a criação de pipelines ETL utilizando o modelo Bronze, Silver e Gold, processados com Apache Spark SQL API e integrados a um Datalake no Amazon S3 via Kafka Connect.
+Desenvolver e implementar, uma solução para extração
+e persistência inicial de dados financeiros em ambiente local,
+com a construção de um pipeline de fluxo contínuo de dados com fila de
+mensageria para migração e armazenamento em nuvem, possibilitando a
+visualização de informações como cotações de moedas, criptomoedas, índice
+de volatilidade e principais bolsas de valores por meio de um dashboard online,
+garantindo acesso remoto, centralizado e confiável para apoiar a tomada de
+decisão estratégica do investidor.
 
 ---
 
