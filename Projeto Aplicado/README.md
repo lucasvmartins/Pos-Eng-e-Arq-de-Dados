@@ -14,7 +14,7 @@ garantindo acesso remoto, centralizado e confiável para apoiar a tomada de
 decisão estratégica do investidor.
 
 ---
-
+<!--
 ## Enunciado
 
 ## 1. Pipeline Bronze (Ingestão Bruta)
@@ -687,3 +687,5 @@ Após o processamento, verifique o bucket no S3:
 # Desafio
 
 Faça os mesmos processamentos para ambos os dados **(IPCA e PRE-FIXADO)**.
+
+-->
