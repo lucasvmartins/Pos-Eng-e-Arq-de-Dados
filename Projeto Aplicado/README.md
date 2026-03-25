@@ -103,7 +103,7 @@ O usuário IAM vinculado a essa chave precisa ter as permissões `AmazonS3FullAc
 
 ### 2. Subir o contêiner PostgreSQL
 
-Na pasta do projeto, execute o `docker-compose.yaml` do PostgreSQL:
+Na pasta **postgres** do projeto, execute o `docker-compose.yaml` do PostgreSQL:
 
 ```bash
 docker compose up -d
@@ -250,9 +250,11 @@ while True:
 
 Acesse o console da AWS e crie um bucket, por exemplo:
 
-- `pa-financial`
+- `seu-bucket`
 
 Escolha a região `us-east-1`.
+
+> **Atenção:** Cuidado com a região, sempre usaremos a `us-east-1`.
 
 ---
 
@@ -269,7 +271,7 @@ RUN confluent-hub install --no-prompt confluentinc/kafka-connect-jdbc:10.4.1 \
     && confluent-hub install --no-prompt confluentinc/kafka-connect-s3:10.0.7
 ```
 
-**Comando para buildar:**
+**Para _buildar_ o Dockerfile, é preciso entrar na pasta `custom-kafka-connector-image` e executar o comando:**
 
 ```bash
 docker buildx build . -t connect-custom:1.0.0
@@ -354,7 +356,7 @@ Arquivo `connect_s3_sink_financial.config`:
         "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
         "flush.size": 2,
         "schema.compatibility": "FULL",
-        "s3.bucket.name": "pa-financial",
+        "s3.bucket.name": "seu-bucket",
         "s3.region": "us-east-1",
         "s3.object.tagging": true,
         "s3.ssea.name": "AES256",
@@ -433,7 +435,7 @@ CREATE EXTERNAL TABLE financial_data (
     vix_br    DOUBLE
 )
 ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-LOCATION 's3://pa-financial/raw-data/kafka/financial/postgres-financial/partition=0/';
+LOCATION 's3://seu-bucket/raw-data/kafka/financial/postgres-financial/partition=0/';
 ```
 
 Para converter o campo de timestamp e visualizar os dados:
@@ -478,7 +480,7 @@ Em **Connections > Data sources**, adicione uma nova fonte do tipo **Amazon Athe
 - **Secret Access Key:** sua chave secreta AWS
 - **Default Region:** `us-east-1`
 - **Database:** `financial`
-- **Workgroup / S3 output location:** caminho do bucket de resultados (`s3://pa-financial/athena-results/`)
+- **Workgroup / S3 output location:** caminho do bucket de resultados (`s3://seu-bucket/athena-results/`)
 
 ---
 
