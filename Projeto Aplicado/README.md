@@ -81,7 +81,7 @@ PostgreSQL (Docker) ──► Kafka Connect (Source - JDBC)
 - Docker e Docker Compose instalados
 - Python 3.x com as bibliotecas `yfinance` e `psycopg2`
 - Conta AWS (Free Tier é suficiente)
-- Conta Grafana Cloud (plano gratuito é suficiente, se não tiver free tier, o uso gera gastos de centavos de dólares)
+- Conta Grafana Cloud (plano gratuito é suficiente, se não tiver, o uso gera gastos de centavos de dólares)
 - Chave de acesso AWS (Access Key ID + Secret Access Key) com permissões de S3 e Athena
 
 ---
