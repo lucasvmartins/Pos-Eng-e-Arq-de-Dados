@@ -368,7 +368,7 @@ Arquivo `connect_s3_sink_financial.config`:
 }
 ```
 
-**Registre os conectores** (fora do contêiner, no diretório dos arquivos de configuração):
+**Registre os conectores** (fora do contêiner, no diretório dos arquivos de configuração, execute os seguintes comandos em cada um dos seus respectivos arquivos):
 
 ```bash
 curl -X POST -H "Content-Type: application/json" --data \
@@ -384,7 +384,7 @@ curl -X POST -H "Content-Type: application/json" --data \
 
 ### 6. Verificar os dados no S3
 
-Os dados devem chegar ao bucket no seguinte formato JSON:
+Os dados devem chegar ao bucket no formato JSON, parecido com a seguinte configuração:
 
 ```json
 {
@@ -402,6 +402,7 @@ Os dados devem chegar ao bucket no seguinte formato JSON:
     "vix_br": 32.66999816894531
 }
 ```
+> Caso não chegue nessa configuração, pode chegar com as chaves e valores todas em uma linha só.
 
 ---
 
@@ -438,7 +439,7 @@ ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
 LOCATION 's3://seu-bucket/raw-data/kafka/financial/postgres-financial/partition=0/';
 ```
 
-Para converter o campo de timestamp e visualizar os dados:
+Para converter o campo de `timestamp` e visualizar os dados:
 
 ```sql
 SELECT
@@ -473,7 +474,9 @@ Acesse [grafana.com](https://grafana.com) e crie uma conta gratuita. O plano gra
 
 ### 4. Conectar o Grafana ao Athena
 
-Em **Connections > Data sources**, adicione uma nova fonte do tipo **Amazon Athena** e preencha:
+Acesse sua conta em [My Account](https://grafana.com/auth/sign-in/) e clique em **Launch**.
+
+No menu lateral em **Connections > Data sources**, adicione uma nova fonte do tipo **Amazon Athena** e preencha:
 
 - **Authentication Provider:** Access & secret key
 - **Access Key ID:** sua chave de acesso AWS
@@ -486,7 +489,7 @@ Em **Connections > Data sources**, adicione uma nova fonte do tipo **Amazon Athe
 
 ### 5. Criar os dashboards no Grafana
 
-No Grafana, crie um novo Dashboard e adicione um painel para cada categoria de ativo, utilizando as queries SQL abaixo.
+No menu lateral, em **Dashboards**, crie um novo Dashboard em **New > New dashboard** e adicione um painel para cada categoria de ativo, utilizando as queries SQL abaixo.
 
 **Bolsas de Valores:**
 
@@ -575,6 +578,9 @@ ORDER BY time
 LIMIT 50;
 ```
 
+Ajuste a janela de tempo conforme queira. Ajuste também o tempo a cada quantos segundos o Grafana irá consultar os dados na AWS.
+> Cuidado: as consultas geram custos, para o mínimo de custos, o ideal seria a cada 30s. Ainda assim, os custos chegam a apenas centavos de dólares. 
+
 ---
 
 ## Lições Aprendidas
@@ -595,7 +601,4 @@ LIMIT 50;
 
 ---
 
-## Repositório
-
-Códigos do projeto disponíveis em:  
-[github.com/lucasvmartins/Pos-Eng-e-Arq-de-Dados/tree/main/Projeto%20Aplicado](https://github.com/lucasvmartins/Pos-Eng-e-Arq-de-Dados/tree/main/Projeto%20Aplicado)
+<sub>Jo 3:16</sub>
