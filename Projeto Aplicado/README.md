@@ -1,268 +1,329 @@
-# Projeto Aplicado - Pós-graduação em Engenharia e Arquitetura de Dados
+# Projeto Aplicado - Especialização em Engenharia e Arquitetura de Dados
 
 ## Arquitetura de Pipeline de Dados Financeiros em Nuvem com Mensageria e Dashboard Analítico em Tempo Quase Real
 
-### Objetivos
-
-Desenvolver e implementar, uma solução para extração
-e persistência inicial de dados financeiros em ambiente local,
-com a construção de um pipeline de fluxo contínuo de dados com fila de
-mensageria para migração e armazenamento em nuvem, possibilitando a
-visualização de informações como cotações de moedas, criptomoedas, índice
-de volatilidade e principais bolsas de valores por meio de um dashboard online,
-garantindo acesso remoto, centralizado e confiável para apoiar a tomada de
-decisão estratégica do investidor.
-
----
-<!--
-## Enunciado
-
-## 1. Pipeline Bronze (Ingestão Bruta)
-
-### Fonte de Dados
-
-* Consumir os dados brutos de uma URL contendo um arquivo CSV com preços e taxas dos títulos públicos (Tesouro Direto), disponibilizado no portal de dados abertos do Tesouro Nacional (CKAN é o sistema de dados abertos usado).
-
-### Ferramenta
-
-* Spark SQL para carregar os dados e criar uma tabela temporária ou persistente (formato Parquet ou Delta).
-
-### Processamento
-
-* Carregar dados brutos para a camada Bronze, sem transformação além da validação do esquema em um banco de dados (por exemplo, PostgreSQL).
+**Autor:** Lucas Vieira Martins  
+**Orientadora:** Daniella Pimenta Brito Alves  
+**Instituição:** XP Educação — Faculdade XPe  
+**Data:** Fevereiro de 2026
 
 ---
 
-## 2. Pipeline Silver (Limpeza e Transformação)
+## Objetivo
 
-### Fonte de Dados
-
-* Tabela Bronze.
-
-### Ferramenta
-
-* Spark SQL para limpeza e transformações.
-
-### Processamento
-
-* Remover duplicações.
-* Tratar dados ausentes (ex.: preencher valores nulos ou descartar registros inválidos).
-* Ajustar colunas para um formato consistente (ex.: normalizar nomes).
-* Salvar os dados limpos em uma tabela Silver em um banco de dados (por exemplo, PostgreSQL).
+Desenvolver e implementar uma solução para extração e persistência de dados financeiros em ambiente local, com a construção de um pipeline de fluxo contínuo de dados com fila de mensageria para migração e armazenamento em nuvem, possibilitando a visualização de informações como cotações de moedas, criptomoedas, índice de volatilidade e principais bolsas de valores por meio de um dashboard online, garantindo acesso remoto, centralizado e confiável para apoiar a tomada de decisão estratégica do investidor.
 
 ---
 
-## 3. Pipeline Gold (Agregação e Enriquecimento)
+## Arquitetura da Solução
 
-### Fonte de Dados
-
-* Tabela Silver.
-
-### Ferramenta
-
-* Spark SQL para realizar agregações e cálculos.
-
-### Processamento
-
-* Gerar métricas agregadas (ex.: número de usuários ativos, média de idade).
-* Criar a camada Gold contendo dados prontos para consumo analítico em um banco de dados (por exemplo, PostgreSQL).
-
----
-
-# PARTE 01 – CAMADAS BRONZE
-
-## Passo a Passo para Execução
-
----
-
-## 1. Pré-requisitos
-
-* Docker
-* Docker Compose
-* Uma conta AWS Free Tier
+```
+yfinance API
+     │
+     ▼
+Python Script (coleta a cada 5s)
+     │
+     ▼
+PostgreSQL (Docker) ──► Kafka Connect (Source - JDBC)
+                                  │
+                                  ▼
+                           Kafka Broker (Tópico: postgres-financial)
+                                  │
+                                  ▼
+                        Kafka Connect (Sink - S3)
+                                  │
+                                  ▼
+                           Amazon S3 (JSON)
+                                  │
+                                  ▼
+                           Amazon Athena (SQL)
+                                  │
+                                  ▼
+                          Grafana Cloud (Dashboard)
+```
 
 ---
 
-## 2. Configurar o arquivo `.env_kafka_connect`
+## Tecnologias Utilizadas
 
-Edite o arquivo `.env_kafka_connect` com suas chaves AWS como variáveis de ambiente.
-Exemplo:
+| Camada | Tecnologia |
+|---|---|
+| Extração de Dados | Python + yfinance |
+| Banco Local | PostgreSQL 13.2 (Docker) |
+| Mensageria | Apache Kafka (Confluent 7.0.0) |
+| Orquestração de Contêineres | Docker / Docker Compose |
+| Armazenamento em Nuvem | Amazon S3 |
+| Consulta Analítica | Amazon Athena |
+| Visualização | Grafana Cloud |
+
+---
+
+## Dados Coletados
+
+| Indicador | Ticker |
+|---|---|
+| IBOVESPA | `^BVSP` |
+| S&P 500 | `^GSPC` |
+| Dow Jones | `^DJI` |
+| USD/BRL | `BRL=X` |
+| EUR/BRL | `EURBRL=X` |
+| GBP/BRL | `GBPBRL=X` |
+| JPY/BRL | `JPYBRL=X` |
+| Bitcoin | `BTC-USD` |
+| Ethereum | `ETH-USD` |
+| VIX | `^VIX` |
+| VIX BR | `^VXEWZ` |
+
+---
+
+## Pré-requisitos
+
+- Docker e Docker Compose instalados
+- Python 3.x com as bibliotecas `yfinance` e `psycopg2`
+- Conta AWS (Free Tier é suficiente)
+- Conta Grafana Cloud (plano gratuito é suficiente)
+- Chave de acesso AWS (Access Key ID + Secret Access Key) com permissões de S3 e Athena
+
+---
+
+## Sprint 1 — Infraestrutura Local e Coleta de Dados
+
+### 1. Configurar o arquivo `.env_kafka_connect`
+
+Edite o arquivo `.env_kafka_connect` com suas chaves AWS:
 
 ```
 AWS_ACCESS_KEY_ID=xxxxxxxxxxxxxxxxxxx
 AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-Lembre-se que o mesmo usuário que possui essa chave precisa ter em suas permissões a permissão `AmazonS3FullAccess` para poder gerenciar os Buckets do S3.
+O usuário IAM vinculado a essa chave precisa ter as permissões `AmazonS3FullAccess` e `AmazonAthenaFullAccess`.
 
 ---
 
-## Configurar o Bucket no Amazon S3
+### 2. Subir o contêiner PostgreSQL
 
-O Kafka Connect precisa das credenciais para se autenticar no Amazon S3. Essas credenciais foram fornecidas dentro de arquivo de conguração.
+Na pasta do projeto, execute o `docker-compose.yaml` do PostgreSQL:
 
-Vá ao console da AWS e crie os buckets com os nomes que preferir, por exemplo:
-
-* `NOME-DO-BUCKET-01`
-* `NOME-DO-BUCKET-02`
-
-Escolha a região compatível:
-
-* `us-east-1`
-
-Ajuste os arquivos de configuração `connect_s3_sink_ipca.config` e `connect_s3_sink_pre.config` em `.../connectors/sink`, substituindo os nomes dos buckets nas linhas:
-
-```
-"s3.bucket.name": "NOME-DO-BUCKET-0X",
-"s3.region": "us-east-1",
-```
-
-  ---
-
-## 3. Build da imagem do Kafka Connect
-
-Após clonar o repositório, entre na pasta `./custom-kafka-connectors-image` pelo console e execute:
-
-```
-docker buildx build . -t connect-custom:1.0.0
-```
-
-Uma nova imagem com o nome `connect-custom` e tag `1.0.0` será criada. Essa é a imagem que nosso serviço connect dentro do `docker-compose.yaml` irá utilizar, com os conectores que precisaremos instalados.
-
-**Explicação:** O comando `docker buildx build` cria uma nova imagem Docker a partir do `Dockerfile` dentro da pasta `./custom-kafka-connectors-image`. Essa pasta contém os arquivos necessários para personalizar a imagem, como congurações especícas e conectores adicionais.
-
-Essa imagem será usada pelo serviço Kafka Connect definido no arquivo `docker-compose.yaml`. Os conectores personalizados incluídos na imagem são necessários para realizar a integração com as fontes de dados **(PostgreSQL)** e destinos **(Amazon S3)**.
-
-
----
-
-## 4. Subir o PostgreSQL
-
-Dentro da pasta `./postgres`, execute o arquivo `docker-compose.yaml` rode:
-
-```
+```bash
 docker compose up -d
 ```
 
-_Obs.: Possa ser que algum serviço postgres já esteja rodando na sua máquina, isso impede que o Docker inicie o contêiner postgres. Caso isso aconteça, verifique os serviços que estão rodando e veja se o postgres já está em execução, se já estiver, pare a execução e execute o docker compose novamente._
+Configuração do contêiner:
 
----
-
-## 5. Processar o ETL
-
-Abra e execute o arquivo `importar.ipynb` _(não funciona em Colab por causa da conexão local com PostgreSQL)_. Você pode rodar este notebook no **Jupyter** ou **VS Code** com extensão **Jupyter**. Pelo fato do seu Postgres estar em um container local, o código vai dar erro na conexão caso você use o **Google Colab**.
-
-Depois de rodar, confira as tabelas no Postgres. Por exemplo, pode usar o **DBeaver** ou o **pgAdmin 4** como ferramenta gerenciadora do banco de dados.
-Os parâmetros de conexão estão dentro do arquivo `docker-compose.yaml` na pasta `./postgres`.
-
-```
-postgres:
+```yaml
+version: '3'
+services:
+  postgres:
     image: postgres:13.2
     ports:
       - 5432:5432
     hostname: postgres
     container_name: postgres
-    environment: 
+    environment:
       POSTGRES_PASSWORD: postgres
+    networks:
+      - proxynet
+    volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
+
+networks:
+  proxynet:
+    name: custom_network
 ```
 
 ---
 
-## 6. Subir a plataforma Confluent com Docker Compose
+### 3. Criar a tabela no PostgreSQL
 
-No arquivo `docker-compose.yaml` localizado na raiz do projeto estamos subindo toda a estrutura da plataforma Confluent. Para isso, vamos entrar na pasta e subir a estrutura.
+Conecte-se ao banco e execute o script SQL abaixo para criar a tabela que receberá os dados:
 
-Na raiz do projeto, rode:
-
+```sql
+CREATE TABLE financial (
+    data_hora  TIMESTAMP PRIMARY KEY,
+    IBOVESPA   DOUBLE PRECISION,
+    SP500      DOUBLE PRECISION,
+    DOWJONES   DOUBLE PRECISION,
+    USD_BRL    DOUBLE PRECISION,
+    EUR_BRL    DOUBLE PRECISION,
+    GBP_BRL    DOUBLE PRECISION,
+    JPY_BRL    DOUBLE PRECISION,
+    BITCOIN    DOUBLE PRECISION,
+    ETHEREUM   DOUBLE PRECISION,
+    VIX        DOUBLE PRECISION,
+    VIX_BR     DOUBLE PRECISION
+);
 ```
+
+> **Atenção:** Use `DOUBLE PRECISION` e não `NUMERIC`. Campos do tipo `NUMERIC` são serializados pelo Kafka Connect e codificados em Base64 ao serem enviados como JSON, tornando os valores ilegíveis.
+
+---
+
+### 4. Executar o script de coleta de dados
+
+O script Python coleta os dados a cada 5 segundos via biblioteca `yfinance` e os persiste no banco local.
+
+**Obtenção dos dados:**
+
+```python
+import yfinance as yf
+from datetime import datetime
+
+TICKERS = {
+    "IBOVESPA": "^BVSP",
+    "SP500": "^GSPC",
+    "DOWJONES": "^DJI",
+    "USD_BRL": "BRL=X",
+    "EUR_BRL": "EURBRL=X",
+    "GBP_BRL": "GBPBRL=X",
+    "JPY_BRL": "JPYBRL=X",
+    "BITCOIN": "BTC-USD",
+    "ETHEREUM": "ETH-USD",
+    "VIX": "^VIX",
+    "VIX_BR": "^VXEWZ"
+}
+
+def get_data():
+    snapshot = {}
+    now = datetime.now()
+    snapshot["data_hora"] = now
+    for ativo, ticker in TICKERS.items():
+        hist = yf.Ticker(ticker).history(period="1d", interval="1m")
+        snapshot[ativo] = (
+            float(hist.iloc[-1]["Close"])
+            if not hist.empty
+            else None
+        )
+    return snapshot
+```
+
+**Persistência no banco:**
+
+```python
+import psycopg2
+import time
+
+DB_CONFIG = {
+    "host": "localhost",
+    "port": 5432,
+    "database": "postgres",
+    "user": "postgres",
+    "password": "postgres"
+}
+
+conn = psycopg2.connect(**DB_CONFIG)
+cursor = conn.cursor()
+
+while True:
+    try:
+        data = get_data()
+        cursor.execute(
+            """
+            INSERT INTO financial (
+                data_hora, IBOVESPA, SP500, DOWJONES,
+                USD_BRL, EUR_BRL, GBP_BRL, JPY_BRL,
+                BITCOIN, ETHEREUM, VIX, VIX_BR
+            )
+            VALUES (
+                %(data_hora)s, %(IBOVESPA)s, %(SP500)s, %(DOWJONES)s,
+                %(USD_BRL)s, %(EUR_BRL)s, %(GBP_BRL)s, %(JPY_BRL)s,
+                %(BITCOIN)s, %(ETHEREUM)s, %(VIX)s, %(VIX_BR)s
+            )
+            """,
+            data
+        )
+        conn.commit()
+        print(f"Snapshot inserido em {data['data_hora']}")
+        time.sleep(5)
+    except Exception as e:
+        conn.rollback()
+        print("Erro:", e)
+        time.sleep(5)
+```
+
+---
+
+## Sprint 2 — Mensageria com Kafka e Migração para o S3
+
+### 1. Criar o Bucket S3
+
+Acesse o console da AWS e crie um bucket, por exemplo:
+
+- `pa-financial`
+
+Escolha a região `us-east-1`.
+
+---
+
+### 2. Build da imagem customizada do Kafka Connect
+
+A imagem customizada inclui os conectores JDBC (PostgreSQL) e S3 já instalados.
+
+**Dockerfile:**
+
+```dockerfile
+FROM confluentinc/cp-kafka-connect-base:7.0.0
+
+RUN confluent-hub install --no-prompt confluentinc/kafka-connect-jdbc:10.4.1 \
+    && confluent-hub install --no-prompt confluentinc/kafka-connect-s3:10.0.7
+```
+
+**Comando para buildar:**
+
+```bash
+docker buildx build . -t connect-custom:1.0.0
+```
+
+---
+
+### 3. Subir o cluster Kafka com Docker Compose
+
+Na raiz do projeto, execute:
+
+```bash
 docker compose up -d
 ```
 
-Este Docker Compose cria uma arquitetura Kafka com suporte para:
-
-* Streaming de dados com Kafka Broker
-* Coordenação através do Zookeeper
-* Gerenciamento de esquemas com Schema Registry
-* Integração com sistemas externos via Kafka Connect
-* Consultas SQL em tempo real com ksqldb-server e ksqldb-cli
-* Interface REST para Kafka via REST Proxy
-
-Se o container do proxy não subir na porta 8082, você pode identificar qual processo está usando a porta 8082 a partir do terminal rodando o comando no Windows `netstat -ano | ndstr :8082`. Você verá o PID (Process ID) do processo que está usando a porta. Obs: para finalizar a tarefa, entre no terminal com acesso de admistrador e execute `taskkill /PID <PID> /F`. Após ter finalizado o processo, tente iniciar o contêiner novamente.
+O Docker Compose sobe toda a estrutura da plataforma Confluent com os seguintes serviços: `zookeeper`, `broker`, `schema-registry`, `rest-proxy`, `connect`, `ksqldb-server` e `ksqldb-cli`.
 
 ---
 
-## 7. Criar dois tópicos no Kafka
+### 4. Criar o tópico Kafka
 
-Antes de criar os tópicos, você precisa acessar o contêiner onde o Kafka está rodando. Certique-se de que o Docker está ativo e os serviços do Kafka estão em execução.
+Acesse o broker:
 
-Acesse o container do broker:
-
-```
+```bash
 docker exec -it broker bash
 ```
 
-Após executar esse comando, você estará no terminal do contêiner Kafka Broker.
+Dentro do broker, crie o tópico:
 
-**Explicação:**
-* **docker exec**: Executa um comando em um contêiner ativo.
-* **-it**: Abre uma sessão interativa com o contêiner.
-* **broker**: Nome do contêiner que roda o Kafka Broker (esse nome pode variar de acordo com a conguração do seu docker-compose.yaml)
-* **bash**: Usando a linha de comando
-
-Crie os tópicos no Kafka:
-
-Agora que você está dentro do contêiner do Kafka, use o comando kafka-topics para criar os tópicos. Cada tópico armazenará os dados movidos do PostgreSQL.
-
-### IPCA (Comando para criar o tópico postgres-dadostesouroipca)
-
-```
+```bash
 kafka-topics --create \
---bootstrap-server localhost:9092 \
---partitions 1 \
---replication-factor 1 \
---topic postgres-dadostesouroipca
+  --bootstrap-server localhost:9092 \
+  --partitions 1 \
+  --replication-factor 1 \
+  --topic postgres-financial
 ```
 
-### PRE (Comando para criar o tópico postgres-dadostesouropre)
+Verifique se o tópico foi criado:
 
-```
-kafka-topics --create \
---bootstrap-server localhost:9092 \
---partitions 1 \
---replication-factor 1 \
---topic postgres-dadostesouropre
-```
-
-* **--bootstrap-server localhost:9092:** Especifica o endereço do servidor Kafka. O localhost:9092 é o endereço padrão usado em contêineres Kafka.
-* **--partitions 1:** Define o número de partições do tópico. Para este exemplo, usamos 1 partição.
-* **--replication-factor 1:** Define o número de réplicas para o tópico. Usamos 1, pois estamos rodando o Kafka em um único broker.
-* **--topic postgres-dadostesouro...:** Nome do tópico sendo criado.
-
-### Verificar se os tópicos foram criados:
-
-Após executar os comandos acima, é importante confirmar que os tópicos foram criados com sucesso. Use o comando abaixo para listar os tópicos disponíveis no Kafka:
-
-```
+```bash
 kafka-topics --bootstrap-server localhost:9092 --list
 ```
 
-Isso exibirá todos os tópicos criados no Kafka. Você deve ver os nomes `postgres-dadostesouroipca` e `postgres-dadostesouropre` na lista.
-
 ---
 
-## 8. Registrar os Connectors Kafka Source
+### 5. Configurar e registrar os conectores
 
-Os conectores Kafka Source serão configurados para extrair dados do PostgreSQL e enviá-los para os tópicos no Kafka. Para isso, vamos precisar de um arquivo no formato json contendo as configurações do conector que vamos registrar. O arquivo `connect_jdbc_postgres_ipca.config` possui a implementação do **IPCA**. O arquivo `connect_jdbc_postgres_pre.config` possui a implementação do **PRE**.
+**Source Connector** — lê os dados do PostgreSQL e os publica no tópico Kafka.
 
-Os conectores são configurados através de arquivos JSON contendo os parâmetros necessários. Aqui está como configurar:
-
-Crie os arquivos com o seguinte conteúdo e salve cada arquivo no diretório onde você irá executar os comandos de registro (./connectors/source):
-
-### `connect_jdbc_postgres_ipca.config`
+Arquivo `connect_jdbc_postgres_financial.config`:
 
 ```json
 {
-    "name": "postg-connector-ipca",
+    "name": "postg-connector-financial",
     "config": {
         "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
         "tasks.max": 1,
@@ -270,8 +331,8 @@ Crie os arquivos com o seguinte conteúdo e salve cada arquivo no diretório ond
         "connection.user": "postgres",
         "connection.password": "postgres",
         "mode": "timestamp",
-        "timestamp.column.name": "dt_update",
-        "table.whitelist": "public.dadostesouroipca",
+        "timestamp.column.name": "data_hora",
+        "table.whitelist": "public.financial",
         "topic.prefix": "postgres-",
         "validate.non.null": "false",
         "poll.interval.ms": 500
@@ -279,122 +340,13 @@ Crie os arquivos com o seguinte conteúdo e salve cada arquivo no diretório ond
 }
 ```
 
-### `connect_jdbc_postgres_pre.config`
+**Sink Connector** — consome o tópico Kafka e entrega os dados no S3.
+
+Arquivo `connect_s3_sink_financial.config`:
 
 ```json
 {
-    "name": "postg-connector",
-    "config": {
-        "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
-        "tasks.max": 1,
-        "connection.url": "jdbc:postgresql://postgres:5432/postgres",
-        "connection.user": "postgres",
-        "connection.password": "postgres",
-        "mode": "timestamp",
-        "timestamp.column.name": "dt_update",
-        "table.whitelist": "public.dadostesouropre",
-        "topic.prefix": "postgres-",
-        "validate.non.null": "false",
-        "poll.interval.ms": 500
-    }
-}
-```
-
-### Execute os comandos curl para registrar os conectores:
-
-Esta etapa envolve o registro de conectores no Kafka Connect utilizando o comando curl no terminal. O Kafka Connect é uma ferramenta usada para integrar sistemas externos com o Apache Kafka, e, neste caso, estamos registrando conectores JDBC para conectar bancos de dados **PostgreSQL** ao Kafka. O objetivo é registrar dois conectores JDBC no Kafka Connect para que ele possa ler dados de duas tabelas do **PostgreSQL** (provavelmente relacionadas ao IPCA e Pre-fixados, conforme os arquivos de configuração).
-
-No terminal do host **(não dentro do contêiner)**, execute os comandos para registrar os conectores. Certifique-se de estar no diretório onde os arquivos estão salvos ou forneça o caminho completo _(por exemplo, .../connectors/source/)_, antes de executar o comando.
-
-### Registrar:
-
-```
-curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_ipca.config http://localhost:8083/connectors
-```
-```
-curl -X POST -H "Content-Type: application/json" --data @connect_jdbc_postgres_pre.config http://localhost:8083/connectors
-```
-
----
-
-## Vericar os conectores e tópicos
-
-Verifique o consumo de dados nos tópicos. O comando kafka-console-consumer é usado para consumir mensagens de um tópico Kafka. Vamos verificar os dados nos tópicos `postgres-dadostesouroipca` e `postgres-dadostesouropre`.
-
-### Explicação do comando:
-
-* **kafka-console-consumer:**
-  * Ferramenta CLI do Kafka para consumir mensagens de um tópico
-* **--bootstrap-server localhost:9092:**
-  * Especifica o servidor Kafka que será usado para consumir mensagens
-  * No exemplo, usamos localhost:9092, que é a porta padrão do Kafka Broker
-* **--topic <nome_do_tópico>:**
-  * Define o tópico Kafka de onde você quer consumir as mensagens
-  * No seu caso, os tópicos são `postgres-dadostesouroipca` e `postgres-dadostesouropre`.
-* **--from-beginning:**
-  * Indica que o consumo de mensagens deve começar desde o início do tópico _(todas as mensagens enviadas desde a criação do tópico)_.
-
-Vamos entrar no Kafka Broker que está rodando:
-
-```
-docker exec -it broker bash
-```
-
-### Verifique o consumo de dados nos tópicos:
-
-### IPCA
-
-```
-kafka-console-consumer --bootstrap-server localhost:9092 \
---topic postgres-dadostesouroipca \
---from-beginning
-```
-
-### PRE
-
-```
-kafka-console-consumer --bootstrap-server localhost:9092 \
---topic postgres-dadostesouropre \
---from-beginning
-```
-
-### Verifique os detalhes dos tópicos:
-
-### IPCA
-
-```
-kafka-topics --bootstrap-server localhost:9092 \
---describe \
---topic postgres-dadostesouroipca
-```
-
-### PRE
-
-```
-kafka-topics --bootstrap-server localhost:9092 \
---describe \
---topic postgres-dadostesouropre
-```
-
-Fora do contêiner, exiba os logs do Kafka Connect para garantir que os conectores não apresentam erros:
-
-```
-docker logs -f connect
-```
-
----
-
-## 9. Configurar os Sink Connectors
-
-Os **Sink Connectors** enviam os dados dos tópicos para o **S3**. Edite os arquivos de configuração `connect_s3_sink_ipca.config` e `connect_s3_sink_pre.config` para os Sink Connectors no diretório _(./connectors/sink)_.
-
-### `connect_s3_sink_ipca.config`
-
-Este arquivo configura o conector para enviar dados do tópico `postgres-dadostesouroipca` para um **bucket S3**.
-
-```json
-{
-    "name": "s3-sink-ipca",
+    "name": "s3-sink-financial",
     "config": {
         "connector.class": "io.confluent.connect.s3.S3SinkConnector",
         "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
@@ -402,290 +354,246 @@ Este arquivo configura o conector para enviar dados do tópico `postgres-dadoste
         "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
         "flush.size": 2,
         "schema.compatibility": "FULL",
-        "s3.bucket.name": "NOME-DO-BUCKET-01",
+        "s3.bucket.name": "pa-financial",
         "s3.region": "us-east-1",
         "s3.object.tagging": true,
         "s3.ssea.name": "AES256",
-        "topics.dir": "raw-data/ipca/kafka",
+        "topics.dir": "raw-data/kafka/financial",
         "storage.class": "io.confluent.connect.s3.storage.S3Storage",
         "tasks.max": 1,
-        "topics": "postgres-dadostesouroipca"
+        "topics": "postgres-financial"
     }
 }
 ```
 
-### `connect_s3_sink_pre.config`
+**Registre os conectores** (fora do contêiner, no diretório dos arquivos de configuração):
 
-Este arquivo configura o conector para enviar dados do tópico `postgres-dadostesouropre` para um **bucket S3**
-
-```json
-{
-    "name": "s3-sink-pre",
-    "config": {
-        "connector.class": "io.confluent.connect.s3.S3SinkConnector",
-        "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
-        "keys.format.class": "io.confluent.connect.s3.format.json.JsonFormat",
-        "schema.generator.class": "io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator",
-        "flush.size": 2,
-        "schema.compatibility": "FULL",
-        "s3.bucket.name": "NOME-DO-BUCKET-02",
-        "s3.region": "us-east-1",
-        "s3.object.tagging": true,
-        "s3.ssea.name": "AES256",
-        "topics.dir": "raw-data/pre/kafka",
-        "storage.class": "io.confluent.connect.s3.storage.S3Storage",
-        "tasks.max": 1,
-        "topics": "postgres-dadostesouropre"
-    }
-}
+```bash
+curl -X POST -H "Content-Type: application/json" --data \
+  @connect_jdbc_postgres_financial.config http://localhost:8083/connectors
 ```
 
-_Obs.: Lembre-se de alterar o nome dos buckets para o mesmo que você criou no S3 **("s3.bucket.name": "NOME-DO-BUCKET-0X")**_
-
-Registre os Sink Connectors no Kafka Connect. Fora do contêiner, vá no diretório _...connectors/sink_ e execute os comandos abaixo:
-
-### IPCA
-
-```
-curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_ipca.config http://localhost:8083/connectors
-```
-
-### PRE
-
-```
-curl -X POST -H "Content-Type: application/json" --data @connect_s3_sink_pre.config http://localhost:8083/connectors
+```bash
+curl -X POST -H "Content-Type: application/json" --data \
+  @connect_s3_sink_financial.config http://localhost:8083/connectors
 ```
 
 ---
 
-## 10. Verificar entrega no S3
+### 6. Verificar os dados no S3
 
-Certifique-se de que os dados dos tópicos `postgres-dadostesouroipca` e `postgres-dadostesouropre` estão sendo escritos no bucket S3 configurado.
-
-Os arquivos devem aparecer no bucket em formato JSON, por exemplo:
+Os dados devem chegar ao bucket no seguinte formato JSON:
 
 ```json
 {
-    "CompraManha": 12.73,
-    "VendaManha": 12.79,
-    "PUCompraManha": 631.4,
-    "PUVendaManha": 630.11,
-    "PUBaseManha": 629.81,
-    "Data_Vencimento": 1420070400000,
-    "Data_Base": 1298851200000,
-    "Tipo": "PRE-FIXADOS",
-    "dt_update": 1734381830665
+    "data_hora": 1769626225670,
+    "ibovespa": 183445.734375,
+    "sp500": 6976.27978515625,
+    "dowjones": 49010.23046875,
+    "usd_brl": 5.193900108337402,
+    "eur_brl": 6.205999851226807,
+    "gbp_brl": 7.171500205993652,
+    "jpy_brl": 0.033730000257492065,
+    "bitcoin": 89271.3984375,
+    "ethereum": 3014.89111328125,
+    "vix": 16.3799991607666,
+    "vix_br": 32.66999816894531
 }
 ```
 
 ---
 
-# PARTE 02 – CAMADAS SILVER E GOLD COM APACHE SPARK
+## Sprint 3 — Amazon Athena e Dashboard no Grafana Cloud
 
-## 1. Configuração de Permissões nos Buckets
+### 1. Criar banco de dados e tabela no Athena
 
-Vamos precisar dar acesso aos buckets. Repare que você precisa buscar antes na área de IAM da AWS seu código de usuário.
+Crie também um diretório dentro do bucket S3 para receber os resultados de saída do Athena, por exemplo `athena-results/`.
 
-`"AWS": "arn:aws:iam::012345678901:user/seuusuario"`
+No editor de consultas do Athena, execute:
 
-Permissões a serem inseridas em cada bucket. **Não se esqueça de alterar seu user e o nome do bucket.**
-
-```
-"arn:aws:s3:::NOME-DO-BUCKET-0X",
-"arn:aws:s3:::NOME-DO-BUCKET-0X/*"
+```sql
+CREATE DATABASE IF NOT EXISTS financial_db;
 ```
 
-Obs.: Para acessar as permissões, vá em cada bucket, na aba `Permissões`, na área de `Política do Bucket`, clique em **Editar** e crie as seguintes diretivas:
+Em seguida, crie a tabela externa apontando para os arquivos JSON no S3:
 
-### IPCA
-
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowWriteAccess",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::012345678901:user/seuusuario"
-            },
-            "Action": [
-                "s3:GetObject",
-                "s3:PutObject",
-                "s3:DeleteObject",
-                "s3:ListBucket"
-            ],
-            "Resource": [
-                "arn:aws:s3:::NOME-DO-BUCKET-01",
-                "arn:aws:s3:::NOME-DO-BUCKET-01/*"
-            ]
-        }
-    ]
-}
+```sql
+CREATE EXTERNAL TABLE financial_data (
+    data_hora BIGINT,
+    ibovespa  DOUBLE,
+    sp500     DOUBLE,
+    dowjones  DOUBLE,
+    usd_brl   DOUBLE,
+    eur_brl   DOUBLE,
+    gbp_brl   DOUBLE,
+    jpy_brl   DOUBLE,
+    bitcoin   DOUBLE,
+    ethereum  DOUBLE,
+    vix       DOUBLE,
+    vix_br    DOUBLE
+)
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+LOCATION 's3://pa-financial/raw-data/kafka/financial/postgres-financial/partition=0/';
 ```
 
-### PRE
+Para converter o campo de timestamp e visualizar os dados:
 
-```json
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "AllowWriteAccess",
-            "Effect": "Allow",
-            "Principal": {
-                "AWS": "arn:aws:iam::012345678901:user/seuusuario"
-            },
-            "Action": [
-                "s3:GetObject",
-                "s3:PutObject",
-                "s3:DeleteObject",
-                "s3:ListBucket"
-            ],
-            "Resource": [
-                "arn:aws:s3:::NOME-DO-BUCKET-02",
-                "arn:aws:s3:::NOME-DO-BUCKET-02/*"
-            ]
-        }
-    ]
-}
+```sql
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    ibovespa,
+    sp500,
+    bitcoin
+FROM financial_data
+ORDER BY time DESC
+LIMIT 50;
 ```
 
 ---
 
-# 2. Instalação do Apache Spark
+### 2. Permissões IAM
 
-Vamos começar usando a pasta **spark**, que está na estrutura de diretórios. Você pode ter o Spark das duas formas que vou explicar abaixo: instalação local na sua máquina ou instalação utilizando contêineres do Docker.
+O usuário IAM precisa das seguintes políticas para operar corretamente:
 
-### a) Instalação local (Spark + Hadoop)
-
-Você pode estar instalando o Spark de forma local seguindo o passo a passo dos links a seguir:
-
-* **No Linux:** https://phoenixnap.com/kb/install-spark-on-ubuntu
-* **No Windows:** https://phoenixnap.com/kb/install-spark-on-windows-10
-
-Você precisa do **Jupyter Notebook** operando na sua máquina, para abrir o arquivo do notebook `(etl-spark.ipynb)`.
-
-ou
-
-### b) Uso do Spark via contêineres Docker
-
-Vá no diretório _spark_ e rode o Docker compose. Ele vai subir o conjunto de contêineres necessários para rodarmos o **Spark**, incluindo o **Jupyter Notebook**.
-
-Vá no notebook criado para o Jupyter e clique no endereço http://localhost:8888. Vai abrir o **Jupyter Notebook** no browser, a partir do contêiner.
-
-Para abrir o arquivo do notebook `(etl-spark.ipynb)`, basta fazer o upload do arquivo.
-
-Para ambos os ambientes do **Spark**, precisaremos dos arquivos **.jar**:
-* **hadoop-aws:** O conector Hadoop para AWS
-* **aws-java-sdk-bundle:** O SDK da Amazon para AWS
-
-**Versões recomendadas:**
-* hadoop-aws-3.3.4.jar
-* aws-java-sdk-bundle-1.12.262.jar
+- `AmazonS3FullAccess`
+- `AmazonAthenaFullAccess`
+- `AWSBillingConductorFullAccess`
+- `AWSBillingConductorReadOnlyAccess`
+- `AWSBillingReadOnlyAccess`
 
 ---
 
-# 3. Entendendo o Notebook `etl-spark.ipynb` Para Transformações
+### 3. Criar conta no Grafana Cloud
 
-Você pode rodar o notebook, entretanto é interessante que leia as explicações abaixo antes de rodar o código.
+Acesse [grafana.com](https://grafana.com) e crie uma conta gratuita. O plano gratuito é suficiente para este projeto.
 
-* **Camada Bronze:** Os dados foram ingeridos como estão, no formato bruto
-* **Camada Silver:** Vamos converter **timestamps** em datas legíveis e trataremos duplicações e inconsistências
-* **Camada Gold:** Vamos agregar dados, como médias de preços unitários (PU) e métricas por tipo de título _(IPCA e "PRE-FIXADOS")_
+---
 
-### (Leitura dos dados brutos no S3)
+### 4. Conectar o Grafana ao Athena
 
-Carregue os dados brutos do S3 que estão em formato **JSON**:
+Em **Connections > Data sources**, adicione uma nova fonte do tipo **Amazon Athena** e preencha:
 
-```python
-from pyspark.sql import SparkSession
+- **Authentication Provider:** Access & secret key
+- **Access Key ID:** sua chave de acesso AWS
+- **Secret Access Key:** sua chave secreta AWS
+- **Default Region:** `us-east-1`
+- **Database:** `financial`
+- **Workgroup / S3 output location:** caminho do bucket de resultados (`s3://pa-financial/athena-results/`)
 
-# Inicializando Spark Session
-spark = SparkSession.builder \
-                    .appName("ETL Pipeline - Bronze to Silver") \
-                    .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
-                    .getOrCreate()
+---
 
-# Caminho dos dados brutos no S3 (Camada Bronze)
-bronze_path = "s3a://NOME-DO-BUCKET-01/raw-data/ipca/kafka/"
+### 5. Criar os dashboards no Grafana
 
-# Lendo os dados brutos do S3
-df_bronze = spark.read.json(bronze_path)
+No Grafana, crie um novo Dashboard e adicione um painel para cada categoria de ativo, utilizando as queries SQL abaixo.
 
-# Visualizando os dados brutos
-df_bronze.show()
+**Bolsas de Valores:**
+
+```sql
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'IBOVESPA' AS asset, ibovespa AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+UNION ALL
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'SP500' AS asset, sp500 AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+UNION ALL
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'DOWJONES' AS asset, dowjones AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+ORDER BY time
 ```
 
-### Bronze → Silver (Limpeza e Transformação)
+**Moedas:**
 
-Aqui você realiza:
-* Remoção de duplicações
-* Conversão de timestamps em formato de data
-* Tratamento de dados ausentes ou inválidos
-* Normalização de colunas
-
-```python
-from pyspark.sql.functions import col, from_unixtime
-
-# Removendo duplicações
-df_silver = df_bronze.dropDuplicates()
-
-# Tratando timestamps e convertendo para o formato de data legível
-df_silver = df_silver.withColumn("Data_Vencimento", from_unixtime(col("Data_Vencimento") / 1000, "yyyy-MM-dd")) \
-                     .withColumn("Data_Base", from_unixtime(col("Data_Base") / 1000, "yyyy-MM-dd")) \
-                     .withColumn("dt_update", from_unixtime(col("dt_update") / 1000, "yyyy-MM-dd HH:mm:ss"))
-
-# Tratando valores nulos (preenchendo com 0)
-df_silver = df_silver.fillna({
-    "PUCompraManha": 0,
-    "PUVendaManha": 0,
-    "PUBaseManha": 0
-})
-
-# Exibindo os dados da camada Silver
-df_silver.show()
-
-# Salvando a camada Silver de volta no S3
-silver_path = "s3a://NOME-DO-BUCKET-01/processed-data/ipca/silver/"
-df_silver.write.mode("overwrite").parquet(silver_path)
+```sql
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'USD/BRL' AS asset, usd_brl AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+UNION ALL
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'EUR/BRL' AS asset, eur_brl AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+UNION ALL
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'GBP/BRL' AS asset, gbp_brl AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+UNION ALL
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'JPY/BRL' AS asset, jpy_brl AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+ORDER BY time
 ```
 
-### Silver → Gold (Agregação e Enriquecimento)
+**Criptomoedas:**
 
-Aqui você agrega os dados para criar métricas analíticas, como:
-* Média de PUCompraManha e PUVendaManha
-* Contagem por tipo de título
+```sql
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'BITCOIN' AS asset, bitcoin AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+UNION ALL
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'ETHEREUM' AS asset, ethereum AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+ORDER BY time
+```
 
-```python
-from pyspark.sql.functions import avg, count
+**Índices de Volatilidade:**
 
-# Calculando métricas agregadas
-df_gold = df_silver.groupBy("Tipo").agg(avg("PUCompraManha").alias("Media_PUCompraManha"), \
-                                        avg("PUVendaManha").alias("Media_PUVendaManha"), \
-                                        count("*").alias("Total_Registros")
-                                   )
-
-# Exibindo os dados agregados (Gold)
-df_gold.show()
-
-# Salvando a camada Gold no S3
-gold_path = "s3a://NOME-DO-BUCKET-01/analytics/ipca/gold/"
-df_gold.write.mode("overwrite").parquet(gold_path)
+```sql
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'VIX' AS asset, vix AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+UNION ALL
+SELECT
+    from_unixtime(data_hora / 1000) AS time,
+    'VIX_BR' AS asset, vix_br AS value
+FROM financial.financial_data
+WHERE $__timeFilter(from_unixtime(data_hora / 1000))
+ORDER BY time
+LIMIT 50;
 ```
 
 ---
 
-## 4. Validar Resultados no S3
+## Lições Aprendidas
 
-Após o processamento, verifique o bucket no S3:
-* `processed-data/ipca/silver/:` Dados limpos e transformados
-* `analytics/ipca/gold/:` Dados agregados e prontos para análise
+- A correta modelagem dos tipos de dados é fundamental: campos `NUMERIC` no PostgreSQL são serializados em Base64 pelo Kafka Connect; a solução foi migrar para `DOUBLE PRECISION`.
+- O Grafana Cloud não é capaz de unificar múltiplos arquivos JSON distribuídos no S3 diretamente. O Amazon Athena foi necessário como camada intermediária de consulta SQL sobre o data lake.
+- A integração entre PostgreSQL, Kafka, S3 e Athena exige atenção especial às permissões IAM para evitar bloqueios de acesso entre os serviços.
 
 ---
 
-# Desafio
+## Próximos Passos
 
-Faça os mesmos processamentos para ambos os dados **(IPCA e PRE-FIXADO)**.
+- Inclusão de novas bolsas de valores internacionais, moedas e criptomoedas
+- Melhorias de escalabilidade na arquitetura para maior volume e frequência de dados
+- Aprimoramento dos gráficos no Grafana com indicadores técnicos e alertas automáticos
+- Desenvolvimento de um site próprio para centralizar a visualização dos dashboards
+- Incorporação de modelos de Machine Learning para previsão de tendências
 
--->
+---
+
+## Repositório
+
+Códigos do projeto disponíveis em:  
+[github.com/lucasvmartins/Pos-Eng-e-Arq-de-Dados/tree/main/Projeto%20Aplicado](https://github.com/lucasvmartins/Pos-Eng-e-Arq-de-Dados/tree/main/Projeto%20Aplicado)
