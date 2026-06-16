@@ -4,8 +4,8 @@
 
 **Autor:** Lucas Vieira Martins  
 **Orientadora:** Daniella Pimenta Brito Alves  
-**Instituição:** XP Educação — Faculdade XPe  
-**Data:** Fevereiro de 2026
+**Instituição:** Faculdade XP Educação
+**Data:** Março de 2026
 
 ---
 
