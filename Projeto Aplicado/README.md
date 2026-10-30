@@ -585,7 +585,7 @@ Ajuste a janela de tempo conforme queira. Ajuste também o tempo a cada quantos 
 
 ## Lições Aprendidas
 
-- A correta modelagem dos tipos de dados é fundamental: campos `NUMERIC` no PostgreSQL são serializados em Base64 pelo Kafka Connect; a solução foi migrar para `DOUBLE PRECISION`.
+- A correta modelagem dos tipos de dados é fundamental: campos `NUMERIC` no PostgreSQL são serializados em Base64 pelo Kafka Connect e ficam ilegíveis quando chegam na nuvem; a solução foi alterar o tipo do dado para `DOUBLE PRECISION`.
 - O Grafana Cloud não é capaz de unificar múltiplos arquivos JSON distribuídos no S3 diretamente. O Amazon Athena foi necessário como camada intermediária de consulta SQL sobre o data lake.
 - A integração entre PostgreSQL, Kafka, S3 e Athena exige atenção especial às permissões IAM para evitar bloqueios de acesso entre os serviços.
 
@@ -596,7 +596,7 @@ Ajuste a janela de tempo conforme queira. Ajuste também o tempo a cada quantos 
 - Inclusão de novas bolsas de valores internacionais, moedas e criptomoedas
 - Melhorias de escalabilidade na arquitetura para maior volume e frequência de dados
 - Aprimoramento dos gráficos no Grafana com indicadores técnicos e alertas automáticos
-- Desenvolvimento de um site próprio para centralizar a visualização dos dashboards
+- Desenvolvimento de um site próprio para centralizar a visualização dos dashboards e tornar a adição e remoção de indicadores de forma personalizável
 - Incorporação de modelos de Machine Learning para previsão de tendências
 
 ---
