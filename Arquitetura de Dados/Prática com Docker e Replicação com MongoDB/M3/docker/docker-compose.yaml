@@ -62,7 +62,7 @@ services:
       - replica2_data:/var/lib/postgresql/data
 
   pgpool:
-    image: bitnami/pgpool:4
+    image: soldevelo/pgpool:4.6
     container_name: pgpool
     environment:
       # Credenciais do banco de dados principal
